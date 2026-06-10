@@ -12,6 +12,30 @@
 
   document.getElementById("year").textContent = new Date().getFullYear();
 
+  // Lightweight i18n based on <html lang>
+  var FR = (document.documentElement.lang || "en").toLowerCase().indexOf("fr") === 0;
+  var T = FR ? {
+    pickImages: "Veuillez choisir des images JPG, JPEG ou PNG.",
+    loading: function (n) { return "Chargement de " + n + " image" + (n > 1 ? "s" : "") + "…"; },
+    ready: function (n) { return n + " image" + (n > 1 ? "s" : "") + " prête" + (n > 1 ? "s" : "") + "."; },
+    readError: "Impossible de lire une image.",
+    engineLoading: "Le moteur PDF se charge encore — réessayez dans un instant.",
+    building: "Création de votre PDF…",
+    done: function (n) { return "Terminé ! Votre PDF (" + n + " page" + (n > 1 ? "s" : "") + ") a été téléchargé."; },
+    failed: function (m) { return "Échec de la conversion : " + m; },
+    page: "Page ", removePage: "Supprimer la page "
+  } : {
+    pickImages: "Please choose JPG, JPEG or PNG images.",
+    loading: function (n) { return "Loading " + n + " image" + (n > 1 ? "s" : "") + "…"; },
+    ready: function (n) { return n + " image" + (n > 1 ? "s" : "") + " ready."; },
+    readError: "Could not read an image.",
+    engineLoading: "PDF engine still loading — please try again in a moment.",
+    building: "Building your PDF…",
+    done: function (n) { return "Done! Your PDF (" + n + " page" + (n > 1 ? "s" : "") + ") has been downloaded."; },
+    failed: function (m) { return "Conversion failed: " + m; },
+    page: "Page ", removePage: "Remove page "
+  };
+
   // List of { id, file, dataUrl, width, height }
   var images = [];
   var nextId = 1;
@@ -38,10 +62,10 @@
             height: img.naturalHeight
           });
         };
-        img.onerror = function () { reject(new Error("Could not read " + file.name)); };
+        img.onerror = function () { reject(new Error(T.readError)); };
         img.src = reader.result;
       };
-      reader.onerror = function () { reject(new Error("Could not read " + file.name)); };
+      reader.onerror = function () { reject(new Error(T.readError)); };
       reader.readAsDataURL(file);
     });
   }
@@ -51,16 +75,16 @@
       return /^image\/(jpeg|jpg|png)$/i.test(f.type);
     });
     if (valid.length === 0) {
-      setStatus("Please choose JPG, JPEG or PNG images.");
+      setStatus(T.pickImages);
       return;
     }
-    setStatus("Loading " + valid.length + " image" + (valid.length > 1 ? "s" : "") + "…");
+    setStatus(T.loading(valid.length));
     Promise.all(valid.map(readFile)).then(function (loaded) {
       images = images.concat(loaded);
       render();
-      setStatus(images.length + " image" + (images.length > 1 ? "s" : "") + " ready.");
+      setStatus(T.ready(images.length));
     }).catch(function (err) {
-      setStatus(err.message || "Something went wrong loading an image.");
+      setStatus(err.message || T.readError);
     });
   }
 
@@ -78,12 +102,12 @@
 
       var img = document.createElement("img");
       img.src = item.dataUrl;
-      img.alt = "Page " + (index + 1);
+      img.alt = T.page + (index + 1);
 
       var del = document.createElement("button");
       del.className = "del";
       del.type = "button";
-      del.setAttribute("aria-label", "Remove page " + (index + 1));
+      del.setAttribute("aria-label", T.removePage + (index + 1));
       del.textContent = "×";
       del.addEventListener("click", function () { removeImage(item.id); });
 
@@ -99,7 +123,7 @@
   function removeImage(id) {
     images = images.filter(function (i) { return i.id !== id; });
     render();
-    setStatus(images.length ? images.length + " image(s) ready." : "");
+    setStatus(images.length ? T.ready(images.length) : "");
   }
 
   // Drag to reorder
@@ -133,12 +157,12 @@
   function convert() {
     if (!images.length) return;
     if (!window.jspdf || !window.jspdf.jsPDF) {
-      setStatus("PDF engine still loading — please try again in a moment.");
+      setStatus(T.engineLoading);
       return;
     }
     var jsPDF = window.jspdf.jsPDF;
     convertBtn.disabled = true;
-    setStatus("Building your PDF…");
+    setStatus(T.building);
 
     var sizeChoice = document.getElementById("pageSize").value;
     var orientChoice = document.getElementById("orientation").value;
@@ -191,9 +215,9 @@
         });
 
         doc.save("converted.pdf");
-        setStatus("Done! Your PDF (" + images.length + " page" + (images.length > 1 ? "s" : "") + ") has been downloaded.");
+        setStatus(T.done(images.length));
       } catch (err) {
-        setStatus("Conversion failed: " + (err.message || err));
+        setStatus(T.failed(err.message || err));
       } finally {
         convertBtn.disabled = false;
       }

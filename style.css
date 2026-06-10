@@ -103,4 +103,6 @@ details p{margin:0 0 14px;color:var(--muted)}
 .site-footer{border-top:2px solid var(--line);margin-top:20px;padding:24px 0}
 .site-footer .wrap{display:flex;flex-direction:column;gap:12px;align-items:center;text-align:center}
 .site-footer p{margin:0;font-size:13px;color:var(--muted)}
+.site-footer .project-of{font-weight:600}
+.site-footer .project-of a{color:var(--fg)}
 .site-footer nav a{margin:0 8px;font-size:13px;text-decoration:none;font-weight:600}
