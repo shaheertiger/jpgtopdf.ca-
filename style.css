@@ -79,9 +79,6 @@ select{
 .status{margin-top:14px;font-size:14px;color:var(--muted);min-height:1.2em}
 
 /* Ad slot */
-.ad-slot{margin:18px auto;text-align:center;min-height:60px}
-.ad-label{display:block;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
-
 /* Content */
 .content{padding:30px 20px}
 .content h2{font-size:24px;margin:0 0 16px;letter-spacing:-.5px;border-bottom:2px solid var(--line);padding-bottom:8px}
