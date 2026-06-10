@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>JPG to PDF Converter — Free, Fast & Private | JPGtoPDF.ca</title>
+<meta name="description" content="Free JPG to PDF converter. Convert JPG, JPEG and PNG images to PDF online, combine or merge multiple pictures and photos into one PDF, reorder pages, and download instantly. 100% private — files never leave your device.">
+<meta name="keywords" content="jpg to pdf, convert jpg to pdf, jpg to pdf converter, image to pdf, picture to pdf, photo to pdf, jpeg to pdf, png to pdf, merge jpg to pdf, combine jpg to pdf, convert jpg to pdf free online">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="theme-color" content="#000000">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://jpgtopdf.ca/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="JPG to PDF Converter — Free, Fast & Private">
+<meta property="og:description" content="Convert JPG, JPEG and PNG images to a PDF for free. 100% private — files are processed in your browser and never uploaded.">
+<meta property="og:url" content="https://jpgtopdf.ca/">
+<meta property="og:site_name" content="JPGtoPDF.ca">
+<meta property="og:locale" content="en_CA">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JPG to PDF Converter — Free, Fast & Private">
+<meta name="twitter:description" content="Convert images to PDF for free, right in your browser. Nothing is uploaded.">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='black'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='white' font-family='Arial'>PDF</text></svg>">
+
+<!-- Structured data: WebApplication + FAQ + Breadcrumb -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "name": "JPG to PDF Converter",
+      "url": "https://jpgtopdf.ca/",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any (web browser)",
+      "browserRequirements": "Requires JavaScript",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CAD" },
+      "description": "Free online tool to convert JPG, JPEG and PNG images into a single PDF. All processing happens locally in the browser.",
+      "featureList": [
+        "Convert JPG, JPEG and PNG to PDF",
+        "Combine multiple images into one PDF",
+        "Reorder and remove pages",
+        "Choose page size and orientation",
+        "100% private — no uploads"
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How do I convert a JPG to PDF?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Tap “Select images”, choose one or more JPG, JPEG or PNG files, then tap “Download PDF”. Your images are combined into a single PDF that downloads to your device." }
+        },
+        {
+          "@type": "Question",
+          "name": "Are my images uploaded to a server?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. Conversion happens entirely in your browser using JavaScript. Your images never leave your device, so the tool works even offline after the page has loaded." }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I combine multiple images into one PDF?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Select several images at once. Each image becomes a page, and you can drag to reorder or remove pages before downloading." }
+        },
+        {
+          "@type": "Question",
+          "name": "Is the JPG to PDF converter free?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes, it is completely free with no sign-up, watermark or file limit." }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://jpgtopdf.ca/" },
+        { "@type": "ListItem", "position": 2, "name": "JPG to PDF", "item": "https://jpgtopdf.ca/" }
+      ]
+    }
+  ]
+}
+</script>
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="logo" href="/" aria-label="JPGtoPDF.ca home">JPG<span>→</span>PDF</a>
+    <nav aria-label="Primary">
+      <a href="#how">How it works</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero wrap">
+    <h1>JPG to PDF Converter</h1>
+    <p class="lead">Convert JPG to PDF online for free. Turn your JPG, JPEG and PNG pictures and photos into a single PDF — fast, simple, and 100% private. Files are converted right here in your browser and never uploaded.</p>
+    <p class="lead" lang="fr"><small>Convertissez vos images JPG en PDF gratuitement — convertir une image ou photo en PDF directement dans votre navigateur.</small></p>
+  </section>
+
+  <!-- Converter tool -->
+  <section class="tool wrap" aria-labelledby="tool-h">
+    <h2 id="tool-h" class="visually-hidden">Convert images to PDF</h2>
+
+    <div id="dropzone" class="dropzone" tabindex="0" role="button" aria-label="Select images to convert. You can also drop files here.">
+      <svg viewBox="0 0 24 24" width="40" height="40" aria-hidden="true"><path fill="currentColor" d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6z"/></svg>
+      <strong>Select images</strong>
+      <span>or drop JPG / JPEG / PNG files here</span>
+      <input id="fileInput" type="file" accept="image/jpeg,image/png,image/jpg" multiple hidden>
+    </div>
+
+    <div class="controls" hidden id="controls">
+      <div class="control">
+        <label for="pageSize">Page size</label>
+        <select id="pageSize">
+          <option value="fit" selected>Fit to image</option>
+          <option value="a4">A4</option>
+          <option value="letter">Letter</option>
+        </select>
+      </div>
+      <div class="control">
+        <label for="orientation">Orientation</label>
+        <select id="orientation">
+          <option value="auto" selected>Auto</option>
+          <option value="portrait">Portrait</option>
+          <option value="landscape">Landscape</option>
+        </select>
+      </div>
+      <div class="control">
+        <label for="margin">Margin</label>
+        <select id="margin">
+          <option value="0" selected>None</option>
+          <option value="10">Small</option>
+          <option value="20">Medium</option>
+        </select>
+      </div>
+    </div>
+
+    <ul id="thumbs" class="thumbs" aria-label="Selected images"></ul>
+
+    <div class="actions" hidden id="actions">
+      <button id="convertBtn" class="btn btn-primary" type="button">Download PDF</button>
+      <button id="clearBtn" class="btn btn-ghost" type="button">Clear all</button>
+    </div>
+
+    <p id="status" class="status" role="status" aria-live="polite"></p>
+  </section>
+
+  <!-- Ad slot: in-content, clearly separated. Replace data-ad-* with your AdSense IDs. -->
+  <aside class="ad-slot wrap" aria-label="Advertisement">
+    <span class="ad-label">Advertisement</span>
+    <!-- <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="XXXXXXXXXX" data-ad-format="auto" data-full-width-responsive="true"></ins> -->
+  </aside>
+
+  <section id="how" class="content wrap">
+    <h2>How to convert JPG to PDF</h2>
+    <ol class="steps">
+      <li><strong>Select your images.</strong> Tap “Select images” or drag and drop JPG, JPEG or PNG files into the box.</li>
+      <li><strong>Arrange the pages.</strong> Drag thumbnails to reorder them, or remove any you don’t need. Each image becomes one page.</li>
+      <li><strong>Choose options.</strong> Pick a page size, orientation and margin — or keep the defaults for an exact fit.</li>
+      <li><strong>Download.</strong> Tap “Download PDF” and your combined PDF saves straight to your device.</li>
+    </ol>
+  </section>
+
+  <section class="content wrap">
+    <h2>Why use this converter</h2>
+    <div class="features">
+      <div class="feature">
+        <h3>Completely private</h3>
+        <p>Everything runs in your browser. Your photos are never sent to a server, which keeps personal documents and ID scans safe.</p>
+      </div>
+      <div class="feature">
+        <h3>Free with no limits</h3>
+        <p>No account, no watermark and no cap on how many images you convert. Use it as often as you like.</p>
+      </div>
+      <div class="feature">
+        <h3>Works on mobile</h3>
+        <p>Designed for phones first. Convert images to PDF on Android or iPhone with a fast, lightweight page.</p>
+      </div>
+      <div class="feature">
+        <h3>Multiple images, one PDF</h3>
+        <p>Merge a stack of receipts, notes or photos into a single, easy-to-share PDF in seconds.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="content wrap">
+    <h2>Convert and merge images to PDF</h2>
+    <p>This free online JPG to PDF converter handles more than one format. Drop in a single picture or dozens at once and combine them into one document. It is a fast way to:</p>
+    <ul class="steps">
+      <li><strong>Convert JPG to PDF</strong> — the classic case for scanned documents and screenshots.</li>
+      <li><strong>Merge JPG to PDF</strong> — combine several JPEG photos into a single, shareable PDF.</li>
+      <li><strong>Picture and photo to PDF</strong> — turn camera photos into clean PDF pages.</li>
+      <li><strong>PNG and JPEG to PDF</strong> — mix formats freely; each image becomes its own page.</li>
+    </ul>
+    <p>Because it runs in your browser, there is nothing to install and no upload wait — making it a quick, private alternative when you just need to convert an image to PDF and move on.</p>
+  </section>
+
+  <section id="faq" class="content wrap">
+    <h2>Frequently asked questions</h2>
+    <details>
+      <summary>How do I convert a JPG to PDF?</summary>
+      <p>Tap “Select images”, choose one or more JPG, JPEG or PNG files, then tap “Download PDF”. Your images are combined into a single PDF that downloads to your device.</p>
+    </details>
+    <details>
+      <summary>Are my images uploaded to a server?</summary>
+      <p>No. Conversion happens entirely in your browser using JavaScript. Your images never leave your device, so the tool even works offline once the page has loaded.</p>
+    </details>
+    <details>
+      <summary>Can I combine multiple images into one PDF?</summary>
+      <p>Yes. Select several images at once — each becomes a page, and you can drag to reorder or remove pages before downloading.</p>
+    </details>
+    <details>
+      <summary>Does it work on iPhone and Android?</summary>
+      <p>Yes. The tool runs in any modern mobile or desktop browser, including Safari and Chrome. No app install is required.</p>
+    </details>
+    <details>
+      <summary>Is the JPG to PDF converter free?</summary>
+      <p>Yes, it is completely free with no sign-up, watermark or file limit.</p>
+    </details>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>&copy; <span id="year"></span> JPGtoPDF.ca — Free JPG to PDF converter. All conversions happen in your browser.</p>
+    <nav aria-label="Footer">
+      <a href="/privacy.html">Privacy</a>
+      <a href="#how">How it works</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" defer></script>
+<script src="app.js" defer></script>
+</body>
+</html>
