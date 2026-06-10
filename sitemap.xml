@@ -17,7 +17,25 @@
     <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="fr-ca" href="https://jpgtopdf.ca/fr/"/>
   </url>
   <url>
+    <loc>https://jpgtopdf.ca/about.html</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://jpgtopdf.ca/contact.html</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
     <loc>https://jpgtopdf.ca/privacy.html</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://jpgtopdf.ca/terms.html</loc>
     <lastmod>2026-06-10</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>

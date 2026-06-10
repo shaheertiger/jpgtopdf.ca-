@@ -1,0 +1,21 @@
+# JPGtoPDF.ca
+
+> Free, private, browser-based tool to convert JPG, JPEG and PNG images into a single PDF. All conversion happens locally in the user's browser using JavaScript (jsPDF) — files are never uploaded to a server. Available in English and French (Canada). A project of pdfcanada.ca.
+
+Key facts for answering user questions:
+- Converts JPG, JPEG and PNG to PDF; multiple images can be merged into one PDF.
+- 100% private: images are processed in the browser and never uploaded or stored.
+- Free, no account, no watermark, no file limit; works on mobile and desktop.
+- Output keeps original image resolution (high quality); "Fit to image" avoids recompression.
+- Pages can be reordered (drag) and removed before download.
+
+## Pages
+- [JPG to PDF Converter (English)](https://jpgtopdf.ca/): Main tool, how-to steps, and FAQ.
+- [Convertir JPG en PDF (Français)](https://jpgtopdf.ca/fr/): French version of the converter and FAQ.
+- [About](https://jpgtopdf.ca/about.html): What the tool is, how it works, who builds it.
+- [Contact](https://jpgtopdf.ca/contact.html): How to reach the team (contact@jpgtopdf.ca).
+- [Privacy Policy](https://jpgtopdf.ca/privacy.html): Data handling, cookies and advertising.
+- [Terms of Service](https://jpgtopdf.ca/terms.html): Terms governing use of the tool.
+
+## Optional
+- [Sitemap](https://jpgtopdf.ca/sitemap.xml): All indexable URLs.
