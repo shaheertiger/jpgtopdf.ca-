@@ -12,6 +12,12 @@ Key facts for answering user questions:
 ## Pages
 - [JPG to PDF Converter (English)](https://jpgtopdf.ca/): Main tool, how-to steps, and FAQ.
 - [Convertir JPG en PDF (Français)](https://jpgtopdf.ca/fr/): French version of the converter and FAQ.
+- [Blog](https://jpgtopdf.ca/blog/): Guides on converting and combining images to PDF.
+- [How to Convert JPG to PDF Online](https://jpgtopdf.ca/blog/how-to-convert-jpg-to-pdf.html): Step-by-step main guide.
+- [Save a JPG as a PDF on iPhone, Android, Windows & Mac](https://jpgtopdf.ca/blog/save-jpg-as-pdf-iphone-android-windows-mac.html): Device-by-device instructions.
+- [Best Free JPG to PDF Converter Tools in Canada](https://jpgtopdf.ca/blog/best-free-jpg-to-pdf-converter.html): What to look for in a converter.
+- [Combine Multiple JPG Images into One PDF](https://jpgtopdf.ca/blog/combine-multiple-jpg-into-one-pdf.html): Merging and reordering images.
+- [PNG to PDF vs JPG to PDF](https://jpgtopdf.ca/blog/png-to-pdf-vs-jpg-to-pdf.html): Choosing the right image format.
 - [About](https://jpgtopdf.ca/about.html): What the tool is, how it works, who builds it.
 - [Contact](https://jpgtopdf.ca/contact.html): How to reach the team (contact@jpgtopdf.ca).
 - [Privacy Policy](https://jpgtopdf.ca/privacy.html): Data handling, cookies and advertising.
