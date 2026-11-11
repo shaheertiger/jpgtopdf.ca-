@@ -199,10 +199,15 @@ for (const lang of ['en', 'fr']) {
     posts.push({ ...data, lang, slug, url, path: `${T[lang].blog}${slug}/`, ...r });
   }
 }
+// Hand-written English posts from before the generator (blog/*.html), kept as-is.
+const LEGACY = [
+  { path: '/blog/how-to-convert-jpg-to-pdf.html', h1: 'How to Convert JPG to PDF Online in Canada', description: 'The full step-by-step guide to turning JPG and JPEG files into one PDF, free and private.' },
+  { path: '/blog/best-free-jpg-to-pdf-converter.html', h1: 'Best Free JPG to PDF Converter Tools in Canada', description: 'The free JPG to PDF converters compared: privacy, limits, watermarks and which to pick.' },
+];
 const bySlug = (lang, slug) => posts.find((p) => p.lang === lang && p.slug === slug);
 
 // Internal links must resolve.
-const known = new Set(['/', '/fr/', '/blog/', '/fr/blog/', '/about.html', '/contact.html', '/privacy.html', '/terms.html', ...posts.map((p) => p.path)]);
+const known = new Set([...LEGACY.map((l) => l.path), '/', '/fr/', '/blog/', '/fr/blog/', '/about.html', '/contact.html', '/privacy.html', '/terms.html', ...posts.map((p) => p.path)]);
 let bad = 0;
 for (const p of posts) for (const [, h] of p.html.matchAll(/href="(\/[^"#]*)/g)) if (!known.has(h)) { console.error(`✗ ${p.lang}/${p.slug}: broken link ${h}`); bad++; }
 if (bad) process.exit(1);
@@ -240,7 +245,7 @@ for (const p of posts) {
 // ---------- blog indexes ----------
 for (const lang of ['en', 'fr']) {
   const L = T[lang];
-  const list = posts.filter((p) => p.lang === lang);
+  const list = [...posts.filter((p) => p.lang === lang), ...(lang === 'en' ? LEGACY.map((l) => ({ ...l, url: SITE + l.path })) : [])];
   const url = `${SITE}${L.blog}`;
   const body = `<section class="hero wrap"><h1>${L.blogH1}</h1><p class="lead">${L.blogLead}</p></section>
 <section class="content wrap"><ul class="post-list">${list.map((p) => `<li><a href="${p.path}"><strong>${esc(p.h1)}</strong></a><p>${esc(p.description)}</p></li>`).join('')}</ul></section>`;
@@ -262,6 +267,7 @@ const entries = [
     const pair = p.pair ? bySlug(p.lang === 'en' ? 'fr' : 'en', p.pair) : null;
     return url(p.url, p.date, '0.6', pair ? [[`${p.lang}-ca`, p.url], [`${pair.lang}-ca`, pair.url]] : []);
   }),
+  ...LEGACY.map((l) => url(SITE + l.path, today, '0.6')),
   ...['about', 'contact', 'privacy', 'terms'].map((n) => url(`${SITE}/${n}.html`, '2026-06-10', '0.3')),
 ];
 fs.writeFileSync(path.join(ROOT, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n${entries.join('\n')}\n</urlset>\n`);

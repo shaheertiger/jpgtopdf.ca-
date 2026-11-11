@@ -96,6 +96,33 @@ summary::after{content:"+";float:right;font-weight:700}
 details[open] summary::after{content:"–"}
 details p{margin:0 0 14px;color:var(--muted)}
 
+/* Blog */
+.breadcrumb{font-size:13px;color:var(--muted);padding:18px 20px 0}
+.breadcrumb a{color:var(--muted)}
+.breadcrumb span{margin:0 6px}
+.post-header{padding:14px 20px 6px}
+.post-header h1{font-size:clamp(26px,6vw,38px)}
+.post-meta{font-size:13px;color:var(--muted);margin:0}
+.post .content{padding:18px 20px}
+.post .content h2{font-size:23px;margin-top:8px}
+.post .content h3{font-size:18px;margin:22px 0 8px}
+.post .content p{margin:0 0 16px}
+.post .content ul,.post .content ol{margin:0 0 16px;padding-left:22px}
+.post .content li{margin-bottom:8px}
+.post .content a{color:var(--fg);text-decoration:underline}
+.cta{border:2px solid var(--line);border-radius:var(--radius);padding:20px;text-align:center;margin:8px 0 24px}
+.cta p{margin:0 0 12px;font-weight:600}
+.cta .btn{display:inline-block;text-decoration:none;background:var(--fg);color:var(--bg)}
+.blog-list{list-style:none;margin:0;padding:0;display:grid;gap:16px}
+.blog-card{border:2px solid var(--line);border-radius:var(--radius);padding:18px}
+.blog-card h2{font-size:19px;margin:0 0 8px;border:none;padding:0}
+.blog-card h2 a{text-decoration:none}
+.blog-card p{margin:0;color:var(--muted);font-size:15px}
+.table-wrap{overflow-x:auto;margin:0 0 16px}
+.cmp{border-collapse:collapse;width:100%;font-size:14px}
+.cmp th,.cmp td{border:2px solid var(--line);padding:8px 10px;text-align:left}
+.cmp th{font-weight:700}
+
 /* Footer */
 .site-footer{border-top:2px solid var(--line);margin-top:20px;padding:24px 0}
 .site-footer .wrap{display:flex;flex-direction:column;gap:12px;align-items:center;text-align:center}
