@@ -14,14 +14,33 @@ Key facts for answering user questions:
 - [Convertir JPG en PDF (Français)](https://jpgtopdf.ca/fr/): French version of the converter and FAQ.
 - [Blog](https://jpgtopdf.ca/blog/): Guides on converting and combining images to PDF.
 - [How to Convert JPG to PDF Online](https://jpgtopdf.ca/blog/how-to-convert-jpg-to-pdf.html): Step-by-step main guide.
-- [Save a JPG as a PDF on iPhone, Android, Windows & Mac](https://jpgtopdf.ca/blog/save-jpg-as-pdf-iphone-android-windows-mac.html): Device-by-device instructions.
 - [Best Free JPG to PDF Converter Tools in Canada](https://jpgtopdf.ca/blog/best-free-jpg-to-pdf-converter.html): What to look for in a converter.
-- [Combine Multiple JPG Images into One PDF](https://jpgtopdf.ca/blog/combine-multiple-jpg-into-one-pdf.html): Merging and reordering images.
-- [PNG to PDF vs JPG to PDF](https://jpgtopdf.ca/blog/png-to-pdf-vs-jpg-to-pdf.html): Choosing the right image format.
 - [About](https://jpgtopdf.ca/about.html): What the tool is, how it works, who builds it.
 - [Contact](https://jpgtopdf.ca/contact.html): How to reach the team (contact@jpgtopdf.ca).
 - [Privacy Policy](https://jpgtopdf.ca/privacy.html): Data handling, cookies and advertising.
 - [Terms of Service](https://jpgtopdf.ca/terms.html): Terms governing use of the tool.
+
+## Guides
+- [How to Combine Multiple JPGs Into One PDF](https://jpgtopdf.ca/blog/combine-jpg-into-one-pdf/): Combine several JPG, JPEG or PNG images into a single PDF in the order you want. Free browser method plus built-in options on Windows, Mac, iPhone and Android.
+- [How to Prepare IRCC Documents as PDF (Under 4 MB or 5 MB)](https://jpgtopdf.ca/blog/ircc-documents-pdf/): Turn phone photos and scans into IRCC-ready PDFs: the per-file limits by account (4 MB or 5 MB), the 96–150 dpi rule, and how to combine pages.
+- [How to Convert JPG to PDF on Android (3 Free Ways, No App)](https://jpgtopdf.ca/blog/jpg-to-pdf-android/): Convert a JPG or photo to PDF on Android with Google Photos' Save as PDF, a browser converter, or Google Drive's scanner. Steps for Samsung and Pixel.
+- [JPG to PDF Too Big? How to Get It Under 2 MB or 4 MB](https://jpgtopdf.ca/blog/jpg-to-pdf-file-size/): Why a PDF made from phone photos is 10–30 MB, and three ways to bring it under an upload limit without making the text unreadable.
+- [How to Convert a Picture to PDF on iPhone (3 Free Ways)](https://jpgtopdf.ca/blog/jpg-to-pdf-iphone/): Convert a picture or JPG to PDF on iPhone with the Files app, the Print trick or a browser. No app needed, plus how to handle HEIC photos.
+- [How to Convert JPG to PDF on Mac (3 Free Ways)](https://jpgtopdf.ca/blog/jpg-to-pdf-mac/): Convert JPG to PDF on a Mac with Preview's Export as PDF, Finder's Create PDF quick action, or a browser. Includes merging many images into one PDF.
+- [How to Convert JPG to PDF on Windows 10 and 11](https://jpgtopdf.ca/blog/jpg-to-pdf-windows/): Convert JPG to PDF on Windows with Microsoft Print to PDF, for one photo or many at once. Plus the Fit picture to frame box that crops your image.
+- [How to Convert JPG to PDF Without Losing Quality](https://jpgtopdf.ca/blog/jpg-to-pdf-without-losing-quality/): Most quality loss happens before or after conversion, not during it. Which settings blur a JPG in a PDF, which keep it sharp, and how to check.
+- [How to Convert a Photo to PDF on Any Device (4 Free Ways)](https://jpgtopdf.ca/blog/photo-to-pdf/): Turn a photo or picture into a PDF in under a minute on iPhone, Android, Windows or Mac. Four free methods compared, plus the step people get wrong.
+- [How to Convert PNG to PDF (Free, No Quality Loss)](https://jpgtopdf.ca/blog/png-to-pdf/): Convert a PNG to PDF free on any device without losing sharpness. What happens to transparent backgrounds, and why PNG PDFs are bigger than JPG ones.
+- [How to Scan a Document to PDF With Your Phone](https://jpgtopdf.ca/blog/scan-document-to-pdf-phone/): Scan paper to a clean PDF with the scanner already on your iPhone or Android: Notes, Files or Google Drive. Plus lighting tips that make the file smaller.
+- [How to Turn a Screenshot Into a PDF (Every Device)](https://jpgtopdf.ca/blog/screenshot-to-pdf/): Turn a screenshot into a PDF in seconds, or save a full web page as a PDF on iPhone with Full Page. Steps for iPhone, Android, Windows and Mac.
+- [Comment envoyer une photo en PDF (mail, SMS, WhatsApp)](https://jpgtopdf.ca/fr/blog/envoyer-photo-en-pdf/): Transformez une photo en PDF puis envoyez-la par courriel, SMS ou WhatsApp sans dépasser la taille maximale. Étapes sur téléphone et ordinateur.
+- [Comment mettre une photo en PDF sur Android (sans application)](https://jpgtopdf.ca/fr/blog/photo-en-pdf-android/): Transformez une photo en PDF sur Android avec Google Photos (Enregistrer au format PDF), Chrome ou le scanner Google Drive. Étapes Samsung et Pixel.
+- [Comment mettre une photo en PDF sur iPhone (3 méthodes gratuites)](https://jpgtopdf.ca/fr/blog/photo-en-pdf-iphone/): Mettez une photo en PDF sur iPhone avec l’app Fichiers, l’astuce Imprimer ou Safari. Sans application à installer, et que faire des photos HEIC.
+- [Comment transformer une photo en PDF sur PC (Windows 10 et 11)](https://jpgtopdf.ca/fr/blog/photo-en-pdf-pc-windows/): Transformez une photo JPG en PDF sur PC avec Microsoft Print to PDF, une ou plusieurs à la fois. Et la case « Ajuster l’image au cadre » qui rogne vos photos.
+- [Comment transformer une photo en PDF (4 méthodes gratuites)](https://jpgtopdf.ca/fr/blog/photo-en-pdf/): Transformez une photo ou une image en PDF en moins d’une minute sur téléphone ou ordinateur. Quatre méthodes gratuites comparées, sans inscription.
+- [Comment convertir un fichier PNG en PDF (gratuit, sans perte)](https://jpgtopdf.ca/fr/blog/png-en-pdf/): Convertissez un PNG en PDF gratuitement, sans perte de netteté. Ce qui arrive à la transparence et pourquoi un PDF issu de PNG pèse plus lourd.
+- [Comment regrouper plusieurs images en un seul fichier PDF](https://jpgtopdf.ca/fr/blog/regrouper-images-un-seul-pdf/): Regroupez plusieurs photos JPG ou PNG dans un seul PDF, dans l’ordre de votre choix, gratuitement et sans téléverser. Méthodes PC, Mac, iPhone et Android.
+- [Comment scanner un document en PDF avec son téléphone](https://jpgtopdf.ca/fr/blog/scanner-document-pdf-telephone/): Numérisez un document papier en PDF propre avec le scanner déjà présent sur iPhone ou Android : Fichiers, Notes ou Google Drive. Plus les bons réglages.
 
 ## Optional
 - [Sitemap](https://jpgtopdf.ca/sitemap.xml): All indexable URLs.
