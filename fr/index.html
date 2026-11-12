@@ -14,7 +14,7 @@
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2963693328827195" crossorigin="anonymous"></script>
 
 <link rel="canonical" href="https://jpgtopdf.ca/fr/">
-<link rel="alternate" hreflang="en-ca" href="https://jpgtopdf.ca/">
+<link rel="alternate" hreflang="en" href="https://jpgtopdf.ca/">
 <link rel="alternate" hreflang="fr-ca" href="https://jpgtopdf.ca/fr/">
 <link rel="alternate" hreflang="x-default" href="https://jpgtopdf.ca/">
 
@@ -107,7 +107,7 @@
       <a href="#how">Comment ça marche</a>
       <a href="/fr/blog/">Guides</a>
       <a href="#faq">FAQ</a>
-      <a href="/" lang="en" hreflang="en-ca">EN</a>
+      <a href="/" lang="en" hreflang="en">EN</a>
     </nav>
   </div>
 </header>
@@ -118,51 +118,19 @@
     <p class="lead">Convertissez vos images JPG, JPEG et PNG en un seul PDF — gratuitement, rapidement et en toute confidentialité. La conversion se fait directement dans votre navigateur, sans téléversement.</p>
   </section>
 
-  <section class="tool wrap" aria-labelledby="tool-h">
+  <section class="tool wrap" id="tool" data-tool="jpg-to-pdf" aria-labelledby="tool-h">
     <h2 id="tool-h" class="visually-hidden">Convertir des images en PDF</h2>
-
-    <div id="dropzone" class="dropzone" tabindex="0" role="button" aria-label="Choisir des images à convertir. Vous pouvez aussi déposer des fichiers ici.">
+    <label class="dropzone" id="drop" for="file">
       <svg viewBox="0 0 24 24" width="40" height="40" aria-hidden="true"><path fill="currentColor" d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6z"/></svg>
       <strong>Choisir des images</strong>
-      <span>ou déposez des fichiers JPG / JPEG / PNG ici</span>
-      <input id="fileInput" type="file" accept="image/jpeg,image/png,image/jpg" multiple hidden>
-    </div>
-
-    <div class="controls" hidden id="controls">
-      <div class="control">
-        <label for="pageSize">Format de page</label>
-        <select id="pageSize">
-          <option value="fit" selected>Ajuster à l’image</option>
-          <option value="a4">A4</option>
-          <option value="letter">Lettre</option>
-        </select>
-      </div>
-      <div class="control">
-        <label for="orientation">Orientation</label>
-        <select id="orientation">
-          <option value="auto" selected>Auto</option>
-          <option value="portrait">Portrait</option>
-          <option value="landscape">Paysage</option>
-        </select>
-      </div>
-      <div class="control">
-        <label for="margin">Marge</label>
-        <select id="margin">
-          <option value="0" selected>Aucune</option>
-          <option value="10">Petite</option>
-          <option value="20">Moyenne</option>
-        </select>
-      </div>
-    </div>
-
-    <ul id="thumbs" class="thumbs" aria-label="Images sélectionnées"></ul>
-
-    <div class="actions" hidden id="actions">
-      <button id="convertBtn" class="btn btn-primary" type="button">Télécharger le PDF</button>
-      <button id="clearBtn" class="btn btn-ghost" type="button">Tout effacer</button>
-    </div>
-
+      <span>ou déposez des fichiers JPG, PNG, WebP ou HEIC ici</span>
+      <span class="private">Vos fichiers restent sur votre appareil — rien n’est téléversé</span>
+      <input id="file" type="file" accept="image/*,.heic,.heif" multiple class="visually-hidden">
+    </label>
+    <div id="work" class="work" hidden></div>
+    <progress id="progress" max="1" value="0" hidden></progress>
     <p id="status" class="status" role="status" aria-live="polite"></p>
+    <noscript><p class="status error">Cet outil fonctionne dans votre navigateur et nécessite JavaScript.</p></noscript>
   </section>
 
   <section id="how" class="content wrap">
@@ -195,6 +163,18 @@
         <p>Fusionnez une pile de reçus, de notes ou de photos en un seul PDF facile à partager, en quelques secondes.</p>
       </div>
     </div>
+  </section>
+
+  <section id="outils" class="content wrap">
+    <h2>Autres outils PDF gratuits (en anglais)</h2>
+    <ul class="list home-guides">
+      <li><a href="/compress-pdf/" hreflang="en">Compresser un PDF</a></li>
+      <li><a href="/merge-pdf/" hreflang="en">Fusionner des PDF</a></li>
+      <li><a href="/heic-to-pdf/" hreflang="en">Photos iPhone (HEIC) en PDF</a></li>
+      <li><a href="/scan-to-pdf/" hreflang="en">Numériser un document en PDF</a></li>
+      <li><a href="/split-pdf/" hreflang="en">Diviser un PDF</a></li>
+      <li><a href="/ocr-pdf/" hreflang="en">OCR : rendre un PDF consultable</a></li>
+    </ul>
   </section>
 
   <section id="guides" class="content wrap">
@@ -254,7 +234,7 @@
   </div>
 </footer>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" defer></script>
-<script src="/app.js" defer></script>
+<script>document.getElementById("year").textContent=new Date().getFullYear();</script>
+<script type="module" src="/assets/js/tools/jpg-to-pdf.js"></script>
 </body>
 </html>

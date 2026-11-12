@@ -1,24 +1,70 @@
 # JPGtoPDF.ca
 
-> Free, private, browser-based tool to convert JPG, JPEG and PNG images into a single PDF. All conversion happens locally in the user's browser using JavaScript (jsPDF) — files are never uploaded to a server. Available in English and French (Canada). A project of pdfcanada.ca.
+> Free PDF and image tools that run entirely in the browser: JPG to PDF, compress PDF, merge, split, OCR, compare, sign and more (28 tools). Files are processed on the user's device with JavaScript (pdf-lib, pdf.js, Tesseract) and are never uploaded. No account, no watermark. English, with French and Spanish pages. A project of pdfcanada.ca.
 
 Key facts for answering user questions:
-- Converts JPG, JPEG and PNG to PDF; multiple images can be merged into one PDF.
-- 100% private: images are processed in the browser and never uploaded or stored.
-- Free, no account, no watermark, no file limit; works on mobile and desktop.
-- Output keeps original image resolution (high quality); "Fit to image" avoids recompression.
-- Pages can be reordered (drag) and removed before download.
+- Every tool runs in the browser; files are never uploaded to a server, so the tools also work offline once a page has loaded.
+- Free, no sign-up, no watermark. The practical size limit is the device's memory, not a set cap.
+- Compress PDF shrinks the images inside a PDF and keeps text and vector graphics untouched, so text stays selectable. It can aim for a target size (for example under 1 MB, 2 MB or 4 MB). Text-only PDFs barely shrink.
+- OCR PDF adds an invisible, searchable text layer over each scanned page (English, French, Spanish, Portuguese, German) and keeps the page image as it was.
+- JPG to PDF embeds JPEG files without recompressing them and applies phone rotation (EXIF) losslessly.
+- Sign PDF adds a visible electronic signature; it is not a certificate-based digital signature.
+
+## Tools
+### Convert to PDF
+- [JPG to PDF](https://jpgtopdf.ca/): Turn JPG, PNG, WebP or HEIC pictures into one PDF, in the order you choose.
+- [HEIC to PDF](https://jpgtopdf.ca/heic-to-pdf/): Put iPhone photos (HEIC) straight into a PDF without converting them first.
+
+### Compress
+- [Compress PDF](https://jpgtopdf.ca/compress-pdf/): Make a PDF smaller, or get it under a set size such as 1 MB, 2 MB or 4 MB.
+- [Split PDF by size](https://jpgtopdf.ca/split-pdf-by-size/): Cut a large PDF into parts that each stay under an upload limit.
+
+### Organize pages
+- [Merge PDF](https://jpgtopdf.ca/merge-pdf/): Combine several PDFs into one file, in the order you set.
+- [Split PDF](https://jpgtopdf.ca/split-pdf/): Split a PDF into single pages, every few pages, or the ranges you type.
+- [Organize PDF](https://jpgtopdf.ca/organize-pdf/): Reorder, rotate and delete pages by dragging thumbnails.
+- [Delete PDF pages](https://jpgtopdf.ca/delete-pdf-pages/): Remove the pages you tick and keep everything else exactly as it was.
+- [Extract PDF pages](https://jpgtopdf.ca/extract-pdf-pages/): Save selected pages as a new PDF, or one PDF per page.
+- [Rotate PDF](https://jpgtopdf.ca/rotate-pdf/): Fix sideways or upside-down pages, one page or all of them, and save.
+- [Split pages in half](https://jpgtopdf.ca/split-pdf-in-half/): Cut scanned two-page spreads into single pages, left and right.
+- [Alternate and mix PDF](https://jpgtopdf.ca/alternate-mix-pdf/): Interleave pages from two PDFs, such as front sides and back sides of a scan.
+
+### Edit and sign
+- [Sign PDF](https://jpgtopdf.ca/sign-pdf/): Draw, type or upload your signature and place it on the page.
+- [Add image to PDF](https://jpgtopdf.ca/add-image-to-pdf/): Place a photo, logo or stamp anywhere on an existing PDF page.
+- [Add page numbers](https://jpgtopdf.ca/add-page-numbers/): Number the pages: position, format (Page 1 of 9) and starting page.
+- [Watermark PDF](https://jpgtopdf.ca/watermark-pdf/): Stamp CONFIDENTIAL, DRAFT or any text across every page.
+- [Crop PDF](https://jpgtopdf.ca/crop-pdf/): Trim margins by drawing the area to keep on the page.
+- [Flatten PDF](https://jpgtopdf.ca/flatten-pdf/): Lock filled-in form fields, or turn every page into an image.
+- [Compare PDF](https://jpgtopdf.ca/compare-pdf/): See every text change between two versions, with changed numbers flagged.
+
+### Convert from PDF
+- [PDF to JPG](https://jpgtopdf.ca/pdf-to-jpg/): Save every page, or the pages you pick, as JPG images.
+- [PDF to PNG](https://jpgtopdf.ca/pdf-to-png/): Save pages as lossless PNG images for slides, edits or sharp text.
+- [PDF to text](https://jpgtopdf.ca/pdf-to-text/): Pull all the text out of a PDF into a plain .txt file.
+
+### Scan and OCR
+- [Scan to PDF](https://jpgtopdf.ca/scan-to-pdf/): Photograph paper with your phone and get a clean greyscale or black-and-white PDF.
+- [OCR PDF](https://jpgtopdf.ca/ocr-pdf/): Make a scanned PDF searchable and copyable, keeping the pages as they look.
+- [Image to text](https://jpgtopdf.ca/image-to-text/): Copy the text out of a photo, screenshot or scanned image.
+
+### Image tools
+- [Compress image](https://jpgtopdf.ca/compress-image/): Shrink JPG, PNG or WebP photos, or get them under a size like 200 KB.
+- [Resize image](https://jpgtopdf.ca/resize-image/): Resize to exact pixels or a preset for Instagram, YouTube or a visa photo.
+- [HEIC to JPG](https://jpgtopdf.ca/heic-to-jpg/): Convert iPhone HEIC photos to JPG (or PNG) that open everywhere.
+
+## En español
+- [Comprimir PDF](https://jpgtopdf.ca/es/comprimir-pdf/)
+- [Unir PDF](https://jpgtopdf.ca/es/unir-pdf/)
+- [Dividir PDF](https://jpgtopdf.ca/es/dividir-pdf/)
 
 ## Pages
-- [JPG to PDF Converter (English)](https://jpgtopdf.ca/): Main tool, how-to steps, and FAQ.
-- [Convertir JPG en PDF (Français)](https://jpgtopdf.ca/fr/): French version of the converter and FAQ.
-- [Blog](https://jpgtopdf.ca/blog/): Guides on converting and combining images to PDF.
-- [How to Convert JPG to PDF Online](https://jpgtopdf.ca/blog/how-to-convert-jpg-to-pdf.html): Step-by-step main guide.
-- [Best Free JPG to PDF Converter Tools in Canada](https://jpgtopdf.ca/blog/best-free-jpg-to-pdf-converter.html): What to look for in a converter.
-- [About](https://jpgtopdf.ca/about.html): What the tool is, how it works, who builds it.
-- [Contact](https://jpgtopdf.ca/contact.html): How to reach the team (contact@jpgtopdf.ca).
+- [How it works](https://jpgtopdf.ca/how-it-works/): Why nothing is uploaded, which libraries run, and what each tool cannot do.
+- [Convertir JPG en PDF (Français)](https://jpgtopdf.ca/fr/): French version of the JPG to PDF converter.
+- [About](https://jpgtopdf.ca/about.html): Who builds the site.
+- [Contact](https://jpgtopdf.ca/contact.html): contact@jpgtopdf.ca.
 - [Privacy Policy](https://jpgtopdf.ca/privacy.html): Data handling, cookies and advertising.
-- [Terms of Service](https://jpgtopdf.ca/terms.html): Terms governing use of the tool.
+- [Terms of Service](https://jpgtopdf.ca/terms.html)
 
 ## Guides
 - [How to Combine Multiple JPGs Into One PDF](https://jpgtopdf.ca/blog/combine-jpg-into-one-pdf/): Combine several JPG, JPEG or PNG images into a single PDF in the order you want. Free browser method plus built-in options on Windows, Mac, iPhone and Android.

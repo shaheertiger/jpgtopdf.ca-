@@ -1,7 +1,7 @@
 {
-  "name": "JPG to PDF Converter",
+  "name": "JPGtoPDF.ca — Free PDF and image tools",
   "short_name": "JPGtoPDF",
-  "description": "Free, private JPG to PDF converter that runs in your browser.",
+  "description": "Free, private PDF and image tools that run in your browser: JPG to PDF, compress, merge, split, OCR and more.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",

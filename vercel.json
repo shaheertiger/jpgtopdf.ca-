@@ -1,7 +1,30 @@
 {
+  "trailingSlash": true,
   "redirects": [
+    { "source": "/:path*", "has": [{ "type": "host", "value": "www.jpgtopdf.ca" }], "destination": "https://jpgtopdf.ca/:path*", "permanent": true },
     { "source": "/blog/combine-multiple-jpg-into-one-pdf.html", "destination": "/blog/combine-jpg-into-one-pdf/", "permanent": true },
     { "source": "/blog/png-to-pdf-vs-jpg-to-pdf.html", "destination": "/blog/png-to-pdf/", "permanent": true },
     { "source": "/blog/save-jpg-as-pdf-iphone-android-windows-mac.html", "destination": "/blog/photo-to-pdf/", "permanent": true }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
+      ]
+    },
+    {
+      "source": "/vendor/(.*)",
+      "headers": [{ "key": "Cache-Control", "value": "public, max-age=2592000, stale-while-revalidate=86400" }]
+    },
+    {
+      "source": "/vendor/(.*)\\.mjs",
+      "headers": [{ "key": "Content-Type", "value": "text/javascript; charset=utf-8" }]
+    },
+    {
+      "source": "/assets/(.*)",
+      "headers": [{ "key": "Cache-Control", "value": "public, max-age=3600, stale-while-revalidate=86400" }]
+    }
   ]
 }

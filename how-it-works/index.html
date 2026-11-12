@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>How It Works: Why Nothing Is Uploaded | JPGtoPDF.ca</title>
+<meta name="description" content="Every JPGtoPDF.ca tool runs in your browser. What happens to your file, which open-source libraries do the work, what we can't see, and each tool's limits.">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="theme-color" content="#000000">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://jpgtopdf.ca/how-it-works/">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="How It Works: Why Nothing Is Uploaded">
+<meta property="og:description" content="Every JPGtoPDF.ca tool runs in your browser. What happens to your file, which open-source libraries do the work, what we can't see, and each tool's limits.">
+<meta property="og:url" content="https://jpgtopdf.ca/how-it-works/">
+<meta property="og:site_name" content="JPGtoPDF.ca">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://jpgtopdf.ca/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='black'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='white' font-family='Arial'>PDF</text></svg>">
+<link rel="manifest" href="/site.webmanifest">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","name":"How it works: why nothing is uploaded","url":"https://jpgtopdf.ca/how-it-works/","description":"Every JPGtoPDF.ca tool runs in your browser. What happens to your file, which open-source libraries do the work, what we can't see, and each tool's limits.","dateModified":"2026-11-12","publisher":{"@id":"https://jpgtopdf.ca/#org"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Do you keep a copy of my files?","acceptedAnswer":{"@type":"Answer","text":"No. Files are processed on your device and never uploaded, so there is nothing for us to keep."}},{"@type":"Question","name":"Does it work offline?","acceptedAnswer":{"@type":"Answer","text":"Yes, once a tool's page has loaded. OCR also needs its language data, which is downloaded the first time and then cached by your browser."}},{"@type":"Question","name":"Why is the first run of OCR slower?","acceptedAnswer":{"@type":"Answer","text":"The text-recognition engine and language data (about 4–7 MB) download the first time. After that, your browser reuses them."}}]},{"@type":"Organization","@id":"https://jpgtopdf.ca/#org","name":"JPGtoPDF.ca","url":"https://jpgtopdf.ca/","logo":"https://jpgtopdf.ca/og-image.png","email":"contact@jpgtopdf.ca","parentOrganization":{"@type":"Organization","name":"pdfcanada.ca","url":"https://www.pdfcanada.ca/"}}]}</script>
+<link rel="stylesheet" href="/style.css">
+<script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="logo" href="/" aria-label="JPGtoPDF.ca home">JPG<span>→</span>PDF</a>
+    <nav aria-label="Primary"><a href="/#tools">All tools</a><a href="/compress-pdf/">Compress</a><a href="/merge-pdf/">Merge</a><a href="/blog/">Guides</a><a href="/fr/" lang="fr" hreflang="fr-ca">FR</a></nav>
+  </div>
+</header>
+<main id="main">
+<article class="post wrap"><nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a></nav><h1>How it works: why nothing is uploaded</h1><p class="meta">Updated <time datetime="2026-11-12">2026-11-12</time></p><p>Every tool on JPGtoPDF.ca, from <a href="/">JPG to PDF</a> to <a href="/compress-pdf/">Compress PDF</a> and <a href="/ocr-pdf/">OCR PDF</a>, runs inside your web browser. When you choose a file, your browser reads it from your device, the tool processes it with JavaScript, and the result is saved back to your device as a download. The file is never sent to our server or anyone else's.</p>
+<h2 id="what-happens-to-your-file-step-by-step">What happens to your file, step by step</h2>
+<ol class="steps"><li><strong>You choose a file.</strong> The browser gives the page a copy of it in memory. Nothing is transmitted.</li><li><strong>The tool loads its engine.</strong> The first time you use a tool, the browser downloads the program code it needs (for example the PDF library) from our site, like any other part of the page. Your file is not part of that download.</li><li><strong>Your device does the work.</strong> Merging, compressing, reading text, rendering pages: all of it runs on your computer or phone.</li><li><strong>You download the result.</strong> The new file is created in memory and saved by your browser. When you close the tab, it is gone from the page.</li></ol>
+<p>You can check this yourself: load a tool, turn off Wi-Fi or mobile data, and use it. It keeps working, because there is no server step.</p>
+<h2 id="which-libraries-do-the-work">Which libraries do the work</h2>
+<p>All the processing code is open source and served from our own domain, not from a third-party CDN:</p>
+<div class="table-wrap"><table><thead><tr><th scope="col">Library</th><th scope="col">What it does here</th></tr></thead><tbody><tr><th scope="row">pdf-lib</th><td>Creates and edits PDFs: merge, split, rotate, page numbers, watermarks, signatures, compression</td></tr><tr><th scope="row">PDF.js (Mozilla)</th><td>Opens PDFs to show page previews, render pages as images and read their text</td></tr><tr><th scope="row">Tesseract</th><td>Reads text from images and scans for OCR (English, French, Spanish, Portuguese, German)</td></tr><tr><th scope="row">heic2any (libheif)</th><td>Decodes iPhone HEIC photos in browsers that can't open them natively</td></tr></tbody></table></div>
+<h2 id="what-we-can-and-can-t-see">What we can and can't see</h2>
+<p>We can't see your files, their names or their contents, because they never reach us. Our analytics (Vercel Web Analytics) counts page views and, for tools, that a tool was used, with no cookies and no file data. Some pages may show ads; see the <a href="/privacy.html">privacy policy</a>.</p>
+<h2 id="honest-limits">Honest limits</h2>
+<ul class="list"><li><strong>Size:</strong> there is no set cap. Your device's memory is the limit; large PDFs work best on a laptop.</li><li><strong>Passwords:</strong> password-protected PDFs can't be edited until the password is removed.</li><li><strong>OCR:</strong> works on printed text in Latin-script languages. It doesn't read handwriting reliably.</li><li><strong>Compression:</strong> shrinks photos and scans inside a PDF. Text-only PDFs barely change.</li><li><strong>Signatures:</strong> <a href="/sign-pdf/">Sign PDF</a> adds a visible electronic signature, not a certificate-based digital signature.</li></ul>
+<h2 id="frequently-asked-questions">Frequently asked questions</h2>
+<h3 id="do-you-keep-a-copy-of-my-files">Do you keep a copy of my files?</h3>
+<p>No. Files are processed on your device and never uploaded, so there is nothing for us to keep.</p>
+<h3 id="does-it-work-offline">Does it work offline?</h3>
+<p>Yes, once a tool's page has loaded. OCR also needs its language data, which is downloaded the first time and then cached by your browser.</p>
+<h3 id="why-is-the-first-run-of-ocr-slower">Why is the first run of OCR slower?</h3>
+<p>The text-recognition engine and language data (about 4–7 MB) download the first time. After that, your browser reuses them.</p></article>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <nav class="foot-tools" aria-label="All tools"><div><strong>Convert to PDF</strong><a href="/">JPG to PDF</a><a href="/heic-to-pdf/">HEIC to PDF</a></div><div><strong>Compress</strong><a href="/compress-pdf/">Compress PDF</a><a href="/split-pdf-by-size/">Split PDF by size</a></div><div><strong>Organize pages</strong><a href="/merge-pdf/">Merge PDF</a><a href="/split-pdf/">Split PDF</a><a href="/organize-pdf/">Organize PDF</a><a href="/delete-pdf-pages/">Delete PDF pages</a><a href="/extract-pdf-pages/">Extract PDF pages</a><a href="/rotate-pdf/">Rotate PDF</a><a href="/split-pdf-in-half/">Split pages in half</a><a href="/alternate-mix-pdf/">Alternate and mix PDF</a></div><div><strong>Edit and sign</strong><a href="/sign-pdf/">Sign PDF</a><a href="/add-image-to-pdf/">Add image to PDF</a><a href="/add-page-numbers/">Add page numbers</a><a href="/watermark-pdf/">Watermark PDF</a><a href="/crop-pdf/">Crop PDF</a><a href="/flatten-pdf/">Flatten PDF</a><a href="/compare-pdf/">Compare PDF</a></div><div><strong>Convert from PDF</strong><a href="/pdf-to-jpg/">PDF to JPG</a><a href="/pdf-to-png/">PDF to PNG</a><a href="/pdf-to-text/">PDF to text</a></div><div><strong>Scan and OCR</strong><a href="/scan-to-pdf/">Scan to PDF</a><a href="/ocr-pdf/">OCR PDF</a><a href="/image-to-text/">Image to text</a></div><div><strong>Image tools</strong><a href="/compress-image/">Compress image</a><a href="/resize-image/">Resize image</a><a href="/heic-to-jpg/">HEIC to JPG</a></div></nav>
+    <p>&copy; 2026 JPGtoPDF.ca — Free PDF and image tools that run in your browser. Files never leave your device.</p>
+    <p class="project-of">A project of <a href="https://www.pdfcanada.ca/en" rel="noopener">pdfcanada.ca</a></p>
+    <nav aria-label="Footer"><a href="/how-it-works/">How it works</a><a href="/about.html">About</a><a href="/contact.html">Contact</a><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a><a href="/es/comprimir-pdf/">Español</a><a href="/fr/">Français</a></nav>
+  </div>
+</footer>
+</body>
+</html>

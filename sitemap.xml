@@ -2,31 +2,177 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://jpgtopdf.ca/</loc>
-    <lastmod>2026-11-11</lastmod>
+    <lastmod>2026-11-12</lastmod>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="en-ca" href="https://jpgtopdf.ca/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jpgtopdf.ca/"/>
     <xhtml:link rel="alternate" hreflang="fr-ca" href="https://jpgtopdf.ca/fr/"/>
   </url>
   <url>
-    <loc>https://jpgtopdf.ca/fr/</loc>
-    <lastmod>2026-11-11</lastmod>
+    <loc>https://jpgtopdf.ca/heic-to-pdf/</loc>
+    <lastmod>2026-11-12</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jpgtopdf.ca/scan-to-pdf/</loc>
+    <lastmod>2026-11-12</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jpgtopdf.ca/compress-pdf/</loc>
+    <lastmod>2026-11-12</lastmod>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="en-ca" href="https://jpgtopdf.ca/"/>
-    <xhtml:link rel="alternate" hreflang="fr-ca" href="https://jpgtopdf.ca/fr/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jpgtopdf.ca/compress-pdf/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://jpgtopdf.ca/es/comprimir-pdf/"/>
   </url>
   <url>
-    <loc>https://jpgtopdf.ca/blog/</loc>
-    <lastmod>2026-11-11</lastmod>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en-ca" href="https://jpgtopdf.ca/blog/"/>
-    <xhtml:link rel="alternate" hreflang="fr-ca" href="https://jpgtopdf.ca/fr/blog/"/>
+    <loc>https://jpgtopdf.ca/split-pdf-by-size/</loc>
+    <lastmod>2026-11-12</lastmod>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://jpgtopdf.ca/fr/blog/</loc>
-    <lastmod>2026-11-11</lastmod>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en-ca" href="https://jpgtopdf.ca/blog/"/>
-    <xhtml:link rel="alternate" hreflang="fr-ca" href="https://jpgtopdf.ca/fr/blog/"/>
+    <loc>https://jpgtopdf.ca/merge-pdf/</loc>
+    <lastmod>2026-11-12</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jpgtopdf.ca/merge-pdf/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://jpgtopdf.ca/es/unir-pdf/"/>
+  </url>
+  <url>
+    <loc>https://jpgtopdf.ca/split-pdf/</loc>
+    <lastmod>2026-11-12</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jpgtopdf.ca/split-pdf/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://jpgtopdf.ca/es/dividir-pdf/"/>
+  </url>
+  <url>
+    <loc>https://jpgtopdf.ca/organize-pdf/</loc>
+    <lastmod>2026-11-12</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jpgtopdf.ca/delete-pdf-pages/</loc>
+    <lastmod>2026-11-12</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jpgtopdf.ca/extract-pdf-pages/</loc>
+    <lastmod>2026-11-12</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jpgtopdf.ca/rotate-pdf/</loc>
+    <lastmod>2026-11-12</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jpgtopdf.ca/split-pdf-in-half/</loc>
+    <lastmod>2026-11-12</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jpgtopdf.ca/alternate-mix-pdf/</loc>
+    <lastmod>2026-11-12</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jpgtopdf.ca/sign-pdf/</loc>
+    <lastmod>2026-11-12</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jpgtopdf.ca/add-image-to-pdf/</loc>
+    <lastmod>2026-11-12</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jpgtopdf.ca/add-page-numbers/</loc>
+    <lastmod>2026-11-12</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jpgtopdf.ca/watermark-pdf/</loc>
+    <lastmod>2026-11-12</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jpgtopdf.ca/crop-pdf/</loc>
+    <lastmod>2026-11-12</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jpgtopdf.ca/flatten-pdf/</loc>
+    <lastmod>2026-11-12</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jpgtopdf.ca/pdf-to-jpg/</loc>
+    <lastmod>2026-11-12</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jpgtopdf.ca/pdf-to-png/</loc>
+    <lastmod>2026-11-12</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jpgtopdf.ca/pdf-to-text/</loc>
+    <lastmod>2026-11-12</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jpgtopdf.ca/ocr-pdf/</loc>
+    <lastmod>2026-11-12</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jpgtopdf.ca/image-to-text/</loc>
+    <lastmod>2026-11-12</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jpgtopdf.ca/compare-pdf/</loc>
+    <lastmod>2026-11-12</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jpgtopdf.ca/compress-image/</loc>
+    <lastmod>2026-11-12</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jpgtopdf.ca/resize-image/</loc>
+    <lastmod>2026-11-12</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jpgtopdf.ca/heic-to-jpg/</loc>
+    <lastmod>2026-11-12</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jpgtopdf.ca/es/comprimir-pdf/</loc>
+    <lastmod>2026-11-12</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jpgtopdf.ca/compress-pdf/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://jpgtopdf.ca/es/comprimir-pdf/"/>
+  </url>
+  <url>
+    <loc>https://jpgtopdf.ca/es/unir-pdf/</loc>
+    <lastmod>2026-11-12</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jpgtopdf.ca/merge-pdf/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://jpgtopdf.ca/es/unir-pdf/"/>
+  </url>
+  <url>
+    <loc>https://jpgtopdf.ca/es/dividir-pdf/</loc>
+    <lastmod>2026-11-12</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jpgtopdf.ca/split-pdf/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://jpgtopdf.ca/es/dividir-pdf/"/>
+  </url>
+  <url>
+    <loc>https://jpgtopdf.ca/how-it-works/</loc>
+    <lastmod>2026-11-12</lastmod>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://jpgtopdf.ca/blog/combine-jpg-into-one-pdf/</loc>
@@ -157,33 +303,54 @@
     <xhtml:link rel="alternate" hreflang="en-ca" href="https://jpgtopdf.ca/blog/scan-document-to-pdf-phone/"/>
   </url>
   <url>
-    <loc>https://jpgtopdf.ca/blog/how-to-convert-jpg-to-pdf.html</loc>
+    <loc>https://jpgtopdf.ca/blog/</loc>
     <lastmod>2026-11-11</lastmod>
-    <priority>0.6</priority>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en-ca" href="https://jpgtopdf.ca/blog/"/>
+    <xhtml:link rel="alternate" hreflang="fr-ca" href="https://jpgtopdf.ca/fr/blog/"/>
+  </url>
+  <url>
+    <loc>https://jpgtopdf.ca/fr/blog/</loc>
+    <lastmod>2026-11-11</lastmod>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en-ca" href="https://jpgtopdf.ca/blog/"/>
+    <xhtml:link rel="alternate" hreflang="fr-ca" href="https://jpgtopdf.ca/fr/blog/"/>
+  </url>
+  <url>
+    <loc>https://jpgtopdf.ca/fr/</loc>
+    <lastmod>2026-11-12</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jpgtopdf.ca/"/>
+    <xhtml:link rel="alternate" hreflang="fr-ca" href="https://jpgtopdf.ca/fr/"/>
+  </url>
+  <url>
+    <loc>https://jpgtopdf.ca/blog/how-to-convert-jpg-to-pdf.html</loc>
+    <lastmod>2026-06-10</lastmod>
+    <priority>0.4</priority>
   </url>
   <url>
     <loc>https://jpgtopdf.ca/blog/best-free-jpg-to-pdf-converter.html</loc>
-    <lastmod>2026-11-11</lastmod>
-    <priority>0.6</priority>
+    <lastmod>2026-06-10</lastmod>
+    <priority>0.4</priority>
   </url>
   <url>
     <loc>https://jpgtopdf.ca/about.html</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-11-12</lastmod>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://jpgtopdf.ca/contact.html</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-11-12</lastmod>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://jpgtopdf.ca/privacy.html</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-11-12</lastmod>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://jpgtopdf.ca/terms.html</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-11-12</lastmod>
     <priority>0.3</priority>
   </url>
 </urlset>
