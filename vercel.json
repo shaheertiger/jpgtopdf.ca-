@@ -1,7 +1,6 @@
 {
   "trailingSlash": true,
   "redirects": [
-    { "source": "/:path*", "has": [{ "type": "host", "value": "www.jpgtopdf.ca" }], "destination": "https://jpgtopdf.ca/:path*", "permanent": true },
     { "source": "/blog/combine-multiple-jpg-into-one-pdf.html", "destination": "/blog/combine-jpg-into-one-pdf/", "permanent": true },
     { "source": "/blog/png-to-pdf-vs-jpg-to-pdf.html", "destination": "/blog/png-to-pdf/", "permanent": true },
     { "source": "/blog/save-jpg-as-pdf-iphone-android-windows-mac.html", "destination": "/blog/photo-to-pdf/", "permanent": true }
