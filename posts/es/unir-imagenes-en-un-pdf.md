@@ -1,7 +1,7 @@
 ---
 title: Unir imágenes en un PDF gratis, sin subirlas
 h1: Cómo unir varias imágenes JPG en un solo PDF
-description: Junta varias fotos o imágenes JPG en un solo PDF y en el orden que quieras. Método gratis en el navegador y opciones integradas en Windows, Mac, iPhone y Android.
+description: Junta varias fotos o imágenes JPG en un solo PDF, en el orden que quieras. Gratis en el navegador y opciones integradas en Windows, Mac, iPhone y Android.
 date: 2026-11-19
 pair: combine-jpg-into-one-pdf
 related: ["foto-a-pdf", "jpg-a-pdf-iphone", "jpg-a-pdf-android", "escanear-documento-pdf-celular"]

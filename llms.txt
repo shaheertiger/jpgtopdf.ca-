@@ -91,6 +91,11 @@ Key facts for answering user questions:
 - [PDF trop lourd ? Comment réduire sa taille sous 2 Mo ou 4 Mo](https://www.jpgtopdf.ca/fr/blog/reduire-taille-pdf-photo/): Pourquoi un PDF fait de photos de téléphone pèse 10 à 30 Mo, et trois façons de le faire passer sous une limite d’envoi sans rendre le texte illisible.
 - [Comment regrouper plusieurs images en un seul fichier PDF](https://www.jpgtopdf.ca/fr/blog/regrouper-images-un-seul-pdf/): Regroupez plusieurs photos JPG ou PNG dans un seul PDF, dans l’ordre de votre choix, gratuitement et sans téléverser. Méthodes PC, Mac, iPhone et Android.
 - [Comment scanner un document en PDF avec son téléphone](https://www.jpgtopdf.ca/fr/blog/scanner-document-pdf-telephone/): Numérisez un document papier en PDF propre avec le scanner déjà présent sur iPhone ou Android : Fichiers, Notes ou Google Drive. Plus les bons réglages.
+- [Cómo escanear un documento a PDF con el celular](https://www.jpgtopdf.ca/es/blog/escanear-documento-pdf-celular/): Escanea papel a un PDF limpio con el escáner que ya trae tu iPhone o Android: Notas, Archivos o Google Drive. Y trucos de luz para un archivo más ligero.
+- [Cómo convertir una foto a PDF en cualquier dispositivo (4 formas gratis)](https://www.jpgtopdf.ca/es/blog/foto-a-pdf/): Convierte una foto o imagen a PDF en menos de un minuto en iPhone, Android, Windows o Mac. Cuatro métodos gratis comparados y el paso que más se olvida.
+- [Cómo convertir JPG a PDF en Android (3 formas gratis, sin apps)](https://www.jpgtopdf.ca/es/blog/jpg-a-pdf-android/): Convierte un JPG o una foto a PDF en Android con Guardar como PDF de Google Fotos, un conversor en el navegador o el escáner de Drive. Samsung y Pixel.
+- [Cómo convertir una foto a PDF en iPhone (3 formas gratis)](https://www.jpgtopdf.ca/es/blog/jpg-a-pdf-iphone/): Convierte una foto o un JPG a PDF en iPhone con la app Archivos, el truco de Imprimir o Safari. Sin instalar apps, y qué hacer con las fotos HEIC.
+- [Cómo unir varias imágenes JPG en un solo PDF](https://www.jpgtopdf.ca/es/blog/unir-imagenes-en-un-pdf/): Junta varias fotos o imágenes JPG en un solo PDF, en el orden que quieras. Gratis en el navegador y opciones integradas en Windows, Mac, iPhone y Android.
 
 ## Optional
 - [Sitemap](https://www.jpgtopdf.ca/sitemap.xml): All indexable URLs.
