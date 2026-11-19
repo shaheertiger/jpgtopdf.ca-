@@ -178,7 +178,7 @@ for (const t of TOOLS) {
     { '@type': 'WebSite', '@id': `${SITE}/#site`, name: 'JPGtoPDF.ca', url: `${SITE}/`, inLanguage: 'en', publisher: { '@id': ORG['@id'] } },
     { '@type': 'ItemList', name: 'Free PDF and image tools', itemListElement: TOOLS.map((x, k) => ({ '@type': 'ListItem', position: k + 1, name: x.name, url: SITE + toolPath(x) })) },
   ] : [];
-  const guides = isHome ? `<section class="wrap content" id="guides"><h2>Guides: photos, scans and screenshots to PDF</h2><ul class="list home-guides">${fs.readdirSync(path.join(ROOT, 'posts/en')).filter((f) => f.endsWith('.md')).sort().map((f) => { const p = parse(read(`posts/en/${f}`), f).data; return `<li><a href="/blog/${f.replace(/\.md$/, '')}/">${esc(p.h1)}</a></li>`; }).join('')}</ul></section>` : '';
+  const guides = isHome ? `<section class="wrap content" id="guides"><h2>Guides: photos, scans and screenshots to PDF</h2><ul class="list home-guides">${fs.readdirSync(path.join(ROOT, 'posts/en')).filter((f) => f.endsWith('.md')).sort().map((f) => { const p = parse(read(`posts/en/${f}`), f).data; return `<li><a href="${p.path || `/blog/${f.replace(/\.md$/, '')}/`}">${esc(p.h1)}</a></li>`; }).join('')}</ul></section>` : '';
   const html = r.html.replace('%%TOOLS%%', '</article>' + hub() + '<article class="tool-content wrap">').replace('%%GUIDES%%', '</article>' + guides + '<article class="tool-content wrap">');
   const crumbNav = isHome ? '' : `<nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> › <a href="/#${group.id}">${esc(group.name)}</a> › <span aria-current="page">${esc(t.name)}</span></nav>`;
   const page = `<section class="hero wrap">
@@ -265,12 +265,13 @@ for (const lang of ['en', 'fr']) {
   for (const f of fs.readdirSync(path.join(ROOT, 'posts', lang)).filter((f) => f.endsWith('.md')).sort()) {
     const { data, body } = parse(read(`posts/${lang}/${f}`), f);
     const slug = f.replace(/\.md$/, '');
-    posts.push({ ...data, lang, slug, url: `${SITE}${G[lang].blog}${slug}/`, path: `${G[lang].blog}${slug}/`, ...md(body) });
+    // `path` in front matter keeps an old URL (e.g. /blog/x.html) for a page moved onto this template.
+    const p = data.path || `${G[lang].blog}${slug}/`;
+    posts.push({ ...data, lang, slug, url: SITE + p, path: p, ...md(body) });
   }
 }
 const LEGACY = [
   { path: '/blog/how-to-convert-jpg-to-pdf.html', h1: 'How to Convert JPG to PDF Online in Canada', description: 'The full step-by-step guide to turning JPG and JPEG files into one PDF, free and private.' },
-  { path: '/blog/best-free-jpg-to-pdf-converter.html', h1: 'Best Free JPG to PDF Converter Tools in Canada', description: 'The free JPG to PDF converters compared: privacy, limits, watermarks and which to pick.' },
 ];
 const postBy = (lang, slug) => posts.find((p) => p.lang === lang && p.slug === slug);
 for (const p of posts) {
@@ -294,7 +295,7 @@ for (const p of posts) {
     ORG,
   ] };
   const title = (p.title + ' | JPGtoPDF.ca').length <= 70 ? p.title + ' | JPGtoPDF.ca' : p.title;
-  write(`${p.path}index.html`, shell(p.lang, { title, description: p.description, canonical: p.url, alternates, schema, body, ogType: 'article', ads: true }));
+  write(p.path.endsWith('.html') ? p.path : `${p.path}index.html`, shell(p.lang, { title, description: p.description, canonical: p.url, alternates, schema, body, ogType: 'article', ads: true }));
   built.push({ url: p.url, lastmod: p.date, priority: '0.6', alts: pair ? [[`${p.lang}-ca`, p.url], [`${pair.lang}-ca`, pair.url]] : [] });
 }
 for (const lang of ['en', 'fr']) {

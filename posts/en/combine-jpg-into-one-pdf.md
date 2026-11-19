@@ -1,7 +1,7 @@
 ---
-title: How to Combine JPGs Into One PDF (Any Order, Free, No Upload)
+title: Combine JPGs, Photos or Images Into One PDF (Free, No Upload)
 h1: How to Combine Multiple JPGs Into One PDF
-description: Combine several JPG, JPEG or PNG images into a single PDF in the order you want. Free browser method plus built-in options on Windows, Mac, iPhone and Android.
+description: Combine multiple JPGs, photos or pictures into one PDF in the order you want. Free browser method plus built-in ways on Windows, Mac, iPhone and Android.
 date: 2026-11-11
 pair: regrouper-images-un-seul-pdf
 related: ["photo-to-pdf", "jpg-to-pdf-file-size", "jpg-to-pdf-windows", "jpg-to-pdf-mac"]

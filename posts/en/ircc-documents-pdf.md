@@ -3,6 +3,7 @@ title: IRCC Document Upload: Photos to PDF Under 4 MB (2026 Limits)
 h1: How to Prepare IRCC Documents as PDF (Under 4 MB or 5 MB)
 description: Turn phone photos and scans into IRCC-ready PDFs: the per-file limits by account (4 MB or 5 MB), the 96–150 dpi rule, and how to combine pages.
 date: 2026-11-11
+pair: documents-ircc-pdf
 related: ["jpg-to-pdf-file-size", "scan-document-to-pdf-phone", "combine-jpg-into-one-pdf", "jpg-to-pdf-without-losing-quality"]
 card: {"title": "IRCC-ready PDF", "alt": "Check your account's limit, scan or photograph each page, resize to about 1,100 to 1,600 pixels, combine into one PDF per document and check the size.", "steps": ["Check the limit shown in your account", "Scan or photograph each page flat", "Resize to ~1,100–1,600 px, combine into one PDF", "Confirm size and readability, then upload"]}
 ---

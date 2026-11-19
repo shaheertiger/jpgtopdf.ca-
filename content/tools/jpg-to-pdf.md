@@ -1,9 +1,9 @@
 ---
-title: JPG to PDF Converter Free — No Upload, No Watermark
-description: Convert JPG, PNG, WebP or HEIC images to one PDF in your browser. Reorder, rotate, pick a page size. Original quality, no upload, no sign-up.
+title: JPG to PDF Converter Free — Photos to One PDF, No Upload
+description: Free JPG to PDF converter. Turn photos and pictures (JPG, PNG, HEIC) into one PDF in your browser, in any order, at original quality. No upload, no sign-up.
 h1: JPG to PDF Converter — Free, Private, Original Quality
 lead: Drop your pictures, put them in order, download one PDF. Nothing leaves your device.
-dateModified: 2026-11-12
+dateModified: 2026-11-19
 related: ["heic-to-pdf", "scan-to-pdf", "compress-pdf", "merge-pdf"]
 features: ["JPG, JPEG, PNG, WebP, GIF, BMP and HEIC input", "Combine many images into one PDF", "Drag to reorder, rotate or remove pages", "Fit to image, A4, Letter or Legal pages", "Original quality: JPEGs embedded without recompression", "Phone (EXIF) rotation fixed without recompressing", "Balanced and Small presets for upload limits", "Runs in the browser: nothing is uploaded"]
 ---
@@ -53,7 +53,7 @@ Quality is lost only when you ask for it, with the **Balanced** or **Small** pre
 
 A 2,480-pixel long edge is still over 200 dpi on a full Letter or A4 page, so text in a photographed document stays readable on Balanced. Small is still fine on screen but can look soft when printed.
 
-## How do I combine several JPGs into one PDF?
+## How do I combine several JPGs or photos into one PDF?
 
 Select all the images at once (Ctrl or Cmd-click on a computer, or pick several in your phone's photo picker), or add them in batches: new images are added to the end of the list. Every image becomes its own page in a single PDF. The guide [combine JPGs into one PDF](/blog/combine-jpg-into-one-pdf/) covers the same job with built-in apps on each device.
 
@@ -124,9 +124,9 @@ There is no set number; your device's memory is the limit. A laptop handles doze
 
 Use Fit to image for sharing on screen, since each page matches the photo. Use A4 (most of the world) or Letter (US and Canada) when the PDF will be printed or a form asks for a standard page.
 
-### Does it work on iPhone and Android?
+### Can I turn a photo or picture on my phone into a PDF?
 
-Yes. It runs in Safari, Chrome and other current mobile browsers, and you can pick images straight from your photo library. Phone guides: [iPhone](/blog/jpg-to-pdf-iphone/) and [Android](/blog/jpg-to-pdf-android/).
+Yes. The converter runs in Safari, Chrome and other current mobile browsers: tap the box, pick the photos or pictures from your library (iPhone HEIC photos included), and download the PDF. Step by step: [photo to PDF](/blog/photo-to-pdf/), [iPhone](/blog/jpg-to-pdf-iphone/) and [Android](/blog/jpg-to-pdf-android/).
 
 ### Can I convert a PDF back to JPG?
 

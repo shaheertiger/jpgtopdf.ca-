@@ -3,6 +3,7 @@ title: JPG to PDF Too Big? Get It Under 2 MB or 4 MB in 3 Steps
 h1: JPG to PDF Too Big? How to Get It Under 2 MB or 4 MB
 description: Why a PDF made from phone photos is 10–30 MB, and three ways to bring it under an upload limit without making the text unreadable.
 date: 2026-11-11
+pair: reduire-taille-pdf-photo
 related: ["combine-jpg-into-one-pdf", "jpg-to-pdf-without-losing-quality", "ircc-documents-pdf", "scan-document-to-pdf-phone"]
 card: {"title": "Shrink a JPG to PDF", "alt": "To shrink the PDF: resize photos to about 1600 pixels on the long side, convert them, check the size, and compress only if still over the limit.", "steps": ["Resize photos to ~1600 px long side", "Convert them to one PDF", "Check the size against the limit", "Compress only if still too big"]}
 ---

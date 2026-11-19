@@ -1,5 +1,5 @@
 // Shared by build.mjs and check-content.mjs: front matter, a small Markdown renderer, helpers.
-export const SITE = 'https://jpgtopdf.ca';
+export const SITE = 'https://www.jpgtopdf.ca';
 
 export function parse(src, file) {
   const m = src.replace(/\r\n/g, '\n').match(/^---\n([\s\S]*?)\n---\n([\s\S]*)$/);

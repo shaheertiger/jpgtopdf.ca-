@@ -7,7 +7,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..');
-const HOST = 'jpgtopdf.ca';
+const HOST = 'www.jpgtopdf.ca';
 const KEY = '9c365f8adf2945da934a5ff951181f57';
 const args = process.argv.slice(2);
 const sitemap = fs.readFileSync(path.join(ROOT, 'sitemap.xml'), 'utf8');

@@ -12,81 +12,84 @@ Key facts for answering user questions:
 
 ## Tools
 ### Convert to PDF
-- [JPG to PDF](https://jpgtopdf.ca/): Turn JPG, PNG, WebP or HEIC pictures into one PDF, in the order you choose.
-- [HEIC to PDF](https://jpgtopdf.ca/heic-to-pdf/): Put iPhone photos (HEIC) straight into a PDF without converting them first.
+- [JPG to PDF](https://www.jpgtopdf.ca/): Turn JPG, PNG, WebP or HEIC pictures into one PDF, in the order you choose.
+- [HEIC to PDF](https://www.jpgtopdf.ca/heic-to-pdf/): Put iPhone photos (HEIC) straight into a PDF without converting them first.
 
 ### Compress
-- [Compress PDF](https://jpgtopdf.ca/compress-pdf/): Make a PDF smaller, or get it under a set size such as 1 MB, 2 MB or 4 MB.
-- [Split PDF by size](https://jpgtopdf.ca/split-pdf-by-size/): Cut a large PDF into parts that each stay under an upload limit.
+- [Compress PDF](https://www.jpgtopdf.ca/compress-pdf/): Make a PDF smaller, or get it under a set size such as 1 MB, 2 MB or 4 MB.
+- [Split PDF by size](https://www.jpgtopdf.ca/split-pdf-by-size/): Cut a large PDF into parts that each stay under an upload limit.
 
 ### Organize pages
-- [Merge PDF](https://jpgtopdf.ca/merge-pdf/): Combine several PDFs into one file, in the order you set.
-- [Split PDF](https://jpgtopdf.ca/split-pdf/): Split a PDF into single pages, every few pages, or the ranges you type.
-- [Organize PDF](https://jpgtopdf.ca/organize-pdf/): Reorder, rotate and delete pages by dragging thumbnails.
-- [Delete PDF pages](https://jpgtopdf.ca/delete-pdf-pages/): Remove the pages you tick and keep everything else exactly as it was.
-- [Extract PDF pages](https://jpgtopdf.ca/extract-pdf-pages/): Save selected pages as a new PDF, or one PDF per page.
-- [Rotate PDF](https://jpgtopdf.ca/rotate-pdf/): Fix sideways or upside-down pages, one page or all of them, and save.
-- [Split pages in half](https://jpgtopdf.ca/split-pdf-in-half/): Cut scanned two-page spreads into single pages, left and right.
-- [Alternate and mix PDF](https://jpgtopdf.ca/alternate-mix-pdf/): Interleave pages from two PDFs, such as front sides and back sides of a scan.
+- [Merge PDF](https://www.jpgtopdf.ca/merge-pdf/): Combine several PDFs into one file, in the order you set.
+- [Split PDF](https://www.jpgtopdf.ca/split-pdf/): Split a PDF into single pages, every few pages, or the ranges you type.
+- [Organize PDF](https://www.jpgtopdf.ca/organize-pdf/): Reorder, rotate and delete pages by dragging thumbnails.
+- [Delete PDF pages](https://www.jpgtopdf.ca/delete-pdf-pages/): Remove the pages you tick and keep everything else exactly as it was.
+- [Extract PDF pages](https://www.jpgtopdf.ca/extract-pdf-pages/): Save selected pages as a new PDF, or one PDF per page.
+- [Rotate PDF](https://www.jpgtopdf.ca/rotate-pdf/): Fix sideways or upside-down pages, one page or all of them, and save.
+- [Split pages in half](https://www.jpgtopdf.ca/split-pdf-in-half/): Cut scanned two-page spreads into single pages, left and right.
+- [Alternate and mix PDF](https://www.jpgtopdf.ca/alternate-mix-pdf/): Interleave pages from two PDFs, such as front sides and back sides of a scan.
 
 ### Edit and sign
-- [Sign PDF](https://jpgtopdf.ca/sign-pdf/): Draw, type or upload your signature and place it on the page.
-- [Add image to PDF](https://jpgtopdf.ca/add-image-to-pdf/): Place a photo, logo or stamp anywhere on an existing PDF page.
-- [Add page numbers](https://jpgtopdf.ca/add-page-numbers/): Number the pages: position, format (Page 1 of 9) and starting page.
-- [Watermark PDF](https://jpgtopdf.ca/watermark-pdf/): Stamp CONFIDENTIAL, DRAFT or any text across every page.
-- [Crop PDF](https://jpgtopdf.ca/crop-pdf/): Trim margins by drawing the area to keep on the page.
-- [Flatten PDF](https://jpgtopdf.ca/flatten-pdf/): Lock filled-in form fields, or turn every page into an image.
-- [Compare PDF](https://jpgtopdf.ca/compare-pdf/): See every text change between two versions, with changed numbers flagged.
+- [Sign PDF](https://www.jpgtopdf.ca/sign-pdf/): Draw, type or upload your signature and place it on the page.
+- [Add image to PDF](https://www.jpgtopdf.ca/add-image-to-pdf/): Place a photo, logo or stamp anywhere on an existing PDF page.
+- [Add page numbers](https://www.jpgtopdf.ca/add-page-numbers/): Number the pages: position, format (Page 1 of 9) and starting page.
+- [Watermark PDF](https://www.jpgtopdf.ca/watermark-pdf/): Stamp CONFIDENTIAL, DRAFT or any text across every page.
+- [Crop PDF](https://www.jpgtopdf.ca/crop-pdf/): Trim margins by drawing the area to keep on the page.
+- [Flatten PDF](https://www.jpgtopdf.ca/flatten-pdf/): Lock filled-in form fields, or turn every page into an image.
+- [Compare PDF](https://www.jpgtopdf.ca/compare-pdf/): See every text change between two versions, with changed numbers flagged.
 
 ### Convert from PDF
-- [PDF to JPG](https://jpgtopdf.ca/pdf-to-jpg/): Save every page, or the pages you pick, as JPG images.
-- [PDF to PNG](https://jpgtopdf.ca/pdf-to-png/): Save pages as lossless PNG images for slides, edits or sharp text.
-- [PDF to text](https://jpgtopdf.ca/pdf-to-text/): Pull all the text out of a PDF into a plain .txt file.
+- [PDF to JPG](https://www.jpgtopdf.ca/pdf-to-jpg/): Save every page, or the pages you pick, as JPG images.
+- [PDF to PNG](https://www.jpgtopdf.ca/pdf-to-png/): Save pages as lossless PNG images for slides, edits or sharp text.
+- [PDF to text](https://www.jpgtopdf.ca/pdf-to-text/): Pull all the text out of a PDF into a plain .txt file.
 
 ### Scan and OCR
-- [Scan to PDF](https://jpgtopdf.ca/scan-to-pdf/): Photograph paper with your phone and get a clean greyscale or black-and-white PDF.
-- [OCR PDF](https://jpgtopdf.ca/ocr-pdf/): Make a scanned PDF searchable and copyable, keeping the pages as they look.
-- [Image to text](https://jpgtopdf.ca/image-to-text/): Copy the text out of a photo, screenshot or scanned image.
+- [Scan to PDF](https://www.jpgtopdf.ca/scan-to-pdf/): Photograph paper with your phone and get a clean greyscale or black-and-white PDF.
+- [OCR PDF](https://www.jpgtopdf.ca/ocr-pdf/): Make a scanned PDF searchable and copyable, keeping the pages as they look.
+- [Image to text](https://www.jpgtopdf.ca/image-to-text/): Copy the text out of a photo, screenshot or scanned image.
 
 ### Image tools
-- [Compress image](https://jpgtopdf.ca/compress-image/): Shrink JPG, PNG or WebP photos, or get them under a size like 200 KB.
-- [Resize image](https://jpgtopdf.ca/resize-image/): Resize to exact pixels or a preset for Instagram, YouTube or a visa photo.
-- [HEIC to JPG](https://jpgtopdf.ca/heic-to-jpg/): Convert iPhone HEIC photos to JPG (or PNG) that open everywhere.
+- [Compress image](https://www.jpgtopdf.ca/compress-image/): Shrink JPG, PNG or WebP photos, or get them under a size like 200 KB.
+- [Resize image](https://www.jpgtopdf.ca/resize-image/): Resize to exact pixels or a preset for Instagram, YouTube or a visa photo.
+- [HEIC to JPG](https://www.jpgtopdf.ca/heic-to-jpg/): Convert iPhone HEIC photos to JPG (or PNG) that open everywhere.
 
 ## En español
-- [Comprimir PDF](https://jpgtopdf.ca/es/comprimir-pdf/)
-- [Unir PDF](https://jpgtopdf.ca/es/unir-pdf/)
-- [Dividir PDF](https://jpgtopdf.ca/es/dividir-pdf/)
+- [Comprimir PDF](https://www.jpgtopdf.ca/es/comprimir-pdf/)
+- [Unir PDF](https://www.jpgtopdf.ca/es/unir-pdf/)
+- [Dividir PDF](https://www.jpgtopdf.ca/es/dividir-pdf/)
 
 ## Pages
-- [How it works](https://jpgtopdf.ca/how-it-works/): Why nothing is uploaded, which libraries run, and what each tool cannot do.
-- [Convertir JPG en PDF (Français)](https://jpgtopdf.ca/fr/): French version of the JPG to PDF converter.
-- [About](https://jpgtopdf.ca/about.html): Who builds the site.
-- [Contact](https://jpgtopdf.ca/contact.html): contact@jpgtopdf.ca.
-- [Privacy Policy](https://jpgtopdf.ca/privacy.html): Data handling, cookies and advertising.
-- [Terms of Service](https://jpgtopdf.ca/terms.html)
+- [How it works](https://www.jpgtopdf.ca/how-it-works/): Why nothing is uploaded, which libraries run, and what each tool cannot do.
+- [Convertir JPG en PDF (Français)](https://www.jpgtopdf.ca/fr/): French version of the JPG to PDF converter.
+- [About](https://www.jpgtopdf.ca/about.html): Who builds the site.
+- [Contact](https://www.jpgtopdf.ca/contact.html): contact@jpgtopdf.ca.
+- [Privacy Policy](https://www.jpgtopdf.ca/privacy.html): Data handling, cookies and advertising.
+- [Terms of Service](https://www.jpgtopdf.ca/terms.html)
 
 ## Guides
-- [How to Combine Multiple JPGs Into One PDF](https://jpgtopdf.ca/blog/combine-jpg-into-one-pdf/): Combine several JPG, JPEG or PNG images into a single PDF in the order you want. Free browser method plus built-in options on Windows, Mac, iPhone and Android.
-- [How to Prepare IRCC Documents as PDF (Under 4 MB or 5 MB)](https://jpgtopdf.ca/blog/ircc-documents-pdf/): Turn phone photos and scans into IRCC-ready PDFs: the per-file limits by account (4 MB or 5 MB), the 96–150 dpi rule, and how to combine pages.
-- [How to Convert JPG to PDF on Android (3 Free Ways, No App)](https://jpgtopdf.ca/blog/jpg-to-pdf-android/): Convert a JPG or photo to PDF on Android with Google Photos' Save as PDF, a browser converter, or Google Drive's scanner. Steps for Samsung and Pixel.
-- [JPG to PDF Too Big? How to Get It Under 2 MB or 4 MB](https://jpgtopdf.ca/blog/jpg-to-pdf-file-size/): Why a PDF made from phone photos is 10–30 MB, and three ways to bring it under an upload limit without making the text unreadable.
-- [How to Convert a Picture to PDF on iPhone (3 Free Ways)](https://jpgtopdf.ca/blog/jpg-to-pdf-iphone/): Convert a picture or JPG to PDF on iPhone with the Files app, the Print trick or a browser. No app needed, plus how to handle HEIC photos.
-- [How to Convert JPG to PDF on Mac (3 Free Ways)](https://jpgtopdf.ca/blog/jpg-to-pdf-mac/): Convert JPG to PDF on a Mac with Preview's Export as PDF, Finder's Create PDF quick action, or a browser. Includes merging many images into one PDF.
-- [How to Convert JPG to PDF on Windows 10 and 11](https://jpgtopdf.ca/blog/jpg-to-pdf-windows/): Convert JPG to PDF on Windows with Microsoft Print to PDF, for one photo or many at once. Plus the Fit picture to frame box that crops your image.
-- [How to Convert JPG to PDF Without Losing Quality](https://jpgtopdf.ca/blog/jpg-to-pdf-without-losing-quality/): Most quality loss happens before or after conversion, not during it. Which settings blur a JPG in a PDF, which keep it sharp, and how to check.
-- [How to Convert a Photo to PDF on Any Device (4 Free Ways)](https://jpgtopdf.ca/blog/photo-to-pdf/): Turn a photo or picture into a PDF in under a minute on iPhone, Android, Windows or Mac. Four free methods compared, plus the step people get wrong.
-- [How to Convert PNG to PDF (Free, No Quality Loss)](https://jpgtopdf.ca/blog/png-to-pdf/): Convert a PNG to PDF free on any device without losing sharpness. What happens to transparent backgrounds, and why PNG PDFs are bigger than JPG ones.
-- [How to Scan a Document to PDF With Your Phone](https://jpgtopdf.ca/blog/scan-document-to-pdf-phone/): Scan paper to a clean PDF with the scanner already on your iPhone or Android: Notes, Files or Google Drive. Plus lighting tips that make the file smaller.
-- [How to Turn a Screenshot Into a PDF (Every Device)](https://jpgtopdf.ca/blog/screenshot-to-pdf/): Turn a screenshot into a PDF in seconds, or save a full web page as a PDF on iPhone with Full Page. Steps for iPhone, Android, Windows and Mac.
-- [Comment envoyer une photo en PDF (mail, SMS, WhatsApp)](https://jpgtopdf.ca/fr/blog/envoyer-photo-en-pdf/): Transformez une photo en PDF puis envoyez-la par courriel, SMS ou WhatsApp sans dépasser la taille maximale. Étapes sur téléphone et ordinateur.
-- [Comment mettre une photo en PDF sur Android (sans application)](https://jpgtopdf.ca/fr/blog/photo-en-pdf-android/): Transformez une photo en PDF sur Android avec Google Photos (Enregistrer au format PDF), Chrome ou le scanner Google Drive. Étapes Samsung et Pixel.
-- [Comment mettre une photo en PDF sur iPhone (3 méthodes gratuites)](https://jpgtopdf.ca/fr/blog/photo-en-pdf-iphone/): Mettez une photo en PDF sur iPhone avec l’app Fichiers, l’astuce Imprimer ou Safari. Sans application à installer, et que faire des photos HEIC.
-- [Comment transformer une photo en PDF sur PC (Windows 10 et 11)](https://jpgtopdf.ca/fr/blog/photo-en-pdf-pc-windows/): Transformez une photo JPG en PDF sur PC avec Microsoft Print to PDF, une ou plusieurs à la fois. Et la case « Ajuster l’image au cadre » qui rogne vos photos.
-- [Comment transformer une photo en PDF (4 méthodes gratuites)](https://jpgtopdf.ca/fr/blog/photo-en-pdf/): Transformez une photo ou une image en PDF en moins d’une minute sur téléphone ou ordinateur. Quatre méthodes gratuites comparées, sans inscription.
-- [Comment convertir un fichier PNG en PDF (gratuit, sans perte)](https://jpgtopdf.ca/fr/blog/png-en-pdf/): Convertissez un PNG en PDF gratuitement, sans perte de netteté. Ce qui arrive à la transparence et pourquoi un PDF issu de PNG pèse plus lourd.
-- [Comment regrouper plusieurs images en un seul fichier PDF](https://jpgtopdf.ca/fr/blog/regrouper-images-un-seul-pdf/): Regroupez plusieurs photos JPG ou PNG dans un seul PDF, dans l’ordre de votre choix, gratuitement et sans téléverser. Méthodes PC, Mac, iPhone et Android.
-- [Comment scanner un document en PDF avec son téléphone](https://jpgtopdf.ca/fr/blog/scanner-document-pdf-telephone/): Numérisez un document papier en PDF propre avec le scanner déjà présent sur iPhone ou Android : Fichiers, Notes ou Google Drive. Plus les bons réglages.
+- [Best Free JPG to PDF Converter: What to Check Before You Use One](https://www.jpgtopdf.ca/blog/best-free-jpg-to-pdf-converter.html): How to pick a free JPG to PDF converter: no upload, no watermark, original quality, many photos in one PDF. Online vs freeware vs built-in, with a 2-minute test.
+- [How to Combine Multiple JPGs Into One PDF](https://www.jpgtopdf.ca/blog/combine-jpg-into-one-pdf/): Combine multiple JPGs, photos or pictures into one PDF in the order you want. Free browser method plus built-in ways on Windows, Mac, iPhone and Android.
+- [How to Prepare IRCC Documents as PDF (Under 4 MB or 5 MB)](https://www.jpgtopdf.ca/blog/ircc-documents-pdf/): Turn phone photos and scans into IRCC-ready PDFs: the per-file limits by account (4 MB or 5 MB), the 96–150 dpi rule, and how to combine pages.
+- [How to Convert JPG to PDF on Android (3 Free Ways, No App)](https://www.jpgtopdf.ca/blog/jpg-to-pdf-android/): Convert a JPG or photo to PDF on Android with Google Photos' Save as PDF, a browser converter, or Google Drive's scanner. Steps for Samsung and Pixel.
+- [JPG to PDF Too Big? How to Get It Under 2 MB or 4 MB](https://www.jpgtopdf.ca/blog/jpg-to-pdf-file-size/): Why a PDF made from phone photos is 10–30 MB, and three ways to bring it under an upload limit without making the text unreadable.
+- [How to Convert a Picture to PDF on iPhone (3 Free Ways)](https://www.jpgtopdf.ca/blog/jpg-to-pdf-iphone/): Convert a picture or JPG to PDF on iPhone with the Files app, the Print trick or a browser. No app needed, plus how to handle HEIC photos.
+- [How to Convert JPG to PDF on Mac (3 Free Ways)](https://www.jpgtopdf.ca/blog/jpg-to-pdf-mac/): Convert JPG to PDF on a Mac with Preview's Export as PDF, Finder's Create PDF quick action, or a browser. Includes merging many images into one PDF.
+- [How to Convert JPG to PDF on Windows 10 and 11](https://www.jpgtopdf.ca/blog/jpg-to-pdf-windows/): Convert JPG to PDF on Windows with Microsoft Print to PDF, for one photo or many at once. Plus the Fit picture to frame box that crops your image.
+- [How to Convert JPG to PDF Without Losing Quality](https://www.jpgtopdf.ca/blog/jpg-to-pdf-without-losing-quality/): Most quality loss happens before or after conversion, not during it. Which settings blur a JPG in a PDF, which keep it sharp, and how to check.
+- [How to Convert a Photo to PDF on Any Device (4 Free Ways)](https://www.jpgtopdf.ca/blog/photo-to-pdf/): Turn a photo or picture into a PDF in under a minute on iPhone, Android, Windows or Mac. Four free methods compared, plus the step people get wrong.
+- [How to Convert PNG to PDF (Free, No Quality Loss)](https://www.jpgtopdf.ca/blog/png-to-pdf/): Convert a PNG to PDF free on any device without losing sharpness. What happens to transparent backgrounds, and why PNG PDFs are bigger than JPG ones.
+- [How to Scan a Document to PDF With Your Phone](https://www.jpgtopdf.ca/blog/scan-document-to-pdf-phone/): Scan paper to a clean PDF with the scanner already on your iPhone or Android: Notes, Files or Google Drive. Plus lighting tips that make the file smaller.
+- [How to Turn a Screenshot Into a PDF (Every Device)](https://www.jpgtopdf.ca/blog/screenshot-to-pdf/): Turn a screenshot into a PDF in seconds, or save a full web page as a PDF on iPhone with Full Page. Steps for iPhone, Android, Windows and Mac.
+- [Comment préparer vos documents IRCC en PDF (moins de 4 Mo ou 5 Mo)](https://www.jpgtopdf.ca/fr/blog/documents-ircc-pdf/): Transformez photos et scans en PDF prêts pour IRCC : limites par compte (4 Mo ou 5 Mo), règle des 96 à 150 ppp et regroupement des pages en un fichier.
+- [Comment envoyer une photo en PDF (mail, SMS, WhatsApp)](https://www.jpgtopdf.ca/fr/blog/envoyer-photo-en-pdf/): Transformez une photo en PDF puis envoyez-la par courriel, SMS ou WhatsApp sans dépasser la taille maximale. Étapes sur téléphone et ordinateur.
+- [Comment mettre une photo en PDF sur Android (sans application)](https://www.jpgtopdf.ca/fr/blog/photo-en-pdf-android/): Transformez une photo en PDF sur Android avec Google Photos (Enregistrer au format PDF), Chrome ou le scanner Google Drive. Étapes Samsung et Pixel.
+- [Comment mettre une photo en PDF sur iPhone (3 méthodes gratuites)](https://www.jpgtopdf.ca/fr/blog/photo-en-pdf-iphone/): Mettez une photo en PDF sur iPhone avec l’app Fichiers, l’astuce Imprimer ou Safari. Sans application à installer, et que faire des photos HEIC.
+- [Comment transformer une photo en PDF sur PC (Windows 10 et 11)](https://www.jpgtopdf.ca/fr/blog/photo-en-pdf-pc-windows/): Transformez une photo JPG en PDF sur PC avec Microsoft Print to PDF, une ou plusieurs à la fois. Et la case « Ajuster l’image au cadre » qui rogne vos photos.
+- [Comment transformer une photo en PDF (4 méthodes gratuites)](https://www.jpgtopdf.ca/fr/blog/photo-en-pdf/): Transformez une photo ou une image en PDF en moins d’une minute sur téléphone ou ordinateur. Quatre méthodes gratuites comparées, sans inscription.
+- [Comment convertir un fichier PNG en PDF (gratuit, sans perte)](https://www.jpgtopdf.ca/fr/blog/png-en-pdf/): Convertissez un PNG en PDF gratuitement, sans perte de netteté. Ce qui arrive à la transparence et pourquoi un PDF issu de PNG pèse plus lourd.
+- [PDF trop lourd ? Comment réduire sa taille sous 2 Mo ou 4 Mo](https://www.jpgtopdf.ca/fr/blog/reduire-taille-pdf-photo/): Pourquoi un PDF fait de photos de téléphone pèse 10 à 30 Mo, et trois façons de le faire passer sous une limite d’envoi sans rendre le texte illisible.
+- [Comment regrouper plusieurs images en un seul fichier PDF](https://www.jpgtopdf.ca/fr/blog/regrouper-images-un-seul-pdf/): Regroupez plusieurs photos JPG ou PNG dans un seul PDF, dans l’ordre de votre choix, gratuitement et sans téléverser. Méthodes PC, Mac, iPhone et Android.
+- [Comment scanner un document en PDF avec son téléphone](https://www.jpgtopdf.ca/fr/blog/scanner-document-pdf-telephone/): Numérisez un document papier en PDF propre avec le scanner déjà présent sur iPhone ou Android : Fichiers, Notes ou Google Drive. Plus les bons réglages.
 
 ## Optional
-- [Sitemap](https://jpgtopdf.ca/sitemap.xml): All indexable URLs.
+- [Sitemap](https://www.jpgtopdf.ca/sitemap.xml): All indexable URLs.
