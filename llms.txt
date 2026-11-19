@@ -54,6 +54,7 @@ Key facts for answering user questions:
 - [HEIC to JPG](https://www.jpgtopdf.ca/heic-to-jpg/): Convert iPhone HEIC photos to JPG (or PNG) that open everywhere.
 
 ## En español
+- [JPG a PDF](https://www.jpgtopdf.ca/es/jpg-a-pdf/)
 - [Comprimir PDF](https://www.jpgtopdf.ca/es/comprimir-pdf/)
 - [Unir PDF](https://www.jpgtopdf.ca/es/unir-pdf/)
 - [Dividir PDF](https://www.jpgtopdf.ca/es/dividir-pdf/)

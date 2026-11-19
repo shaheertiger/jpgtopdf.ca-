@@ -5,7 +5,17 @@ import { $, el, setupDrop, showWork, resetTool, status, progress, run, result, c
   jpegOrientation, loadImage, imageToCanvas, canvasBytes, PAGE_SIZES, MM, fmtBytes, tick } from './core.js';
 
 const FR = /^fr/i.test(document.documentElement.lang);
-const S = FR ? {
+const ES = /^es/i.test(document.documentElement.lang);
+const S = ES ? {
+  pageSize: 'Tamaño de página', fit: 'Ajustar a la imagen', orientation: 'Orientación', auto: 'Auto', portrait: 'Vertical', landscape: 'Horizontal',
+  margin: 'Margen', none: 'Ninguno', small: 'Pequeño', medium: 'Mediano', quality: 'Calidad', original: 'Original (sin recomprimir)',
+  balanced: 'Equilibrada (más ligero)', smallFile: 'Archivo pequeño (correo, portales)', convert: 'Descargar PDF', clear: 'Borrar todo',
+  add: 'Añadir imágenes', rotate: 'Girar', remove: 'Quitar', left: 'Antes', right: 'Después', page: 'Página',
+  loading: (n) => `Leyendo ${n} ${n > 1 ? 'imágenes' : 'imagen'}…`, ready: (n) => `${n} ${n > 1 ? 'imágenes listas' : 'imagen lista'}. Arrastra para cambiar el orden.`,
+  building: (i, n) => `Creando el PDF… página ${i} de ${n}`, done: (n) => `Listo: ${n} página${n > 1 ? 's' : ''}.`,
+  skipped: (n) => `${n} imagen(es) no se pudieron leer y se omitieron.`, filter: 'Filtro', color: 'Color', gray: 'Escala de grises', bw: 'Blanco y negro (documento)',
+  reject: 'Elige archivos de imagen (JPG, PNG, WebP, GIF, BMP).', name: 'imagenes',
+} : FR ? {
   pageSize: 'Format de page', fit: 'Ajusté à l’image', orientation: 'Orientation', auto: 'Auto', portrait: 'Portrait', landscape: 'Paysage',
   margin: 'Marge', none: 'Aucune', small: 'Petite', medium: 'Moyenne', quality: 'Qualité', original: 'Originale (sans recompression)',
   balanced: 'Équilibrée (plus léger)', smallFile: 'Petit fichier (courriel, portails)', convert: 'Télécharger le PDF', clear: 'Tout effacer',
@@ -199,11 +209,11 @@ export function mountImageTool(opts = {}) {
         : [0, bh, -bw, 0, x + bw, y];
       page.pushOperators(pushGraphicsState(), concatTransformationMatrix(...m), drawObject(name), popGraphicsState());
     }
-    status(FR ? 'Enregistrement…' : 'Saving…');
+    status(ES ? 'Guardando…' : FR ? 'Enregistrement…' : 'Saving…');
     progress(1);
     const bytes = await doc.save();
     progress(null);
-    const base = opts.fileName || (items.length === 1 ? items[0].file.name.replace(/\.[^.]+$/, '') : (FR ? 'images' : 'images'));
+    const base = opts.fileName || (items.length === 1 ? items[0].file.name.replace(/\.[^.]+$/, '') : S.name);
     result(bytes, base + '.pdf');
     status(S.done(items.length) + ' ' + fmtBytes(bytes.length), 'ok');
   }

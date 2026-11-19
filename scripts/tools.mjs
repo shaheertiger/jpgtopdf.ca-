@@ -60,6 +60,7 @@ export const TOOLS = [
 // Translated tool pages. The slug is in the page's language; `tool` names the English
 // registry entry whose script and file input it reuses.
 export const TRANSLATIONS = [
+  { lang: 'es', slug: 'jpg-a-pdf', tool: 'jpg-to-pdf', name: 'JPG a PDF', drop: 'Selecciona imágenes', dropSub: 'o suelta aquí archivos JPG, PNG, WebP o HEIC' },
   { lang: 'es', slug: 'comprimir-pdf', tool: 'compress-pdf', name: 'Comprimir PDF', drop: 'Selecciona un PDF', dropSub: 'o suéltalo aquí' },
   { lang: 'es', slug: 'unir-pdf', tool: 'merge-pdf', name: 'Unir PDF', drop: 'Selecciona archivos PDF', dropSub: 'o suéltalos aquí' },
   { lang: 'es', slug: 'dividir-pdf', tool: 'split-pdf', name: 'Dividir PDF', drop: 'Selecciona un PDF', dropSub: 'o suéltalo aquí' },

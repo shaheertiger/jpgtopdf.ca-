@@ -39,7 +39,7 @@ const T = {
   },
   es: {
     htmlLang: 'es', og: 'es_ES', skip: 'Ir al contenido', home: '/es/comprimir-pdf/', homeName: 'Inicio',
-    nav: [['/es/comprimir-pdf/', 'Comprimir'], ['/es/unir-pdf/', 'Unir'], ['/es/dividir-pdf/', 'Dividir'], ['/', 'English']],
+    nav: [['/es/jpg-a-pdf/', 'JPG a PDF'], ['/es/comprimir-pdf/', 'Comprimir'], ['/es/unir-pdf/', 'Unir'], ['/es/dividir-pdf/', 'Dividir'], ['/', 'English']],
     foot: 'Herramientas PDF gratuitas que funcionan en tu navegador. Tus archivos no salen de tu dispositivo.',
     footNav: [['/how-it-works/', 'Cómo funciona (EN)'], ['/about.html', 'Acerca de (EN)'], ['/privacy.html', 'Privacidad (EN)'], ['/', 'English']],
     project: 'Un proyecto de', pdfca: 'https://www.pdfcanada.ca/en', private: 'Tus archivos no salen de tu dispositivo: no se sube nada',
@@ -172,7 +172,7 @@ for (const t of TOOLS) {
   const crumbs = isHome ? [['Home', `${SITE}/`], [t.name, `${SITE}/`]] : [['Home', `${SITE}/`], [group.name, `${SITE}/#${group.id}`], [t.name, url]];
   const es = TRANSLATIONS.find((x) => x.tool === t.slug);
   const alternates = isHome
-    ? [['en', `${SITE}/`], ['fr-ca', `${SITE}/fr/`], ['x-default', `${SITE}/`]]
+    ? [['en', `${SITE}/`], ['fr-ca', `${SITE}/fr/`], ['es', `${SITE}/es/jpg-a-pdf/`], ['x-default', `${SITE}/`]]
     : es ? [['en', url], ['es', `${SITE}/es/${es.slug}/`], ['x-default', url]] : [];
   const extra = isHome ? [
     { '@type': 'WebSite', '@id': `${SITE}/#site`, name: 'JPGtoPDF.ca', url: `${SITE}/`, inLanguage: 'en', publisher: { '@id': ORG['@id'] } },
@@ -184,7 +184,7 @@ for (const t of TOOLS) {
   const page = `<section class="hero wrap">
   ${crumbNav}
   <h1>${esc(data.h1)}</h1>
-  <p class="lead">${esc(data.lead)}</p>${isHome ? '\n  <p class="lead" lang="fr"><small><a href="/fr/" hreflang="fr-ca">Convertir JPG en PDF en français →</a></small></p>' : ''}${es ? `\n  <p class="lang-switch"><a href="/es/${es.slug}/" hreflang="es" lang="es">En español</a></p>` : ''}
+  <p class="lead">${esc(data.lead)}</p>${isHome ? '\n  <p class="lead" lang="fr"><small><a href="/fr/" hreflang="fr-ca">Convertir JPG en PDF en français →</a> · <a href="/es/jpg-a-pdf/" hreflang="es" lang="es">JPG a PDF en español →</a></small></p>' : ''}${es && !isHome ? `\n  <p class="lang-switch"><a href="/es/${es.slug}/" hreflang="es" lang="es">En español</a></p>` : ''}
 </section>
 ${toolBox('en', t, { name: t.name, drop: t.drop, dropSub: t.dropSub })}
 <article class="tool-content wrap">
@@ -209,7 +209,7 @@ for (const x of TRANSLATIONS) {
   const t = bySlug[x.tool];
   const url = `${SITE}/${x.lang}/${x.slug}/`;
   const enUrl = SITE + toolPath(t);
-  const alternates = [['en', enUrl], [x.lang, url], ['x-default', enUrl]];
+  const alternates = [['en', enUrl], ...(x.tool === 'jpg-to-pdf' ? [['fr-ca', `${SITE}/fr/`]] : []), [x.lang, url], ['x-default', enUrl]];
   const crumbs = [['Inicio', `${SITE}/es/comprimir-pdf/`], [x.name, url]];
   const page = `<section class="hero wrap">
   <nav class="crumbs" aria-label="Ruta"><a href="/es/comprimir-pdf/">Herramientas PDF</a> › <span aria-current="page">${esc(x.name)}</span></nav>
@@ -315,7 +315,7 @@ const frHome = fs.statSync(path.join(ROOT, 'fr/index.html'));
 const homeEntry = built.find((b) => b.url === `${SITE}/`);
 const entries = [
   ...built,
-  { url: `${SITE}/fr/`, lastmod: homeEntry.lastmod, priority: '0.9', alts: [['en', `${SITE}/`], ['fr-ca', `${SITE}/fr/`]] },
+  { url: `${SITE}/fr/`, lastmod: homeEntry.lastmod, priority: '0.9', alts: [['en', `${SITE}/`], ['fr-ca', `${SITE}/fr/`], ['es', `${SITE}/es/jpg-a-pdf/`]] },
   ...LEGACY.map((l) => ({ url: SITE + l.path, lastmod: '2026-06-10', priority: '0.4', alts: [] })),
   ...['about', 'contact', 'privacy', 'terms'].map((n) => ({ url: `${SITE}/${n}.html`, lastmod: '2026-11-12', priority: '0.3', alts: [] })),
 ];
