@@ -17,7 +17,8 @@ function known() {
   const set = new Set(['/', '/fr/', '/blog/', '/fr/blog/', '/how-it-works/', '/about.html', '/contact.html', '/privacy.html', '/terms.html', '/blog/how-to-convert-jpg-to-pdf.html', '/blog/best-free-jpg-to-pdf-converter.html']);
   TOOLS.forEach((t) => set.add(toolPath(t)));
   TRANSLATIONS.forEach((x) => set.add(`/${x.lang}/${x.slug}/`));
-  for (const lang of ['en', 'fr']) for (const f of fs.readdirSync(path.join(ROOT, 'posts', lang))) if (f.endsWith('.md')) set.add(`${lang === 'en' ? '/blog/' : '/fr/blog/'}${f.replace(/\.md$/, '')}/`);
+  set.add('/es/blog/');
+  for (const lang of ['en', 'fr', 'es']) for (const f of fs.existsSync(path.join(ROOT, 'posts', lang)) ? fs.readdirSync(path.join(ROOT, 'posts', lang)) : []) if (f.endsWith('.md')) set.add(`${lang === 'en' ? '/blog/' : `/${lang}/blog/`}${f.replace(/\.md$/, '')}/`);
   for (const f of fs.existsSync(path.join(ROOT, 'content/pages')) ? fs.readdirSync(path.join(ROOT, 'content/pages')) : []) set.add(`/${f.replace(/\.md$/, '')}/`);
   return set;
 }

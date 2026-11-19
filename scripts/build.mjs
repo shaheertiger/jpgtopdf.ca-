@@ -39,7 +39,7 @@ const T = {
   },
   es: {
     htmlLang: 'es', og: 'es_ES', skip: 'Ir al contenido', home: '/es/comprimir-pdf/', homeName: 'Inicio',
-    nav: [['/es/jpg-a-pdf/', 'JPG a PDF'], ['/es/comprimir-pdf/', 'Comprimir'], ['/es/unir-pdf/', 'Unir'], ['/es/dividir-pdf/', 'Dividir'], ['/', 'English']],
+    nav: [['/es/jpg-a-pdf/', 'JPG a PDF'], ['/es/blog/', 'Guías'], ['/es/comprimir-pdf/', 'Comprimir'], ['/es/unir-pdf/', 'Unir'], ['/es/dividir-pdf/', 'Dividir'], ['/', 'English']],
     foot: 'Herramientas PDF gratuitas que funcionan en tu navegador. Tus archivos no salen de tu dispositivo.',
     footNav: [['/how-it-works/', 'Cómo funciona (EN)'], ['/about.html', 'Acerca de (EN)'], ['/privacy.html', 'Privacidad (EN)'], ['/', 'English']],
     project: 'Un proyecto de', pdfca: 'https://www.pdfcanada.ca/en', private: 'Tus archivos no salen de tu dispositivo: no se sube nada',
@@ -222,7 +222,7 @@ ${toolBox(x.lang, t, { name: x.name, drop: x.drop, dropSub: x.dropSub })}
 ${r.html}
 <p class="meta">${T[x.lang].updated} <time datetime="${data.dateModified}">${data.dateModified}</time></p>
 </article>
-${relatedBlock(x.lang, data.related, true)}`;
+${x.tool === 'jpg-to-pdf' && fs.existsSync(path.join(ROOT, `posts/${x.lang}`)) ? `<section class="wrap content" id="guias"><h2>Guías: fotos, escaneos e imágenes a PDF</h2><ul class="list home-guides">${fs.readdirSync(path.join(ROOT, `posts/${x.lang}`)).filter((f) => f.endsWith('.md')).sort().map((f) => `<li><a href="/${x.lang}/blog/${f.replace(/\.md$/, '')}/">${esc(parse(read(`posts/${x.lang}/${f}`), f).data.h1)}</a></li>`).join('')}</ul></section>\n` : ''}${relatedBlock(x.lang, data.related, true)}`;
   write(`${x.lang}/${x.slug}/index.html`, shell(x.lang, {
     title: data.title, description: data.description, canonical: url, alternates,
     schema: toolSchema(x.lang, { url, name: x.name, data, r, crumbs }), body: page,
@@ -247,9 +247,14 @@ for (const f of fs.readdirSync(path.join(ROOT, 'content/pages')).filter((f) => f
 // ---------- guides (posts/<lang>/*.md) ----------
 const G = {
   en: { blog: '/blog/', home: '/', homeName: 'JPG to PDF', blogName: 'Guides', blogTitle: 'JPG to PDF Guides: Photos, Scans and Screenshots to PDF | JPGtoPDF.ca', blogDesc: 'Step-by-step guides to turn photos, screenshots, scans and PNG files into PDF on iPhone, Android, Windows and Mac, plus file-size and quality fixes.', blogH1: 'JPG to PDF Guides', blogLead: 'Short, tested guides for turning pictures into PDF on every device, and fixing the file when a form rejects it.', toc: 'On this page', updated: 'Updated', by: 'By the JPGtoPDF.ca team', minutes: (n) => `${n} min read`, ctaTitle: 'Convert your images now', ctaText: 'Free, no sign-up, and nothing is uploaded: the PDF is made in your browser.', ctaBtn: 'Open the JPG to PDF converter', related: 'Related guides', other: 'Lire en français' },
+  es: { blog: '/es/blog/', home: '/es/jpg-a-pdf/', homeName: 'JPG a PDF', blogName: 'Guías', blogTitle: 'Guías JPG a PDF: fotos, escaneos y capturas a PDF | JPGtoPDF.ca', blogDesc: 'Guías paso a paso para convertir fotos, documentos escaneados e imágenes JPG en PDF en iPhone, Android y la computadora, y para juntar varias en un solo archivo.', blogH1: 'Guías JPG a PDF', blogLead: 'Guías cortas y probadas para convertir tus imágenes en PDF en cada dispositivo.', toc: 'En esta página', updated: 'Actualizado el', by: 'Por el equipo de JPGtoPDF.ca', minutes: (n) => `${n} min de lectura`, ctaTitle: 'Convierte tus imágenes ahora', ctaText: 'Gratis, sin registro y sin subir nada: el PDF se crea en tu navegador.', ctaBtn: 'Abrir el conversor JPG a PDF', related: 'Guías relacionadas' },
   fr: { blog: '/fr/blog/', home: '/fr/', homeName: 'JPG en PDF', blogName: 'Guides', blogTitle: 'Guides JPG en PDF : photos, scans et captures en PDF | JPGtoPDF.ca', blogDesc: 'Guides pas à pas pour transformer une photo, une capture d’écran, un scan ou un PNG en PDF sur iPhone, Android et PC, et pour envoyer le fichier.', blogH1: 'Guides JPG en PDF', blogLead: 'Des guides courts et testés pour transformer vos images en PDF sur chaque appareil.', toc: 'Sur cette page', updated: 'Mis à jour le', by: 'Par l’équipe JPGtoPDF.ca', minutes: (n) => `${n} min de lecture`, ctaTitle: 'Convertissez vos images maintenant', ctaText: 'Gratuit, sans compte, et rien n’est téléversé : le PDF est créé dans votre navigateur.', ctaBtn: 'Ouvrir le convertisseur JPG en PDF', related: 'Guides liés', other: 'Read in English' },
 };
-const ghtml = (lang) => (lang === 'fr' ? 'fr-CA' : 'en-CA');
+const ghtml = (lang) => ({ fr: 'fr-CA', es: 'es' })[lang] || 'en-CA';
+const HL = { en: 'en-ca', fr: 'fr-ca', es: 'es' };
+const LANG_NAME = { en: 'English', fr: 'Français', es: 'Español' };
+const BLOG_LANGS = ['en', 'fr', 'es'];
+const blogAlts = BLOG_LANGS.map((l) => [HL[l], `${SITE}${G[l].blog}`]);
 function card(c) {
   const steps = c.steps.slice(0, 4);
   const h = 130 + steps.length * 110;
@@ -261,8 +266,8 @@ function card(c) {
   return `<figure class="card"><svg viewBox="0 0 760 ${h}" role="img" aria-labelledby="card-t card-d" xmlns="http://www.w3.org/2000/svg"><title id="card-t">${esc(c.title)}</title><desc id="card-d">${esc(c.alt)}</desc><rect x="2" y="2" width="756" height="${h - 4}" rx="8" fill="none" stroke="currentColor" stroke-width="3"/><text x="32" y="72" font-size="40" font-weight="800" fill="currentColor">${esc(c.title)}</text>${rows}</svg><figcaption>${esc(c.alt)}</figcaption></figure>`;
 }
 const posts = [];
-for (const lang of ['en', 'fr']) {
-  for (const f of fs.readdirSync(path.join(ROOT, 'posts', lang)).filter((f) => f.endsWith('.md')).sort()) {
+for (const lang of BLOG_LANGS) {
+  for (const f of (fs.existsSync(path.join(ROOT, 'posts', lang)) ? fs.readdirSync(path.join(ROOT, 'posts', lang)) : []).filter((f) => f.endsWith('.md')).sort()) {
     const { data, body } = parse(read(`posts/${lang}/${f}`), f);
     const slug = f.replace(/\.md$/, '');
     // `path` in front matter keeps an old URL (e.g. /blog/x.html) for a page moved onto this template.
@@ -276,15 +281,19 @@ const LEGACY = [
 const postBy = (lang, slug) => posts.find((p) => p.lang === lang && p.slug === slug);
 for (const p of posts) {
   const L = G[p.lang];
-  const pair = p.pair ? postBy(p.lang === 'en' ? 'fr' : 'en', p.pair) : null;
-  const alternates = pair ? [[p.lang === 'en' ? 'en-ca' : 'fr-ca', p.url], [pair.lang === 'en' ? 'en-ca' : 'fr-ca', pair.url], ['x-default', p.lang === 'en' ? p.url : pair.url]] : [];
+  // Translations are grouped by the English slug: non-English posts name it in `pair`.
+  const key = p.lang === 'en' ? p.slug : p.pair;
+  const group = key ? posts.filter((q) => (q.lang === 'en' ? q.slug : q.pair) === key) : [];
+  const others = group.filter((q) => q !== p);
+  const enPost = group.find((q) => q.lang === 'en');
+  const alternates = others.length ? [...group.map((q) => [HL[q.lang], q.url]), ['x-default', (enPost || p).url]] : [];
   const related = (p.related || []).map((s) => postBy(p.lang, s)).filter(Boolean);
   const minutes = Math.max(2, Math.round(p.words / 230));
   const cta = `<aside class="cta-box"><strong>${L.ctaTitle}</strong><p>${L.ctaText}</p><a class="btn btn-primary" href="${L.home}">${L.ctaBtn}</a></aside>`;
   const body = `<article class="post wrap">
   <nav class="crumbs" aria-label="Breadcrumb"><a href="${L.home}">${L.homeName}</a> › <a href="${L.blog}">${L.blogName}</a></nav>
   <h1>${esc(p.h1)}</h1>
-  <p class="meta">${L.by} · ${L.updated} <time datetime="${p.date}">${p.date}</time> · ${L.minutes(minutes)}${pair ? ` · <a href="${pair.path}" hreflang="${pair.lang}-ca">${L.other}</a>` : ''}</p>
+  <p class="meta">${L.by} · ${L.updated} <time datetime="${p.date}">${p.date}</time> · ${L.minutes(minutes)}${others.map((q) => ` · <a href="${q.path}" hreflang="${HL[q.lang]}" lang="${q.lang}">${LANG_NAME[q.lang]}</a>`).join('')}</p>
   ${p.html.replace('%%CTA%%', cta).replace('%%CARD%%', card(p.card)).replace(/<h2 /, `<nav class="toc" aria-label="${L.toc}"><strong>${L.toc}</strong><ol>${p.heads.map(([id, t]) => `<li><a href="#${id}">${esc(t)}</a></li>`).join('')}</ol></nav>\n<h2 `)}
   ${related.length ? `<section class="related"><h2>${L.related}</h2><ul class="list">${related.map((r) => `<li><a href="${r.path}">${esc(r.h1)}</a></li>`).join('')}</ul></section>` : ''}
 </article>`;
@@ -296,18 +305,18 @@ for (const p of posts) {
   ] };
   const title = (p.title + ' | JPGtoPDF.ca').length <= 70 ? p.title + ' | JPGtoPDF.ca' : p.title;
   write(p.path.endsWith('.html') ? p.path : `${p.path}index.html`, shell(p.lang, { title, description: p.description, canonical: p.url, alternates, schema, body, ogType: 'article', ads: true }));
-  built.push({ url: p.url, lastmod: p.date, priority: '0.6', alts: pair ? [[`${p.lang}-ca`, p.url], [`${pair.lang}-ca`, pair.url]] : [] });
+  built.push({ url: p.url, lastmod: p.date, priority: '0.6', alts: alternates.filter(([h]) => h !== 'x-default') });
 }
-for (const lang of ['en', 'fr']) {
+for (const lang of BLOG_LANGS) {
   const L = G[lang];
   const list = [...posts.filter((p) => p.lang === lang), ...(lang === 'en' ? LEGACY.map((l) => ({ ...l, url: SITE + l.path })) : [])];
   const url = `${SITE}${L.blog}`;
   const body = `<section class="hero wrap"><h1>${L.blogH1}</h1><p class="lead">${L.blogLead}</p></section>
 <section class="content wrap"><ul class="post-list">${list.map((p) => `<li><a href="${p.path}"><strong>${esc(p.h1)}</strong></a><p>${esc(p.description)}</p></li>`).join('')}</ul></section>`;
   const schema = { '@context': 'https://schema.org', '@type': 'CollectionPage', name: L.blogH1, url, inLanguage: ghtml(lang), hasPart: list.map((p) => ({ '@type': 'Article', headline: p.h1, url: p.url })) };
-  write(`${L.blog}index.html`, shell(lang, { title: L.blogTitle, description: L.blogDesc, canonical: url, alternates: [['en-ca', `${SITE}/blog/`], ['fr-ca', `${SITE}/fr/blog/`], ['x-default', `${SITE}/blog/`]], schema, body, ads: true }));
+  write(`${L.blog}index.html`, shell(lang, { title: L.blogTitle, description: L.blogDesc, canonical: url, alternates: [...blogAlts, ['x-default', `${SITE}/blog/`]], schema, body, ads: true }));
   const last = posts.filter((p) => p.lang === lang).map((p) => p.date).sort().at(-1);
-  built.push({ url, lastmod: last, priority: '0.5', alts: [['en-ca', `${SITE}/blog/`], ['fr-ca', `${SITE}/fr/blog/`]] });
+  built.push({ url, lastmod: last, priority: '0.5', alts: blogAlts });
 }
 
 // ---------- sitemap ----------
