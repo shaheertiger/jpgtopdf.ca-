@@ -3,7 +3,57 @@
   "redirects": [
     { "source": "/blog/combine-multiple-jpg-into-one-pdf.html", "destination": "/blog/combine-jpg-into-one-pdf/", "permanent": true },
     { "source": "/blog/png-to-pdf-vs-jpg-to-pdf.html", "destination": "/blog/png-to-pdf/", "permanent": true },
-    { "source": "/blog/save-jpg-as-pdf-iphone-android-windows-mac.html", "destination": "/blog/photo-to-pdf/", "permanent": true }
+    { "source": "/blog/save-jpg-as-pdf-iphone-android-windows-mac.html", "destination": "/blog/photo-to-pdf/", "permanent": true },
+    { "source": "/compress-pdf", "destination": "https://pdfcompact.com/compress-pdf", "permanent": true },
+    { "source": "/compress-pdf/", "destination": "https://pdfcompact.com/compress-pdf", "permanent": true },
+    { "source": "/split-pdf-by-size", "destination": "https://pdfcompact.com/split-pdf-by-size", "permanent": true },
+    { "source": "/split-pdf-by-size/", "destination": "https://pdfcompact.com/split-pdf-by-size", "permanent": true },
+    { "source": "/merge-pdf", "destination": "https://pdfcompact.com/merge-pdf", "permanent": true },
+    { "source": "/merge-pdf/", "destination": "https://pdfcompact.com/merge-pdf", "permanent": true },
+    { "source": "/split-pdf", "destination": "https://pdfcompact.com/split-pdf", "permanent": true },
+    { "source": "/split-pdf/", "destination": "https://pdfcompact.com/split-pdf", "permanent": true },
+    { "source": "/organize-pdf", "destination": "https://pdfcompact.com/organize-pdf", "permanent": true },
+    { "source": "/organize-pdf/", "destination": "https://pdfcompact.com/organize-pdf", "permanent": true },
+    { "source": "/delete-pdf-pages", "destination": "https://pdfcompact.com/delete-pdf-pages", "permanent": true },
+    { "source": "/delete-pdf-pages/", "destination": "https://pdfcompact.com/delete-pdf-pages", "permanent": true },
+    { "source": "/extract-pdf-pages", "destination": "https://pdfcompact.com/extract-pdf-pages", "permanent": true },
+    { "source": "/extract-pdf-pages/", "destination": "https://pdfcompact.com/extract-pdf-pages", "permanent": true },
+    { "source": "/rotate-pdf", "destination": "https://pdfcompact.com/rotate-pdf", "permanent": true },
+    { "source": "/rotate-pdf/", "destination": "https://pdfcompact.com/rotate-pdf", "permanent": true },
+    { "source": "/split-pdf-in-half", "destination": "https://pdfcompact.com/split-pdf-in-half", "permanent": true },
+    { "source": "/split-pdf-in-half/", "destination": "https://pdfcompact.com/split-pdf-in-half", "permanent": true },
+    { "source": "/alternate-mix-pdf", "destination": "https://pdfcompact.com/merge-pdf", "permanent": true },
+    { "source": "/alternate-mix-pdf/", "destination": "https://pdfcompact.com/merge-pdf", "permanent": true },
+    { "source": "/sign-pdf", "destination": "https://pdfcompact.com/sign-pdf", "permanent": true },
+    { "source": "/sign-pdf/", "destination": "https://pdfcompact.com/sign-pdf", "permanent": true },
+    { "source": "/add-image-to-pdf", "destination": "https://pdfcompact.com/add-image-to-pdf", "permanent": true },
+    { "source": "/add-image-to-pdf/", "destination": "https://pdfcompact.com/add-image-to-pdf", "permanent": true },
+    { "source": "/add-page-numbers", "destination": "https://pdfcompact.com/add-page-numbers", "permanent": true },
+    { "source": "/add-page-numbers/", "destination": "https://pdfcompact.com/add-page-numbers", "permanent": true },
+    { "source": "/watermark-pdf", "destination": "https://pdfcompact.com/watermark-pdf", "permanent": true },
+    { "source": "/watermark-pdf/", "destination": "https://pdfcompact.com/watermark-pdf", "permanent": true },
+    { "source": "/crop-pdf", "destination": "https://pdfcompact.com/crop-pdf", "permanent": true },
+    { "source": "/crop-pdf/", "destination": "https://pdfcompact.com/crop-pdf", "permanent": true },
+    { "source": "/flatten-pdf", "destination": "https://pdfcompact.com/flatten-pdf", "permanent": true },
+    { "source": "/flatten-pdf/", "destination": "https://pdfcompact.com/flatten-pdf", "permanent": true },
+    { "source": "/pdf-to-jpg", "destination": "https://pdfcompact.com/pdf-to-jpg", "permanent": true },
+    { "source": "/pdf-to-jpg/", "destination": "https://pdfcompact.com/pdf-to-jpg", "permanent": true },
+    { "source": "/pdf-to-png", "destination": "https://pdfcompact.com/pdf-to-png", "permanent": true },
+    { "source": "/pdf-to-png/", "destination": "https://pdfcompact.com/pdf-to-png", "permanent": true },
+    { "source": "/pdf-to-text", "destination": "https://pdfcompact.com/pdf-to-text", "permanent": true },
+    { "source": "/pdf-to-text/", "destination": "https://pdfcompact.com/pdf-to-text", "permanent": true },
+    { "source": "/ocr-pdf", "destination": "https://pdfcompact.com/ocr-pdf", "permanent": true },
+    { "source": "/ocr-pdf/", "destination": "https://pdfcompact.com/ocr-pdf", "permanent": true },
+    { "source": "/image-to-text", "destination": "https://pdfcompact.com/ocr-pdf", "permanent": true },
+    { "source": "/image-to-text/", "destination": "https://pdfcompact.com/ocr-pdf", "permanent": true },
+    { "source": "/compare-pdf", "destination": "https://pdfcompact.com/compare-pdf", "permanent": true },
+    { "source": "/compare-pdf/", "destination": "https://pdfcompact.com/compare-pdf", "permanent": true },
+    { "source": "/es/comprimir-pdf", "destination": "https://pdfcompact.com/compress-pdf", "permanent": true },
+    { "source": "/es/comprimir-pdf/", "destination": "https://pdfcompact.com/compress-pdf", "permanent": true },
+    { "source": "/es/unir-pdf", "destination": "https://pdfcompact.com/merge-pdf", "permanent": true },
+    { "source": "/es/unir-pdf/", "destination": "https://pdfcompact.com/merge-pdf", "permanent": true },
+    { "source": "/es/dividir-pdf", "destination": "https://pdfcompact.com/split-pdf", "permanent": true },
+    { "source": "/es/dividir-pdf/", "destination": "https://pdfcompact.com/split-pdf", "permanent": true }
   ],
   "headers": [
     {
@@ -15,15 +65,21 @@
     },
     {
       "source": "/vendor/(.*)",
-      "headers": [{ "key": "Cache-Control", "value": "public, max-age=2592000, stale-while-revalidate=86400" }]
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=2592000, stale-while-revalidate=86400" }
+      ]
     },
     {
       "source": "/vendor/(.*)\\.mjs",
-      "headers": [{ "key": "Content-Type", "value": "text/javascript; charset=utf-8" }]
+      "headers": [
+        { "key": "Content-Type", "value": "text/javascript; charset=utf-8" }
+      ]
     },
     {
       "source": "/assets/(.*)",
-      "headers": [{ "key": "Cache-Control", "value": "public, max-age=3600, stale-while-revalidate=86400" }]
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=3600, stale-while-revalidate=86400" }
+      ]
     }
   ]
 }

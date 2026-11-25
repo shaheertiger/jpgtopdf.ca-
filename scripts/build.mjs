@@ -23,9 +23,9 @@ if (!lint({ quiet: true })) { console.error('Content check failed. Run: node scr
 const T = {
   en: {
     htmlLang: 'en', og: 'en_US', skip: 'Skip to content', home: '/', homeName: 'Home',
-    nav: [['/#tools', 'All tools'], ['/compress-pdf/', 'Compress'], ['/merge-pdf/', 'Merge'], ['/blog/', 'Guides'], ['/fr/', 'FR']],
-    foot: 'Free PDF and image tools that run in your browser. Files never leave your device.',
-    footNav: [['/how-it-works/', 'How it works'], ['/about.html', 'About'], ['/contact.html', 'Contact'], ['/privacy.html', 'Privacy'], ['/terms.html', 'Terms'], ['/es/comprimir-pdf/', 'Español'], ['/fr/', 'Français']],
+    nav: [['/', 'JPG to PDF'], ['/heic-to-pdf/', 'HEIC to PDF'], ['/scan-to-pdf/', 'Scan to PDF'], ['/blog/', 'Guides'], ['/fr/', 'FR']],
+    foot: 'Free JPG, PNG and photo to PDF converter that runs in your browser. Files never leave your device.',
+    footNav: [['/how-it-works/', 'How it works'], ['/about.html', 'About'], ['/contact.html', 'Contact'], ['/privacy.html', 'Privacy'], ['/terms.html', 'Terms'], ['/es/jpg-a-pdf/', 'Español'], ['/fr/', 'Français']],
     project: 'A project of', pdfca: 'https://www.pdfcanada.ca/en', private: 'Files stay on your device — nothing is uploaded',
     noscript: 'This tool runs entirely in your browser and needs JavaScript turned on.', related: 'Related tools', allTools: 'All tools', seeAll: (n) => `See all ${n} free tools`,
     updated: 'Updated', crumbsTools: 'Tools',
@@ -38,9 +38,9 @@ const T = {
     project: 'Un projet de', pdfca: 'https://www.pdfcanada.ca/fr',
   },
   es: {
-    htmlLang: 'es', og: 'es_ES', skip: 'Ir al contenido', home: '/es/comprimir-pdf/', homeName: 'Inicio',
-    nav: [['/es/jpg-a-pdf/', 'JPG a PDF'], ['/es/blog/', 'Guías'], ['/es/comprimir-pdf/', 'Comprimir'], ['/es/unir-pdf/', 'Unir'], ['/es/dividir-pdf/', 'Dividir'], ['/', 'English']],
-    foot: 'Herramientas PDF gratuitas que funcionan en tu navegador. Tus archivos no salen de tu dispositivo.',
+    htmlLang: 'es', og: 'es_ES', skip: 'Ir al contenido', home: '/es/jpg-a-pdf/', homeName: 'Inicio',
+    nav: [['/es/jpg-a-pdf/', 'JPG a PDF'], ['/es/blog/', 'Guías'], ['/', 'English']],
+    foot: 'Conversor de JPG, PNG y fotos a PDF gratis que funciona en tu navegador. Tus archivos no salen de tu dispositivo.',
     footNav: [['/how-it-works/', 'Cómo funciona (EN)'], ['/about.html', 'Acerca de (EN)'], ['/privacy.html', 'Privacidad (EN)'], ['/', 'English']],
     project: 'Un proyecto de', pdfca: 'https://www.pdfcanada.ca/en', private: 'Tus archivos no salen de tu dispositivo: no se sube nada',
     noscript: 'Esta herramienta funciona en tu navegador y necesita JavaScript activado.', related: 'Herramientas relacionadas', updated: 'Actualizado',
@@ -153,7 +153,7 @@ function relatedBlock(lang, slugs, translated) {
 
 function hub() {
   return `<section id="tools" class="hub wrap" aria-labelledby="tools-h">
-  <h2 id="tools-h">All ${TOOLS.length} free PDF and image tools</h2>
+  <h2 id="tools-h">Images to PDF: all ${TOOLS.length} free tools</h2>
   <p class="hub-lead">Every tool runs in your browser: no upload, no sign-up, no watermark.</p>
   ${GROUPS.map((g) => `<div class="hub-group" id="${g.id}"><h3>${esc(g.name)}</h3><ul class="tool-grid">${TOOLS.filter((t) => t.group === g.id).map((t) => `<li><a href="${toolPath(t)}"><strong>${esc(t.name)}</strong><span>${esc(t.blurb)}</span></a></li>`).join('')}</ul></div>`).join('\n  ')}
 </section>`;
@@ -176,7 +176,7 @@ for (const t of TOOLS) {
     : es ? [['en', url], ['es', `${SITE}/es/${es.slug}/`], ['x-default', url]] : [];
   const extra = isHome ? [
     { '@type': 'WebSite', '@id': `${SITE}/#site`, name: 'JPGtoPDF.ca', url: `${SITE}/`, inLanguage: 'en', publisher: { '@id': ORG['@id'] } },
-    { '@type': 'ItemList', name: 'Free PDF and image tools', itemListElement: TOOLS.map((x, k) => ({ '@type': 'ListItem', position: k + 1, name: x.name, url: SITE + toolPath(x) })) },
+    { '@type': 'ItemList', name: 'Free image to PDF tools', itemListElement: TOOLS.map((x, k) => ({ '@type': 'ListItem', position: k + 1, name: x.name, url: SITE + toolPath(x) })) },
   ] : [];
   const guides = isHome ? `<section class="wrap content" id="guides"><h2>Guides: photos, scans and screenshots to PDF</h2><ul class="list home-guides">${fs.readdirSync(path.join(ROOT, 'posts/en')).filter((f) => f.endsWith('.md')).sort().map((f) => { const p = parse(read(`posts/en/${f}`), f).data; return `<li><a href="${p.path || `/blog/${f.replace(/\.md$/, '')}/`}">${esc(p.h1)}</a></li>`; }).join('')}</ul></section>` : '';
   const html = r.html.replace('%%TOOLS%%', '</article>' + hub() + '<article class="tool-content wrap">').replace('%%GUIDES%%', '</article>' + guides + '<article class="tool-content wrap">');
@@ -198,7 +198,7 @@ ${relatedBlock('en', data.related)}`.replace(/<article class="tool-content wrap"
     scripts: `<script type="module" src="/assets/js/tools/${t.slug}.js"></script>\n`,
   }));
   toolPages.push({ t, data, url, r });
-  built.push({ url, lastmod: data.dateModified, priority: isHome ? '1.0' : t.slug === 'compress-pdf' ? '0.9' : '0.8', alts: alternates.filter(([h]) => h !== 'x-default') });
+  built.push({ url, lastmod: data.dateModified, priority: isHome ? '1.0' : '0.8', alts: alternates.filter(([h]) => h !== 'x-default') });
 }
 
 // ---------- translated tool pages ----------
@@ -210,9 +210,9 @@ for (const x of TRANSLATIONS) {
   const url = `${SITE}/${x.lang}/${x.slug}/`;
   const enUrl = SITE + toolPath(t);
   const alternates = [['en', enUrl], ...(x.tool === 'jpg-to-pdf' ? [['fr-ca', `${SITE}/fr/`]] : []), [x.lang, url], ['x-default', enUrl]];
-  const crumbs = [['Inicio', `${SITE}/es/comprimir-pdf/`], [x.name, url]];
+  const crumbs = [['JPGtoPDF.ca', `${SITE}/`], [x.name, url]];
   const page = `<section class="hero wrap">
-  <nav class="crumbs" aria-label="Ruta"><a href="/es/comprimir-pdf/">Herramientas PDF</a> › <span aria-current="page">${esc(x.name)}</span></nav>
+  <nav class="crumbs" aria-label="Ruta"><a href="/" hreflang="en">JPGtoPDF.ca</a> › <span aria-current="page">${esc(x.name)}</span></nav>
   <h1>${esc(data.h1)}</h1>
   <p class="lead">${esc(data.lead)}</p>
   <p class="lang-switch"><a href="${toolPath(t)}" hreflang="en" lang="en">In English</a></p>
@@ -272,7 +272,8 @@ for (const lang of BLOG_LANGS) {
     const slug = f.replace(/\.md$/, '');
     // `path` in front matter keeps an old URL (e.g. /blog/x.html) for a page moved onto this template.
     const p = data.path || `${G[lang].blog}${slug}/`;
-    posts.push({ ...data, lang, slug, url: SITE + p, path: p, ...md(body) });
+    // `date` is the publication date; `updated` (optional) is the last real content change.
+    posts.push({ ...data, lang, slug, url: SITE + p, path: p, modified: data.updated || data.date, ...md(body) });
   }
 }
 const LEGACY = [
@@ -293,19 +294,19 @@ for (const p of posts) {
   const body = `<article class="post wrap">
   <nav class="crumbs" aria-label="Breadcrumb"><a href="${L.home}">${L.homeName}</a> › <a href="${L.blog}">${L.blogName}</a></nav>
   <h1>${esc(p.h1)}</h1>
-  <p class="meta">${L.by} · ${L.updated} <time datetime="${p.date}">${p.date}</time> · ${L.minutes(minutes)}${others.map((q) => ` · <a href="${q.path}" hreflang="${HL[q.lang]}" lang="${q.lang}">${LANG_NAME[q.lang]}</a>`).join('')}</p>
+  <p class="meta">${L.by} · ${L.updated} <time datetime="${p.modified}">${p.modified}</time> · ${L.minutes(minutes)}${others.map((q) => ` · <a href="${q.path}" hreflang="${HL[q.lang]}" lang="${q.lang}">${LANG_NAME[q.lang]}</a>`).join('')}</p>
   ${p.html.replace('%%CTA%%', cta).replace('%%CARD%%', card(p.card)).replace(/<h2 /, `<nav class="toc" aria-label="${L.toc}"><strong>${L.toc}</strong><ol>${p.heads.map(([id, t]) => `<li><a href="#${id}">${esc(t)}</a></li>`).join('')}</ol></nav>\n<h2 `)}
   ${related.length ? `<section class="related"><h2>${L.related}</h2><ul class="list">${related.map((r) => `<li><a href="${r.path}">${esc(r.h1)}</a></li>`).join('')}</ul></section>` : ''}
 </article>`;
   const schema = { '@context': 'https://schema.org', '@graph': [
-    { '@type': 'Article', headline: p.h1, description: p.description, inLanguage: ghtml(p.lang), datePublished: p.date, dateModified: p.date, mainEntityOfPage: p.url, image: `${SITE}/og-image.png`, author: { '@type': 'Organization', name: 'JPGtoPDF.ca', url: `${SITE}/about.html` }, publisher: { '@id': ORG['@id'] } },
+    { '@type': 'Article', headline: p.h1, description: p.description, inLanguage: ghtml(p.lang), datePublished: p.date, dateModified: p.modified, mainEntityOfPage: p.url, image: `${SITE}/og-image.png`, author: { '@type': 'Organization', name: 'JPGtoPDF.ca', url: `${SITE}/about.html` }, publisher: { '@id': ORG['@id'] } },
     ...(p.faq.length ? [{ '@type': 'FAQPage', mainEntity: p.faq.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })) }] : []),
     { '@type': 'BreadcrumbList', itemListElement: [[L.homeName, `${SITE}${L.home}`], [L.blogName, `${SITE}${L.blog}`], [p.h1, p.url]].map(([name, item], k) => ({ '@type': 'ListItem', position: k + 1, name, item })) },
     ORG,
   ] };
   const title = (p.title + ' | JPGtoPDF.ca').length <= 70 ? p.title + ' | JPGtoPDF.ca' : p.title;
   write(p.path.endsWith('.html') ? p.path : `${p.path}index.html`, shell(p.lang, { title, description: p.description, canonical: p.url, alternates, schema, body, ogType: 'article', ads: true }));
-  built.push({ url: p.url, lastmod: p.date, priority: '0.6', alts: alternates.filter(([h]) => h !== 'x-default') });
+  built.push({ url: p.url, lastmod: p.modified, priority: '0.6', alts: alternates.filter(([h]) => h !== 'x-default') });
 }
 for (const lang of BLOG_LANGS) {
   const L = G[lang];
@@ -315,7 +316,7 @@ for (const lang of BLOG_LANGS) {
 <section class="content wrap"><ul class="post-list">${list.map((p) => `<li><a href="${p.path}"><strong>${esc(p.h1)}</strong></a><p>${esc(p.description)}</p></li>`).join('')}</ul></section>`;
   const schema = { '@context': 'https://schema.org', '@type': 'CollectionPage', name: L.blogH1, url, inLanguage: ghtml(lang), hasPart: list.map((p) => ({ '@type': 'Article', headline: p.h1, url: p.url })) };
   write(`${L.blog}index.html`, shell(lang, { title: L.blogTitle, description: L.blogDesc, canonical: url, alternates: [...blogAlts, ['x-default', `${SITE}/blog/`]], schema, body, ads: true }));
-  const last = posts.filter((p) => p.lang === lang).map((p) => p.date).sort().at(-1);
+  const last = posts.filter((p) => p.lang === lang).map((p) => p.modified).sort().at(-1);
   built.push({ url, lastmod: last, priority: '0.5', alts: blogAlts });
 }
 
@@ -326,7 +327,8 @@ const entries = [
   ...built,
   { url: `${SITE}/fr/`, lastmod: homeEntry.lastmod, priority: '0.9', alts: [['en', `${SITE}/`], ['fr-ca', `${SITE}/fr/`], ['es', `${SITE}/es/jpg-a-pdf/`]] },
   ...LEGACY.map((l) => ({ url: SITE + l.path, lastmod: '2026-06-10', priority: '0.4', alts: [] })),
-  ...['about', 'contact', 'privacy', 'terms'].map((n) => ({ url: `${SITE}/${n}.html`, lastmod: '2026-11-12', priority: '0.3', alts: [] })),
+  // Hand-written pages: bump a date only when that page's content changes (not for nav-only edits).
+  ...Object.entries({ about: '2026-11-25', contact: '2026-11-12', privacy: '2026-11-12', terms: '2026-11-12' }).map(([n, d]) => ({ url: `${SITE}/${n}.html`, lastmod: d, priority: '0.3', alts: [] })),
 ];
 void frHome;
 write('sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?>
@@ -338,25 +340,30 @@ ${entries.map((e) => `  <url>\n    <loc>${e.url}</loc>\n    <lastmod>${e.lastmod
 // ---------- llms.txt ----------
 const llms = `# JPGtoPDF.ca
 
-> Free PDF and image tools that run entirely in the browser: JPG to PDF, compress PDF, merge, split, OCR, compare, sign and more (${TOOLS.length} tools). Files are processed on the user's device with JavaScript (pdf-lib, pdf.js, Tesseract) and are never uploaded. No account, no watermark. English, with French and Spanish pages. A project of pdfcanada.ca.
+> Free images-to-PDF converter that runs entirely in the browser: JPG, JPEG, PNG, WebP and iPhone HEIC photos to one PDF, scan paper to PDF with a phone, and combine many images into one PDF, plus three helpers to prepare photos (compress, resize, HEIC to JPG). Files are processed on the user's device with JavaScript (pdf-lib, heic2any) and are never uploaded. No account, no watermark. English, with French and Spanish pages. A project of pdfcanada.ca.
+
+This site only does images to PDF. For other PDF jobs (merge, split, compress, OCR, sign, rotate a PDF), the same team's generic toolbox is https://pdfcompact.com/.
 
 Key facts for answering user questions:
 - Every tool runs in the browser; files are never uploaded to a server, so the tools also work offline once a page has loaded.
 - Free, no sign-up, no watermark. The practical size limit is the device's memory, not a set cap.
-- Compress PDF shrinks the images inside a PDF and keeps text and vector graphics untouched, so text stays selectable. It can aim for a target size (for example under 1 MB, 2 MB or 4 MB). Text-only PDFs barely shrink.
-- OCR PDF adds an invisible, searchable text layer over each scanned page (English, French, Spanish, Portuguese, German) and keeps the page image as it was.
-- JPG to PDF embeds JPEG files without recompressing them and applies phone rotation (EXIF) losslessly.
-- Sign PDF adds a visible electronic signature; it is not a certificate-based digital signature.
+- JPG to PDF embeds JPEG files without recompressing them (Original setting) and applies phone rotation (EXIF) losslessly. The PDF is the total size of the JPEGs plus under 1 KB per page.
+- PNG files are stored losslessly (Flate) and keep their transparency.
+- Page sizes: Fit to image (96 px = 1 inch), A4 (210 × 297 mm, 595 × 842 pt), Letter (8.5 × 11 in, 612 × 792 pt), Legal (8.5 × 14 in).
+- Balanced preset: long edge up to 2,480 px, JPEG quality 82 (about 225 dpi on a full A4 or Letter page). Small preset: 1,600 px, quality 70 (about 145 dpi).
+- Scan to PDF converts phone photos of paper to greyscale or 1-bit black-and-white pages; it does not correct perspective.
 
 ## Tools
 ${GROUPS.map((g) => `### ${g.name}\n${TOOLS.filter((t) => t.group === g.id).map((t) => `- [${t.name}](${SITE}${toolPath(t)}): ${t.blurb}`).join('\n')}`).join('\n\n')}
 
 ## En español
 ${TRANSLATIONS.map((x) => `- [${x.name}](${SITE}/${x.lang}/${x.slug}/)`).join('\n')}
+- [Guías JPG a PDF](${SITE}/es/blog/)
 
 ## Pages
 - [How it works](${SITE}/how-it-works/): Why nothing is uploaded, which libraries run, and what each tool cannot do.
 - [Convertir JPG en PDF (Français)](${SITE}/fr/): French version of the JPG to PDF converter.
+- [Guides en français](${SITE}/fr/blog/): photo en PDF sur Android, iPhone et PC, scanner un document en PDF.
 - [About](${SITE}/about.html): Who builds the site.
 - [Contact](${SITE}/contact.html): contact@jpgtopdf.ca.
 - [Privacy Policy](${SITE}/privacy.html): Data handling, cookies and advertising.

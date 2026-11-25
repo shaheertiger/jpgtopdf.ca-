@@ -8,13 +8,13 @@ The registry (`scripts/tools.mjs`) holds the URL, group, hub blurb and drop-zone
 
 ```
 ---
-title: Compress PDF Free — Up to 80% Smaller, No Upload        ≤ 62 chars, tool name + a measurable promise
-description: Shrink a PDF to under 1 MB in your browser. …    110–160 chars, a feature list, only what is true
-h1: Compress PDF — Reduce File Size Free                       tool + job
-lead: Drop a PDF, pick a level, download the smaller file.     one line: what to do
+title: HEIC to PDF Free — iPhone Photos to One PDF, No Upload   ≤ 62 chars, tool name + a measurable promise
+description: Put iPhone HEIC photos in one PDF in your browser. … 110–160 chars, a feature list, only what is true
+h1: HEIC to PDF — Convert iPhone Photos Free                    tool + job
+lead: Drop your photos, put them in order, download one PDF.  one line: what to do
 dateModified: 2026-11-12                                       change only when facts change
-related: ["split-pdf", "merge-pdf", "ocr-pdf"]                 3–4 true siblings (registry slugs)
-features: ["Three levels", "Target size", "Keeps text selectable"]   WebApplication featureList
+related: ["heic-to-jpg", "jpg-to-pdf", "scan-to-pdf"]          3–4 true siblings (registry slugs)
+features: ["HEIC and JPG mixed", "Original quality", "A4 or Letter"]   WebApplication featureList
 ---
 ```
 
@@ -29,11 +29,11 @@ features: ["Three levels", "Target size", "Keeps text selectable"]   WebApplicat
 7. **Troubleshooting** — a table with the columns Problem | Fix | Why.
 8. `## Frequently asked questions` — **6–8** `###` questions; answer in the first sentence.
 
-Related tools are added by the generator from `related`. Link other tools in plain text where it helps: `[split it](/split-pdf/)`.
+Related tools are added by the generator from `related`. Link other tools in plain text where it helps: `[resize them](/resize-image/)`. Generic PDF jobs link out to `https://pdfcompact.com/<slug>`.
 
 ## Length
 
-Compress PDF (flagship): 1,500–2,300 words. Main tools: 800–1,600. Small, specific tools: 500–1,500.
+Main tools: 800–1,600 words. Small, specific tools: 500–1,500.
 
 ## Writing rules
 

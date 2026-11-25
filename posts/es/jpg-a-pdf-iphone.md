@@ -3,6 +3,7 @@ title: JPG a PDF en iPhone: 3 formas gratis, sin apps (iOS 27)
 h1: Cómo convertir una foto a PDF en iPhone (3 formas gratis)
 description: Convierte una foto o un JPG a PDF en iPhone con la app Archivos, el truco de Imprimir o Safari. Sin instalar apps, y qué hacer con las fotos HEIC.
 date: 2026-11-19
+updated: 2026-11-25
 pair: jpg-to-pdf-iphone
 related: ["foto-a-pdf", "escanear-documento-pdf-celular", "unir-imagenes-en-un-pdf", "jpg-a-pdf-android"]
 card: {"title": "Foto a PDF en iPhone", "alt": "Método de la app Archivos: guardar la foto en Archivos, mantenerla presionada, elegir Crear PDF y compartir el PDF.", "steps": ["En Fotos, toca Compartir y Guardar en Archivos", "Abre la app Archivos y busca la foto", "Mantenla presionada y elige Crear PDF", "Comparte o adjunta el nuevo PDF"]}
@@ -82,7 +83,7 @@ Las fotos se convierten en tu iPhone, no se suben a ningún servidor. Es el úni
 | No aparece «Crear PDF» | Actualiza iOS o usa el truco de Imprimir | Crear PDF llegó con las Acciones rápidas de iOS 15 |
 | El PDF se guardó pero no lo encuentras | Archivos → Recientes, o Explorar → Descargas | Las descargas de Safari van a la carpeta Descargas |
 | El sitio dice que el tipo de archivo no es válido | Elige la foto con el selector de Safari o pon la cámara en Más compatible | Convierte el HEIC en JPEG |
-| El PDF pesa muchísimo | Usa el método 3 con menos fotos y la calidad «Equilibrada», o pásalo por [Comprimir PDF](/es/comprimir-pdf/) | Cada foto de iPhone pesa de 2 a 5 MB |
+| El PDF pesa muchísimo | Usa el método 3 con menos fotos y la calidad «Equilibrada», o pásalo por [Comprimir PDF](https://pdfcompact.com/compress-pdf) (pdfcompact.com, en inglés) | Cada foto de iPhone pesa de 2 a 5 MB |
 | El documento sale torcido | Usa Escanear documentos en Notas o Archivos | El escáner endereza y recorta la página |
 
 ## Si es un documento en papel, escanéalo

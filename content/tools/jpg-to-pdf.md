@@ -3,8 +3,8 @@ title: JPG to PDF Converter Free — Photos to One PDF, No Upload
 description: Free JPG to PDF converter. Turn photos and pictures (JPG, PNG, HEIC) into one PDF in your browser, in any order, at original quality. No upload, no sign-up.
 h1: JPG to PDF Converter — Free, Private, Original Quality
 lead: Drop your pictures, put them in order, download one PDF. Nothing leaves your device.
-dateModified: 2026-11-19
-related: ["heic-to-pdf", "scan-to-pdf", "compress-pdf", "merge-pdf"]
+dateModified: 2026-11-25
+related: ["heic-to-pdf", "scan-to-pdf", "compress-image"]
 features: ["JPG, JPEG, PNG, WebP, GIF, BMP and HEIC input", "Combine many images into one PDF", "Drag to reorder, rotate or remove pages", "Fit to image, A4, Letter or Legal pages", "Original quality: JPEGs embedded without recompression", "Phone (EXIF) rotation fixed without recompressing", "Balanced and Small presets for upload limits", "Runs in the browser: nothing is uploaded"]
 ---
 
@@ -57,11 +57,11 @@ A 2,480-pixel long edge is still over 200 dpi on a full Letter or A4 page, so te
 
 Select all the images at once (Ctrl or Cmd-click on a computer, or pick several in your phone's photo picker), or add them in batches: new images are added to the end of the list. Every image becomes its own page in a single PDF. The guide [combine JPGs into one PDF](/blog/combine-jpg-into-one-pdf/) covers the same job with built-in apps on each device.
 
-If you already have PDFs and want to join them, use [Merge PDF](/merge-pdf/) instead.
+If you already have PDFs and want to join them, use [Merge PDF](https://pdfcompact.com/merge-pdf) instead.
 
 ## Why is my PDF so big, and how do I make it smaller?
 
-A modern phone photo is 2–5 MB, so ten photos make a 20–50 MB PDF on the Original setting. That's the size of the pictures, not waste added by the PDF. Pick **Balanced** before you press Download and the same photos usually land at a fraction of that size. If you already made the PDF, run it through [Compress PDF](/compress-pdf/). The [JPG to PDF too big](/blog/jpg-to-pdf-file-size/) guide explains the numbers.
+A modern phone photo is 2–5 MB, so ten photos make a 20–50 MB PDF on the Original setting. That's the size of the pictures, not waste added by the PDF. Pick **Balanced** before you press Download and the same photos usually land at a fraction of that size. If you already made the PDF, run it through [Compress PDF](https://pdfcompact.com/compress-pdf). The [JPG to PDF too big](/blog/jpg-to-pdf-file-size/) guide explains the numbers.
 
 ## Use cases
 
@@ -130,4 +130,4 @@ Yes. The converter runs in Safari, Chrome and other current mobile browsers: tap
 
 ### Can I convert a PDF back to JPG?
 
-Yes, with [PDF to JPG](/pdf-to-jpg/), which saves each page as an image.
+Yes, with [PDF to JPG](https://pdfcompact.com/pdf-to-jpg), which saves each page as an image.

@@ -7,8 +7,8 @@ import { parse, md, plain, words } from './lib.mjs';
 import { TOOLS, TRANSLATIONS, toolPath } from './tools.mjs';
 
 const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..');
-const FLAGSHIP = new Set(['compress-pdf']);
-const SMALL = new Set(['split-pdf-in-half', 'alternate-mix-pdf', 'add-page-numbers', 'flatten-pdf', 'crop-pdf', 'heic-to-jpg', 'pdf-to-png', 'delete-pdf-pages', 'extract-pdf-pages', 'rotate-pdf', 'watermark-pdf', 'add-image-to-pdf', 'split-pdf-by-size', 'heic-to-pdf']);
+const FLAGSHIP = new Set();
+const SMALL = new Set(['heic-to-jpg', 'heic-to-pdf']);
 const BANNED = /no file size limit|unlimited file size|no size limit|military[- ]grade|bank[- ]level|ai[- ]powered|100\s?% accurate|#1\b|best in the world|completely secure|sin límite de tamaño/i;
 const PROMISE = /\d|free|gratis|gratuit|no upload|no sign|no watermark|sin subir|sin registro|sans/i;
 const ENGLISH_H2 = /\b(the|how|what|why|when|your|with|does|can i|is it)\b/i;
@@ -65,7 +65,7 @@ function checkPage(file, { slug, name, lang = 'en', related: relatedSet }) {
   const k = known();
   for (const [, h] of body.matchAll(/\]\((\/[^)#\s]*)/g)) if (!k.has(h)) errors.push(`broken internal link ${h}`);
   const related = data.related || [];
-  const minRel = lang === 'en' ? 3 : 2;
+  const minRel = lang === 'en' ? 3 : Math.min(2, relatedSet.size - 1);
   if (!Array.isArray(related) || related.length < minRel || related.length > 4) errors.push(`related: list ${minRel}–4 tool slugs`);
   else related.forEach((s) => { if (!relatedSet.has(s)) errors.push(`related: unknown tool "${s}"`); if (s === slug) errors.push('related: lists itself'); });
   if (lang !== 'en') r.heads.forEach(([, t]) => { if (ENGLISH_H2.test(t)) errors.push(`H2 looks English on a ${lang} page: "${t}"`); });

@@ -3,8 +3,8 @@ title: JPG a PDF gratis — convierte fotos en un PDF, sin subirlas
 description: Convierte imágenes JPG, PNG o HEIC en un solo PDF desde tu navegador, en el orden que quieras y con calidad original. Gratis, sin registro ni marca de agua.
 h1: JPG a PDF — convertir imágenes en PDF gratis
 lead: Suelta tus fotos, ordénalas y descarga un solo PDF. Nada sale de tu dispositivo.
-dateModified: 2026-11-19
-related: ["comprimir-pdf", "unir-pdf", "dividir-pdf"]
+dateModified: 2026-11-25
+related: []
 features: ["Entrada JPG, JPEG, PNG, WebP, GIF, BMP y HEIC", "Varias imágenes en un solo PDF", "Arrastra para ordenar, gira o quita páginas", "Páginas ajustadas a la imagen, A4, Carta u Oficio", "Calidad original: los JPEG se insertan sin recomprimir", "Ajustes Equilibrada y Archivo pequeño para límites de subida", "Funciona en el navegador: no se sube nada"]
 ---
 
@@ -43,7 +43,7 @@ Sí. JPG y JPEG son el mismo formato; solo cambia la extensión del archivo (.jp
 
 ## ¿Cómo junto varias imágenes en un solo PDF?
 
-Selecciona todas las imágenes a la vez (Ctrl o Cmd + clic en la computadora, selección múltiple en la galería del celular) o añádelas por partes: las nuevas se colocan al final. Cada imagen es una página del mismo PDF. Si ya tienes varios PDF y quieres juntarlos, usa [Unir PDF](/es/unir-pdf/).
+Selecciona todas las imágenes a la vez (Ctrl o Cmd + clic en la computadora, selección múltiple en la galería del celular) o añádelas por partes: las nuevas se colocan al final. Cada imagen es una página del mismo PDF. Si ya tienes varios PDF y quieres juntarlos, usa [Unir PDF](https://pdfcompact.com/merge-pdf) (pdfcompact.com, en inglés).
 
 ## ¿Qué calidad elijo?
 
@@ -53,7 +53,7 @@ Selecciona todas las imágenes a la vez (Ctrl o Cmd + clic en la computadora, se
 | Equilibrada | Correo y la mayoría de formularios | Suele ser 60–80 % más ligero |
 | Archivo pequeño | Portales que piden 1 o 2 MB | El más ligero, el texto sigue legible |
 
-Si el PDF aún pesa demasiado, quita páginas que no hagan falta o redúcelo después con [Comprimir PDF](/es/comprimir-pdf/).
+Si el PDF aún pesa demasiado, quita páginas que no hagan falta o redúcelo después con [Comprimir PDF](https://pdfcompact.com/compress-pdf) (pdfcompact.com, en inglés).
 
 ## Usos habituales
 
