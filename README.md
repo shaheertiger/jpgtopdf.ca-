@@ -1,6 +1,6 @@
 # JPGtoPDF.ca
 
-Images to PDF, nothing else: JPG, PNG, HEIC and phone photos to one PDF, scan paper to PDF, and
+Images to PDF, nothing else: JPG, PNG, HEIC and phone photos to one PDF, TIFF and SVG to PDF, scan paper to PDF, and
 three helpers that get photos ready (compress, resize, HEIC to JPG). Everything runs in the browser.
 Static site on Vercel: no server code, no build step on deploy. The generated HTML is committed.
 
@@ -19,7 +19,7 @@ that isn't part of the images-to-PDF job; send it to pdfcompact instead.
 | `posts/en`, `posts/fr`, `posts/es` | Guides. `date` = published, `updated` = last real content change (drives `dateModified` and the sitemap `lastmod`; leave it alone for template-only changes) |
 | `assets/js/core.js` | Shared browser runtime (drop zone, status, download, ZIP, page grid) |
 | `assets/js/tools/<slug>.js` | One script per tool |
-| `vendor/` | Self-hosted pdf-lib and heic2any (PDF.js and Tesseract are no longer used by any page) |
+| `vendor/` | Self-hosted pdf-lib, heic2any, UTIF.js + pako inflate (TIFF), jsPDF + svg2pdf.js (SVG). Each folder has a LICENSE.md naming the pinned version. PDF.js and Tesseract are no longer used by any page |
 | `fr/index.html` | French homepage (hand-written) |
 
 ## Commands

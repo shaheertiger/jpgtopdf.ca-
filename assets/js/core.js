@@ -42,6 +42,18 @@ export const loadPdfjs = once(async () => {
 });
 export const loadTesseract = once(async () => { if (!window.Tesseract) await script('/vendor/tesseract/tesseract.min.js'); return window.Tesseract; });
 export const loadHeic = once(async () => { if (!window.heic2any) await script('/vendor/heic2any/heic2any.min.js'); return window.heic2any; });
+// UTIF reads `self.pako` when it loads, so the inflater (Deflate TIFFs) goes first.
+export const loadUtif = once(async () => {
+  if (!window.pako) await script('/vendor/utif/pako_inflate.min.js');
+  if (!window.UTIF) await script('/vendor/utif/UTIF.js');
+  return window.UTIF;
+});
+// svg2pdf.js extends the global jsPDF, so jsPDF loads first.
+export const loadSvg2pdf = once(async () => {
+  if (!window.jspdf) await script('/vendor/jspdf/jspdf.umd.min.js');
+  if (!window.svg2pdf) await script('/vendor/svg2pdf/svg2pdf.umd.min.js');
+  return window.jspdf.jsPDF;
+});
 
 // Opens a PDF with pdf.js for rendering or text. Pass a copy of the bytes: pdf.js transfers them.
 export async function openPdfjs(bytes, password) {
@@ -114,6 +126,8 @@ export function readBytes(file) {
 }
 export const isPdf = (f) => f.type === 'application/pdf' || /\.pdf$/i.test(f.name);
 export const isImage = (f) => /^image\//.test(f.type) || /\.(jpe?g|png|webp|gif|bmp|heic|heif|avif)$/i.test(f.name);
+export const isTiff = (f) => /^image\/tiff?$/i.test(f.type) || /\.tiff?$/i.test(f.name);
+export const isSvg = (f) => /^image\/svg\+xml$/i.test(f.type) || /\.svgz?$/i.test(f.name);
 export const baseName = (name) => String(name || 'document').replace(/\.[^.]+$/, '').replace(/[\\/:*?"<>|]+/g, '_').slice(0, 80) || 'document';
 export function fmtBytes(n) {
   if (n < 1024) return n + ' B';

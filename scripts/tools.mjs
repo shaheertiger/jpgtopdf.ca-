@@ -18,6 +18,8 @@ export const TOOLS = [
   // Images to PDF
   { slug: 'jpg-to-pdf', path: '/', name: 'JPG to PDF', group: 'convert-to', blurb: 'Turn JPG, PNG, WebP or HEIC pictures into one PDF, in the order you choose.', ...IMGS },
   { slug: 'heic-to-pdf', name: 'HEIC to PDF', group: 'convert-to', blurb: 'Put iPhone photos (HEIC) straight into a PDF without converting them first.', ...IMGS, dropSub: 'or drop HEIC photos here (JPG and PNG can be mixed in)' },
+  { slug: 'tiff-to-pdf', name: 'TIFF to PDF', group: 'convert-to', blurb: 'Turn TIFF scans and faxes into a PDF, every page of a multi-page TIFF included.', ...IMGS, accept: '.tif,.tiff,image/tiff,image/*', drop: 'Select TIFF files', dropSub: 'or drop .tif or .tiff files here (multi-page is fine)' },
+  { slug: 'svg-to-pdf', name: 'SVG to PDF', group: 'convert-to', blurb: 'Convert SVG drawings, logos and charts to a vector PDF that stays sharp at any zoom.', ...IMGS, accept: '.svg,.svgz,image/svg+xml,image/*', drop: 'Select SVG files', dropSub: 'or drop .svg files here (several make one PDF)' },
   { slug: 'scan-to-pdf', name: 'Scan to PDF', group: 'convert-to', blurb: 'Photograph paper with your phone and get a clean greyscale or black-and-white PDF.', ...IMGS, drop: 'Choose photos', dropSub: 'or drop photos of the pages here' },
   // Image helpers that serve the same job: get photos ready before they go into a PDF.
   { slug: 'compress-image', name: 'Compress image', group: 'image', blurb: 'Shrink JPG, PNG or WebP photos, or get them under a size like 200 KB.', ...IMGS },

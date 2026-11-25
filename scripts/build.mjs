@@ -36,7 +36,7 @@ if (!lint({ quiet: true })) { console.error('Content check failed. Run: node scr
 const T = {
   en: {
     htmlLang: 'en', og: 'en_US', skip: 'Skip to content', home: '/', homeName: 'Home',
-    nav: [['/', 'JPG to PDF'], ['/heic-to-pdf/', 'HEIC to PDF'], ['/scan-to-pdf/', 'Scan to PDF'], ['/blog/', 'Guides'], ['/fr/', 'FR']],
+    nav: [['/', 'JPG to PDF'], ['/heic-to-pdf/', 'HEIC to PDF'], ['/tiff-to-pdf/', 'TIFF to PDF'], ['/svg-to-pdf/', 'SVG to PDF'], ['/scan-to-pdf/', 'Scan to PDF'], ['/blog/', 'Guides'], ['/fr/', 'FR']],
     foot: 'Free JPG, PNG and photo to PDF converter that runs in your browser. Files never leave your device.',
     footNav: [['/how-it-works/', 'How it works'], ['/about.html', 'About'], ['/contact.html', 'Contact'], ['/privacy.html', 'Privacy'], ['/terms.html', 'Terms'], ['/es/jpg-a-pdf/', 'Español'], ['/fr/', 'Français']],
     project: 'A project of', pdfca: 'https://www.pdfcanada.ca/en', private: 'Files stay on your device — nothing is uploaded',
@@ -74,6 +74,8 @@ const LINKS = {
     ['/blog/combine-jpg-into-one-pdf/', 'Combine images into one PDF'],
     ['/blog/photo-to-pdf/', 'Convert a photo to PDF'],
     ['/heic-to-pdf/', 'HEIC to PDF'],
+    ['/tiff-to-pdf/', 'Tagged image file format (TIFF) to PDF'],
+    ['/svg-to-pdf/', 'SVG converter to PDF'],
     ['/scan-to-pdf/', 'Scan to PDF'],
     ['/blog/scan-document-to-pdf-phone/', 'How to scan a document to PDF on your phone'],
     ['/blog/jpg-to-pdf-windows/', 'JPG to PDF on Windows 10 and 11'],
@@ -408,7 +410,7 @@ ${entries.map((e) => `  <url>\n    <loc>${e.url}</loc>\n    <lastmod>${e.lastmod
 // ---------- llms.txt ----------
 const llms = `# JPGtoPDF.ca
 
-> Free images-to-PDF converter that runs entirely in the browser: JPG, JPEG, PNG, WebP and iPhone HEIC photos to one PDF, scan paper to PDF with a phone, and combine many images into one PDF, plus three helpers to prepare photos (compress, resize, HEIC to JPG). Files are processed on the user's device with JavaScript (pdf-lib, heic2any) and are never uploaded. No account, no watermark. English, with French and Spanish pages. A project of pdfcanada.ca.
+> Free images-to-PDF converter that runs entirely in the browser: JPG, JPEG, PNG, WebP and iPhone HEIC photos to one PDF, TIFF scans and faxes (multi-page) to PDF, SVG drawings to vector PDF, scan paper to PDF with a phone, and combine many images into one PDF, plus three helpers to prepare photos (compress, resize, HEIC to JPG). Files are processed on the user's device with JavaScript (pdf-lib, heic2any, UTIF.js, jsPDF with svg2pdf.js) and are never uploaded. No account, no watermark. English, with French and Spanish pages. A project of pdfcanada.ca.
 
 This site only does images to PDF. For other PDF jobs (merge, split, compress, OCR, sign, rotate a PDF), the same team's generic toolbox is https://pdfcompact.com/.
 
@@ -420,6 +422,8 @@ Key facts for answering user questions:
 - Page sizes: Fit to image (96 px = 1 inch), A4 (210 × 297 mm, 595 × 842 pt), Letter (8.5 × 11 in, 612 × 792 pt), Legal (8.5 × 14 in).
 - Balanced preset: long edge up to 2,480 px, JPEG quality 82 (about 225 dpi on a full A4 or Letter page). Small preset: 1,600 px, quality 70 (about 145 dpi).
 - Scan to PDF converts phone photos of paper to greyscale or 1-bit black-and-white pages; it does not correct perspective.
+- TIFF to PDF: one PDF page per TIFF page; reads uncompressed, LZW, PackBits, Deflate, CCITT Group 3 and Group 4 fax and JPEG-compressed TIFFs, 1- to 16-bit, greyscale, RGB, palette and CMYK. Pages are stored losslessly (1-bit stays 1-bit, CMYK stays CMYK; 16-bit becomes 8-bit; JPEG TIFFs are re-saved at JPEG quality 92). Fit to image uses the TIFF's own x and y dpi. Planar and floating-point TIFFs are not supported.
+- SVG to PDF: vector output by default (svg2pdf.js + jsPDF): shapes stay vectors and text stays selectable, in the PDF standard fonts (Helvetica, Times, Courier). Page size comes from the SVG's width/height (any unit), else its viewBox (96 units = 1 inch). Masks, filters and see-through gradients need the Image output (300 dpi PNG); text in non-Western scripts is saved as a 300 dpi image automatically; linked pictures and web fonts not stored in the SVG are left out.
 
 ## Tools
 ${GROUPS.map((g) => `### ${g.name}\n${TOOLS.filter((t) => t.group === g.id).map((t) => `- [${t.name}](${SITE}${toolPath(t)}): ${t.blurb}`).join('\n')}`).join('\n\n')}

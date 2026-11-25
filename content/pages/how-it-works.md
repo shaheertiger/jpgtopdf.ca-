@@ -24,6 +24,8 @@ All the processing code is open source and served from our own domain, not from 
 |---|---|
 | pdf-lib | Builds the PDF: one page per image, JPEGs copied in unchanged, PNGs stored losslessly |
 | heic2any (libheif) | Decodes iPhone HEIC photos in browsers that can't open them natively |
+| UTIF.js (with pako) | Decodes TIFF files, including multi-page scans and Group 3/4 faxes, for TIFF to PDF |
+| svg2pdf.js and jsPDF | Turn SVG drawings into vector PDF pages for SVG to PDF |
 | Your browser's canvas | Resizes and re-encodes photos when you pick Balanced, Small or a scan filter |
 
 ## What we can and can't see

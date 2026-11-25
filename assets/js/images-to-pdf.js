@@ -51,6 +51,12 @@ function select(id, label, options, value) {
  * Mounts the image-to-PDF tool.
  * opts.filter(file) -> bool        which files to accept
  * opts.decode(file) -> {blob, kind} optional: convert a file to a browser-readable image (HEIC)
+ * opts.expand(file) -> [page] | null optional: a file that becomes one or more pages the browser
+ *                                   can't draw itself (TIFF, SVG). Each page: { url (thumbnail), w, h,
+ *                                   dpi?: [x, y], rot?, embed(doc) -> { ref, form?: [w, h] },
+ *                                   toCanvas() -> canvas (for Balanced/Small) }. null = a normal image.
+ * opts.quality = false              hide the quality presets (every page goes through embed)
+ * opts.controls                     extra selects: [[id, label, [[value, text]…], default]]
  * opts.scan                         show the colour / greyscale / black & white filter
  * opts.defaults                     { size, quality, filter }
  * opts.fileName                     output name
@@ -64,11 +70,18 @@ export function mountImageTool(opts = {}) {
   async function addFiles(files) {
     status(S.loading(files.length));
     if (!work) build();
-    let bad = 0;
+    let bad = 0, lastError = '';
+    const warns = [];
     for (let k = 0; k < files.length; k++) {
       const file = files[k];
       try {
         progress(k / files.length);
+        const pages = opts.expand ? await opts.expand(file) : null;
+        if (pages) {
+          for (const p of pages) { items.push({ id: nextId++, file, blob: file, kind: 'custom', orient: 1, rot: 0, ...p }); if (p.warn) warns.push(p.warn); }
+          await tick();
+          continue;
+        }
         let blob = file, kind;
         if (opts.decode) ({ blob, kind } = await opts.decode(file));
         const t = (blob.type || '').toLowerCase();
@@ -82,13 +95,17 @@ export function mountImageTool(opts = {}) {
       } catch (e) {
         console.warn(file.name, e);
         bad++;
-        if (files.length === 1) status(e.message || String(e), 'error');
+        lastError = e.message || String(e);
+        // Chrome, Edge and Firefox can't draw TIFF: point to the page that decodes it.
+        if (!opts.expand && /\.tiff?$/i.test(file.name)) lastError = ES ? `${file.name}: usa TIFF a PDF en jpgtopdf.ca/tiff-to-pdf/ (página en inglés).` : FR ? `${file.name} : utilisez TIFF to PDF sur jpgtopdf.ca/tiff-to-pdf/ (page en anglais).` : `${file.name}: this browser can't open TIFF here. Use TIFF to PDF at jpgtopdf.ca/tiff-to-pdf/.`;
       }
     }
     progress(null);
     render();
-    if (items.length) status(S.ready(items.length) + (bad ? ' ' + S.skipped(bad) : ''), bad ? 'warn' : '');
-    else if (bad && files.length > 1) status(S.skipped(bad), 'error');
+    // render() resets an empty tool, so the error is shown after it. One failure gets its own message.
+    const why = bad === 1 ? lastError : S.skipped(bad);
+    if (items.length) status([S.ready(items.length), bad ? why : '', ...warns].filter(Boolean).join(' '), bad || warns.length ? 'warn' : '');
+    else if (bad) status(why, 'error');
   }
 
   function build() {
@@ -97,7 +114,8 @@ export function mountImageTool(opts = {}) {
       select('pageSize', S.pageSize, [['fit', S.fit], ['a4', 'A4'], ['letter', 'Letter'], ['legal', 'Legal']], d.size),
       select('orientation', S.orientation, [['auto', S.auto], ['portrait', S.portrait], ['landscape', S.landscape]], 'auto'),
       select('margin', S.margin, [['0', S.none], ['10', S.small], ['20', S.medium]], d.margin),
-      select('quality', S.quality, [['original', S.original], ['balanced', S.balanced], ['small', S.smallFile]], d.quality),
+      opts.quality === false ? null : select('quality', S.quality, [['original', S.original], ['balanced', S.balanced], ['small', S.smallFile]], d.quality),
+      ...(opts.controls || []).map((c) => select(...c)),
       opts.scan ? select('filter', S.filter, [['color', S.color], ['gray', S.gray], ['bw', S.bw]], d.filter) : null,
     );
     list = el('ul', { class: 'thumbs', 'aria-label': S.name });
@@ -156,7 +174,7 @@ export function mountImageTool(opts = {}) {
     const PDFLib = await loadPdfLib();
     const { PDFDocument, pushGraphicsState, popGraphicsState, concatTransformationMatrix, drawObject } = PDFLib;
     const size = $('#pageSize').value, orientation = $('#orientation').value, margin = (+$('#margin').value || 0) * MM;
-    const quality = QUALITY[$('#quality').value] || QUALITY.original;
+    const quality = QUALITY[$('#quality')?.value] || QUALITY.original;
     const filter = opts.scan ? $('#filter').value : 'color';
     const reencode = quality.maxEdge > 0 || filter !== 'color';
     const doc = await PDFDocument.create();
@@ -168,7 +186,9 @@ export function mountImageTool(opts = {}) {
       await tick();
       let image, rot = it.rot, w = it.w, h = it.h; // w,h = upright (EXIF-applied) size
       const lossless = !reencode && (it.kind === 'png' || (it.kind === 'jpeg' && ORIENT_ROT[it.orient] != null));
-      if (lossless) {
+      if (it.embed && !reencode) {
+        image = await it.embed(doc);
+      } else if (lossless) {
         const bytes = await readBytes(it.blob);
         if (it.kind === 'png') image = await doc.embedPng(bytes);
         else {
@@ -177,8 +197,9 @@ export function mountImageTool(opts = {}) {
           if (it.orient === 6 || it.orient === 8) [w, h] = [h, w]; // stored size
         }
       } else {
-        const img = await loadImage(it.url);
+        const img = it.toCanvas ? await it.toCanvas() : await loadImage(it.url);
         const canvas = imageToCanvas(img, quality.maxEdge);
+        if (img !== canvas && img.getContext) img.width = img.height = 0;
         if (filter !== 'color') applyFilter(canvas, filter);
         w = canvas.width; h = canvas.height;
         const keepPng = !reencode && it.kind !== 'jpeg' && /gif|bmp/i.test(it.blob.type || it.file.name);
@@ -192,6 +213,8 @@ export function mountImageTool(opts = {}) {
       let pw, ph, x, y, bw, bh;
       if (size === 'fit') {
         pw = dw * 0.75; ph = dh * 0.75; // 96 px per inch
+        // TIFF scans and faxes keep their own resolution (x and y can differ: fax is 204 × 98 dpi).
+        if (it.dpi) { const [dx, dy] = turned ? [it.dpi[1], it.dpi[0]] : it.dpi; pw = (turned ? it.h : it.w) * 72 / dx; ph = (turned ? it.w : it.h) * 72 / dy; }
         x = 0; y = 0; bw = pw; bh = ph;
       } else {
         [pw, ph] = PAGE_SIZES[size];
@@ -202,12 +225,14 @@ export function mountImageTool(opts = {}) {
         bw = dw * s; bh = dh * s; x = (pw - bw) / 2; y = (ph - bh) / 2;
       }
       const page = doc.addPage([pw, ph]);
-      const name = page.node.newXObject('Image', image.ref);
+      const name = page.node.newXObject(image.form ? 'Form' : 'Image', image.ref);
       const m = rot === 0 ? [bw, 0, 0, bh, x, y]
         : rot === 90 ? [0, -bh, bw, 0, x, y + bh]
         : rot === 180 ? [-bw, 0, 0, -bh, x + bw, y + bh]
         : [0, bh, -bw, 0, x + bw, y];
-      page.pushOperators(pushGraphicsState(), concatTransformationMatrix(...m), drawObject(name), popGraphicsState());
+      // Images fill a 1 × 1 unit square; a vector page (SVG) is a form in points, so scale it down first.
+      const unit = image.form ? [concatTransformationMatrix(1 / image.form[0], 0, 0, 1 / image.form[1], 0, 0)] : [];
+      page.pushOperators(pushGraphicsState(), concatTransformationMatrix(...m), ...unit, drawObject(name), popGraphicsState());
     }
     status(ES ? 'Guardando…' : FR ? 'Enregistrement…' : 'Saving…');
     progress(1);

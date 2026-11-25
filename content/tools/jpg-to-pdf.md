@@ -114,7 +114,7 @@ HEIC files are decoded in the browser and placed in the PDF like any other image
 |---|---|---|
 | A photo is sideways in the PDF | Tap ↻ on that thumbnail before downloading | The photo has no rotation tag, so it's stored sideways |
 | The PDF is too big to upload | Choose Balanced or Small, then download again | Original keeps every pixel of each photo |
-| An image was skipped | Re-save it as JPG or PNG and add it again | The file is damaged or in a format the browser can't open |
+| An image was skipped | Re-save it as JPG or PNG; for .tif files use [TIFF to PDF](/tiff-to-pdf/) | The file is damaged or in a format the browser can't open |
 | Pages are in the wrong order | Drag the thumbnails before downloading | Files are added in the order the picker gives them |
 | Margins look uneven on Fit to image | Choose A4 or Letter with a margin | Fit to image makes each page exactly the picture's size, with no margin |
 | Nothing downloads on iPhone | Tap the **Download** button in the result box | Some browsers block the automatic download |
