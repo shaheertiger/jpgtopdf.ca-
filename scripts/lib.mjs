@@ -43,7 +43,8 @@ export function md(body, { sections = false } = {}) {
   const out = [], heads = [], faq = [], tables = [];
   let inFaq = false, h2 = null, answer = null, limits = null, howto = null, open = false;
   let i = 0;
-  const closeSection = () => { if (sections && open) { out.push('</section>'); open = false; } };
+  // Tool pages wrap every H2 in a <section>; guides wrap only the Quick answer, so it renders as a box.
+  const closeSection = () => { if (open) { out.push('</section>'); open = false; } };
   while (i < lines.length) {
     const l = lines[i];
     if (!l.trim()) { i++; continue; }
@@ -59,7 +60,7 @@ export function md(body, { sections = false } = {}) {
         h2 = text;
         inFaq = FAQ_RE.test(text);
         const cls = ANSWER_RE.test(text) ? 'answer' : LIMITS_RE.test(text) ? 'limits' : inFaq ? 'faq' : '';
-        if (sections) { out.push(`<section id="${id}"${cls ? ` class="${cls}"` : ''}>`); open = true; }
+        if (sections || cls === 'answer') { out.push(`<section id="${id}"${cls ? ` class="${cls}"` : ''}>`); open = true; }
       }
       if (level === 3 && inFaq) {
         const ans = [];

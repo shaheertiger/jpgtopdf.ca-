@@ -35,7 +35,8 @@ const T = {
     nav: [['/fr/', 'Convertisseur'], ['/fr/blog/', 'Guides'], ['/#tools', 'Outils (EN)'], ['/blog/', 'EN']],
     foot: 'Convertisseur JPG en PDF gratuit. Tout se passe dans votre navigateur.',
     footNav: [['/about.html', 'À propos'], ['/contact.html', 'Contact'], ['/privacy.html', 'Confidentialité'], ['/terms.html', 'Conditions']],
-    project: 'Un projet de', pdfca: 'https://www.pdfcanada.ca/fr',
+    project: 'Un projet de', pdfca: 'https://www.pdfcanada.ca/fr', private: 'Vos fichiers restent sur votre appareil — rien n’est téléversé',
+    noscript: 'Cet outil fonctionne dans votre navigateur et nécessite JavaScript.',
   },
   es: {
     htmlLang: 'es', og: 'es_ES', skip: 'Ir al contenido', home: '/es/jpg-a-pdf/', homeName: 'Inicio',
@@ -50,6 +51,53 @@ const T = {
 const ADSENSE = '<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2963693328827195" crossorigin="anonymous"></script>';
 const ICON = `<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='black'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='white' font-family='Arial'>PDF</text></svg>">`;
 const ORG = { '@type': 'Organization', '@id': `${SITE}/#org`, name: 'JPGtoPDF.ca', url: `${SITE}/`, logo: `${SITE}/og-image.png`, email: 'contact@jpgtopdf.ca', parentOrganization: { '@type': 'Organization', name: 'pdfcanada.ca', url: 'https://www.pdfcanada.ca/' } };
+
+// Sitewide link box: the image-to-PDF pages, each linked with the wording people search
+// (queries from Search Console, Nov 2026). One anchor per page; the current page is left out.
+const LINKS = {
+  en: { title: 'Images to PDF: more ways', links: [
+    ['/', 'JPG to PDF converter'],
+    ['/blog/png-to-pdf/', 'Convert PNG to PDF without losing quality'],
+    ['/blog/combine-jpg-into-one-pdf/', 'Combine images into one PDF'],
+    ['/blog/photo-to-pdf/', 'Convert a photo to PDF'],
+    ['/heic-to-pdf/', 'HEIC to PDF'],
+    ['/scan-to-pdf/', 'Scan to PDF'],
+    ['/blog/scan-document-to-pdf-phone/', 'How to scan a document to PDF on your phone'],
+    ['/blog/jpg-to-pdf-windows/', 'JPG to PDF on Windows 10 and 11'],
+    ['/blog/jpg-to-pdf-iphone/', 'Picture to PDF on iPhone'],
+    ['/blog/jpg-to-pdf-android/', 'JPG to PDF on Android'],
+    ['/blog/jpg-to-pdf-without-losing-quality/', 'JPG to PDF in high quality'],
+    ['/blog/jpg-to-pdf-file-size/', 'PDF from photos too big?'],
+    ['/fr/', 'JPG en PDF (français)', 'fr'],
+  ] },
+  fr: { title: 'Images en PDF : autres pages utiles', links: [
+    ['/fr/', 'Convertir JPG en PDF'],
+    ['/fr/blog/photo-en-pdf/', 'Mettre une photo en PDF'],
+    ['/fr/blog/photo-en-pdf-android/', 'Photo en PDF sur Android'],
+    ['/fr/blog/photo-en-pdf-iphone/', 'Photo en PDF sur iPhone'],
+    ['/fr/blog/photo-en-pdf-pc-windows/', 'Photo en PDF sur PC'],
+    ['/fr/blog/scanner-document-pdf-telephone/', 'Scanner un document en PDF avec son téléphone'],
+    ['/fr/blog/regrouper-images-un-seul-pdf/', 'Regrouper plusieurs images en un seul PDF'],
+    ['/fr/blog/png-en-pdf/', 'Convertir un PNG en PDF sans perte'],
+    ['/fr/blog/reduire-taille-pdf-photo/', 'Réduire la taille d’un PDF de photos'],
+    ['/fr/blog/envoyer-photo-en-pdf/', 'Envoyer une photo en PDF'],
+    ['/', 'JPG to PDF (English)', 'en'],
+  ] },
+  es: { title: 'Imágenes a PDF: más guías', links: [
+    ['/es/jpg-a-pdf/', 'Convertir JPG a PDF'],
+    ['/es/blog/foto-a-pdf/', 'Convertir una foto a PDF'],
+    ['/es/blog/unir-imagenes-en-un-pdf/', 'Unir imágenes en un PDF'],
+    ['/es/blog/escanear-documento-pdf-celular/', 'Escanear un documento a PDF con el celular'],
+    ['/es/blog/jpg-a-pdf-android/', 'JPG a PDF en Android'],
+    ['/es/blog/jpg-a-pdf-iphone/', 'Foto a PDF en iPhone'],
+    ['/', 'JPG to PDF (English)', 'en'],
+  ] },
+};
+function linkBox(lang, current) {
+  const B = LINKS[lang];
+  const here = current.replace(SITE, '');
+  return `<nav class="link-box wrap" aria-label="${esc(B.title)}"><h2>${esc(B.title)}</h2><ul>${B.links.filter(([h]) => h !== here).map(([h, t, hl]) => `<li><a href="${h}"${hl ? ` lang="${hl}" hreflang="${hl === 'fr' ? 'fr-ca' : hl}"` : ''}>${esc(t)}</a></li>`).join('')}</ul></nav>`;
+}
 
 function footerTools(lang) {
   if (lang !== 'en') return '';
@@ -96,6 +144,7 @@ ${extraHead}<script defer src="https://cdn.vercel-insights.com/v1/script.js"></s
 </header>
 <main id="main">
 ${body}
+${linkBox(lang, canonical)}
 </main>
 <footer class="site-footer">
   <div class="wrap">
@@ -290,12 +339,16 @@ for (const p of posts) {
   const alternates = others.length ? [...group.map((q) => [HL[q.lang], q.url]), ['x-default', (enPost || p).url]] : [];
   const related = (p.related || []).map((s) => postBy(p.lang, s)).filter(Boolean);
   const minutes = Math.max(2, Math.round(p.words / 230));
+  // `tool: <registry slug>` in front matter puts that working converter right under the quick answer.
+  const tool = p.tool && bySlug[p.tool];
+  const toolUi = tool && (p.lang === 'en' ? { name: tool.name, drop: tool.drop, dropSub: tool.dropSub } : p.lang === 'fr' ? { name: 'Convertir des images en PDF', drop: 'Choisir des images', dropSub: 'ou déposez des fichiers JPG, PNG, WebP ou HEIC ici' } : TRANSLATIONS.find((x) => x.lang === p.lang && x.tool === p.tool));
+  const embed = tool ? `</article>\n${toolBox(p.lang, tool, toolUi)}\n<article class="post wrap post-cont">` : '';
   const cta = `<aside class="cta-box"><strong>${L.ctaTitle}</strong><p>${L.ctaText}</p><a class="btn btn-primary" href="${L.home}">${L.ctaBtn}</a></aside>`;
   const body = `<article class="post wrap">
   <nav class="crumbs" aria-label="Breadcrumb"><a href="${L.home}">${L.homeName}</a> › <a href="${L.blog}">${L.blogName}</a></nav>
   <h1>${esc(p.h1)}</h1>
   <p class="meta">${L.by} · ${L.updated} <time datetime="${p.modified}">${p.modified}</time> · ${L.minutes(minutes)}${others.map((q) => ` · <a href="${q.path}" hreflang="${HL[q.lang]}" lang="${q.lang}">${LANG_NAME[q.lang]}</a>`).join('')}</p>
-  ${p.html.replace('%%CTA%%', cta).replace('%%CARD%%', card(p.card)).replace(/<h2 /, `<nav class="toc" aria-label="${L.toc}"><strong>${L.toc}</strong><ol>${p.heads.map(([id, t]) => `<li><a href="#${id}">${esc(t)}</a></li>`).join('')}</ol></nav>\n<h2 `)}
+  ${p.html.replace('%%CTA%%', cta).replace('%%CARD%%', card(p.card)).replace('%%TOOL%%', embed).replace(/<h2 (?!id="(quick-answer|reponse-rapide|respuesta-rapida)")/, `<nav class="toc" aria-label="${L.toc}"><strong>${L.toc}</strong><ol>${p.heads.map(([id, t]) => `<li><a href="#${id}">${esc(t)}</a></li>`).join('')}</ol></nav>\n<h2 `)}
   ${related.length ? `<section class="related"><h2>${L.related}</h2><ul class="list">${related.map((r) => `<li><a href="${r.path}">${esc(r.h1)}</a></li>`).join('')}</ul></section>` : ''}
 </article>`;
   const schema = { '@context': 'https://schema.org', '@graph': [
@@ -305,7 +358,7 @@ for (const p of posts) {
     ORG,
   ] };
   const title = (p.title + ' | JPGtoPDF.ca').length <= 70 ? p.title + ' | JPGtoPDF.ca' : p.title;
-  write(p.path.endsWith('.html') ? p.path : `${p.path}index.html`, shell(p.lang, { title, description: p.description, canonical: p.url, alternates, schema, body, ogType: 'article', ads: true }));
+  write(p.path.endsWith('.html') ? p.path : `${p.path}index.html`, shell(p.lang, { title, description: p.description, canonical: p.url, alternates, schema, body, ogType: 'article', ads: true, scripts: tool ? `<script type="module" src="/assets/js/tools/${tool.slug}.js"></script>\n` : '' }));
   built.push({ url: p.url, lastmod: p.modified, priority: '0.6', alts: alternates.filter(([h]) => h !== 'x-default') });
 }
 for (const lang of BLOG_LANGS) {
@@ -321,16 +374,18 @@ for (const lang of BLOG_LANGS) {
 }
 
 // ---------- sitemap ----------
-const frHome = fs.statSync(path.join(ROOT, 'fr/index.html'));
-const homeEntry = built.find((b) => b.url === `${SITE}/`);
+// fr/index.html is hand-written: its lastmod is its own schema dateModified, and the build fills its link box.
+let frHtml = read('fr/index.html');
+const frModified = frHtml.match(/"dateModified": "(\d{4}-\d{2}-\d{2})"/)[1];
+frHtml = frHtml.replace(/<!-- linkbox -->[\s\S]*?<!-- \/linkbox -->/, `<!-- linkbox -->${linkBox('fr', `${SITE}/fr/`)}<!-- /linkbox -->`);
+write('fr/index.html', frHtml);
 const entries = [
   ...built,
-  { url: `${SITE}/fr/`, lastmod: homeEntry.lastmod, priority: '0.9', alts: [['en', `${SITE}/`], ['fr-ca', `${SITE}/fr/`], ['es', `${SITE}/es/jpg-a-pdf/`]] },
+  { url: `${SITE}/fr/`, lastmod: frModified, priority: '0.9', alts: [['en', `${SITE}/`], ['fr-ca', `${SITE}/fr/`], ['es', `${SITE}/es/jpg-a-pdf/`]] },
   ...LEGACY.map((l) => ({ url: SITE + l.path, lastmod: '2026-06-10', priority: '0.4', alts: [] })),
   // Hand-written pages: bump a date only when that page's content changes (not for nav-only edits).
   ...Object.entries({ about: '2026-11-25', contact: '2026-11-12', privacy: '2026-11-12', terms: '2026-11-12' }).map(([n, d]) => ({ url: `${SITE}/${n}.html`, lastmod: d, priority: '0.3', alts: [] })),
 ];
-void frHome;
 write('sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
 ${entries.map((e) => `  <url>\n    <loc>${e.url}</loc>\n    <lastmod>${e.lastmod}</lastmod>\n    <priority>${e.priority}</priority>\n${e.alts.map(([hl, h]) => `    <xhtml:link rel="alternate" hreflang="${hl}" href="${h}"/>\n`).join('')}  </url>`).join('\n')}
