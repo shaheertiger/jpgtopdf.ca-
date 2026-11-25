@@ -3,6 +3,7 @@ title: Unir imágenes en un PDF gratis, sin subirlas
 h1: Cómo unir varias imágenes JPG en un solo PDF
 description: Junta varias fotos o imágenes JPG en un solo PDF, en el orden que quieras. Gratis en el navegador y opciones integradas en Windows, Mac, iPhone y Android.
 date: 2026-11-19
+updated: 2026-11-25
 pair: combine-jpg-into-one-pdf
 related: ["foto-a-pdf", "jpg-a-pdf-iphone", "jpg-a-pdf-android", "escanear-documento-pdf-celular"]
 card: {"title": "Muchos JPG, un solo PDF", "alt": "Elegir todas las imágenes, arrastrarlas en orden, escoger un tamaño de página y descargar un solo PDF con una imagen por página.", "steps": ["Elige todas las imágenes de una vez", "Arrastra las miniaturas en el orden de las páginas", "Escoge Carta, A4 o Ajustar a la imagen", "Descarga un PDF, una imagen por página"]}
@@ -68,7 +69,7 @@ Guías por dispositivo: [iPhone](/es/blog/jpg-a-pdf-iphone/) y [Android](/es/blo
 | 5 escaneos a 150 ppp | ~400 KB cada uno | ~2 MB |
 | 10 capturas de pantalla | PNG, ~1 MB cada una | ~10 MB |
 
-Son cifras aproximadas: el tamaño real depende del detalle y la luz. Estas cifras corresponden a la calidad «Original»; si te pasas del límite, elige «Equilibrada» o «Archivo pequeño» en el conversor, o reduce el PDF después con [Comprimir PDF](/es/comprimir-pdf/).
+Son cifras aproximadas: el tamaño real depende del detalle y la luz. Estas cifras corresponden a la calidad «Original»; si te pasas del límite, elige «Equilibrada» o «Archivo pequeño» en el conversor, o reduce el PDF después con [Comprimir PDF](https://pdfcompact.com/compress-pdf) (pdfcompact.com, en inglés).
 
 ## Problemas al unir imágenes y cómo resolverlos
 
@@ -82,7 +83,7 @@ Son cifras aproximadas: el tamaño real depende del detalle y la luz. Estas cifr
 
 ## Unir PDF o unir imágenes
 
-Si algunas páginas ya son PDF (un estado de cuenta, un formulario firmado), primero junta tus imágenes en un PDF y después une los PDF con [Unir PDF](/es/unir-pdf/). Nuestro conversor de JPG a PDF solo acepta imágenes.
+Si algunas páginas ya son PDF (un estado de cuenta, un formulario firmado), primero junta tus imágenes en un PDF y después une los PDF con [Unir PDF](https://pdfcompact.com/merge-pdf) (pdfcompact.com, en inglés). Nuestro conversor de JPG a PDF solo acepta imágenes.
 
 ## Sitios que suben tus archivos para unirlos (con precaución)
 
@@ -129,7 +130,7 @@ Su tamaño es más o menos la suma de todas las imágenes. Elige «Equilibrada»
 
 ### ¿Puedo añadir una imagen a un PDF que ya tengo?
 
-Convierte la imagen a PDF y después une los dos PDF con [Unir PDF](/es/unir-pdf/), o vuelve a crear el PDF con todas las imágenes.
+Convierte la imagen a PDF y después une los dos PDF con [Unir PDF](https://pdfcompact.com/merge-pdf) (pdfcompact.com, en inglés), o vuelve a crear el PDF con todas las imágenes.
 
 ## En resumen
 

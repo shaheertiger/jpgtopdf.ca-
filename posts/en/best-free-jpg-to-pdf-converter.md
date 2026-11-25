@@ -3,6 +3,7 @@ title: Best Free JPG to PDF Converter (2026): How to Pick One
 h1: Best Free JPG to PDF Converter: What to Check Before You Use One
 description: How to pick a free JPG to PDF converter: no upload, no watermark, original quality, many photos in one PDF. Online vs freeware vs built-in, with a 2-minute test.
 date: 2026-11-19
+updated: 2026-11-25
 path: /blog/best-free-jpg-to-pdf-converter.html
 related: ["combine-jpg-into-one-pdf", "jpg-to-pdf-without-losing-quality", "jpg-to-pdf-file-size", "photo-to-pdf"]
 card: {"title": "Pick a free converter", "alt": "Check that files stay on your device, that the PDF has no watermark, that several photos combine in your order, and that quality is kept.", "steps": ["Files stay on your device (no upload)", "No watermark, no sign-up", "Many photos, one PDF, your order", "Original quality, size presets"]}
@@ -83,7 +84,7 @@ Our [JPG to PDF converter](/) passes all five: it works offline once loaded, com
 Be wary of any tool that promises these, free or paid:
 
 - **Make a blurry photo sharp.** The PDF can only hold the detail the photo has.
-- **Turn a photo into editable text.** A converted JPG is a picture of text. For searchable text you need OCR, such as our [OCR PDF](/ocr-pdf/) tool.
+- **Turn a photo into editable text.** A converted JPG is a picture of text. For searchable text you need OCR, such as [OCR PDF on pdfcompact.com](https://pdfcompact.com/ocr-pdf).
 - **Shrink a file to any size without loss.** Smaller files mean fewer pixels or more compression. See [why a JPG to PDF is too big](/blog/jpg-to-pdf-file-size/).
 
 ## Common Problems and Fixes

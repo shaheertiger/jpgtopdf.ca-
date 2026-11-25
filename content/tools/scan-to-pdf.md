@@ -3,8 +3,8 @@ title: Scan to PDF Free — Phone Camera Scanner, No App, No Upload
 description: Photograph paper with your phone and get a clean PDF: greyscale or black and white, Letter or A4 pages. No app, no sign-up, nothing uploaded.
 h1: Scan to PDF — Turn Phone Photos of Paper Into a Clean PDF
 lead: Take a photo of each page, pick a filter, download one PDF.
-dateModified: 2026-11-12
-related: ["ocr-pdf", "jpg-to-pdf", "compress-pdf", "heic-to-pdf"]
+dateModified: 2026-11-25
+related: ["jpg-to-pdf", "heic-to-pdf", "compress-image"]
 features: ["Opens the phone's rear camera", "Use photos you already took", "Greyscale with automatic contrast", "Black and white that removes shadows", "Letter, A4 or Legal pages", "Balanced and Small presets for uploads", "Runs in the browser: nothing is uploaded"]
 ---
 
@@ -51,13 +51,13 @@ What this tool adds: it works in any browser without installing anything, it han
 
 ## How do I make a scanned PDF searchable?
 
-A scan is a picture of text, so you can't search or copy it yet. Run the PDF through [OCR PDF](/ocr-pdf/), which adds an invisible text layer over each page.
+A scan is a picture of text, so you can't search or copy it yet. Run the PDF through [OCR PDF](https://pdfcompact.com/ocr-pdf), which adds an invisible text layer over each page.
 
 ## Use cases
 
 ### IRCC and visa uploads (about 4 MB)
 
-The default **Balanced** quality keeps pages readable while keeping the file small. If a multi-page scan is still over the limit, switch to Small or use [Compress PDF](/compress-pdf/).
+The default **Balanced** quality keeps pages readable while keeping the file small. If a multi-page scan is still over the limit, switch to Small or use [Compress PDF](https://pdfcompact.com/compress-pdf).
 
 ### Signed forms sent back by email
 

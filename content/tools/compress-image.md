@@ -3,8 +3,8 @@ title: Compress Image Free — Under 200 KB or Any Size, No Upload
 description: Shrink JPG, PNG, WebP or HEIC photos in your browser, or hit a target like 200 KB. Batch, resize, strip GPS data. Free, no sign-up, nothing uploaded.
 h1: Compress Image — Reduce JPG, PNG and WebP File Size Free
 lead: Drop your images, pick a quality or a target size, download smaller files.
-dateModified: 2026-11-12
-related: ["resize-image", "compress-pdf", "heic-to-jpg", "jpg-to-pdf"]
+dateModified: 2026-11-25
+related: ["resize-image", "heic-to-jpg", "jpg-to-pdf"]
 features: ["JPG, PNG, WebP and HEIC input", "Three quality levels or a target size in KB", "Optional maximum width (4K down to 800 px)", "Auto format: JPG, or WebP for transparent images", "Removes EXIF data such as GPS location", "Batch with ZIP download", "Runs in the browser: nothing is uploaded"]
 ---
 
@@ -107,4 +107,4 @@ Yes. All the files use the same settings and download together as a ZIP.
 
 ### Can I compress a PDF the same way?
 
-Use [Compress PDF](/compress-pdf/), which shrinks the images inside a PDF and keeps its text.
+Use [Compress PDF on pdfcompact.com](https://pdfcompact.com/compress-pdf), our sister site, which shrinks the images inside a PDF and keeps its text.

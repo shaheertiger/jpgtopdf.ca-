@@ -3,6 +3,7 @@ title: Cómo escanear un documento a PDF con el celular
 h1: Cómo escanear un documento a PDF con el celular
 description: Escanea papel a un PDF limpio con el escáner que ya trae tu iPhone o Android: Notas, Archivos o Google Drive. Y trucos de luz para un archivo más ligero.
 date: 2026-11-19
+updated: 2026-11-25
 pair: scan-document-to-pdf-phone
 related: ["jpg-a-pdf-iphone", "jpg-a-pdf-android", "foto-a-pdf", "unir-imagenes-en-un-pdf"]
 card: {"title": "Escanear papel a PDF", "alt": "Poner la hoja sobre una superficie oscura y plana con luz de día, abrir el escáner integrado del celular, capturar y guardar como PDF.", "steps": ["Pon la hoja sobre una superficie oscura y plana", "Abre el escáner de Archivos, Notas o Drive", "Deja que detecte los bordes y capture", "Añade páginas y guarda un solo PDF"]}
@@ -81,7 +82,7 @@ Los celulares Samsung también permiten escanear documentos desde la app Cámara
 
 Si fotografiaste las hojas en lugar de escanearlas, recórtalas en tu editor de fotos y luego elígelas en [nuestro conversor gratis](/es/jpg-a-pdf/) para descargar un solo PDF. El conversor no corrige la perspectiva, así que repite cualquier foto que esté muy inclinada. Sí puedes girar páginas con el botón **Girar** y ordenarlas antes de descargar. Pasos por dispositivo: [iPhone](/es/blog/jpg-a-pdf-iphone/) y [Android](/es/blog/jpg-a-pdf-android/). Para juntar muchas fotos, consulta [cómo unir imágenes en un PDF](/es/blog/unir-imagenes-en-un-pdf/).
 
-Si además necesitas que el texto del PDF se pueda buscar o copiar, prueba [OCR PDF](/ocr-pdf/) (en inglés).
+Si además necesitas que el texto del PDF se pueda buscar o copiar, prueba [OCR PDF](https://pdfcompact.com/ocr-pdf) (pdfcompact.com, en inglés).
 
 ## Solución de problemas
 
@@ -89,7 +90,7 @@ Si además necesitas que el texto del PDF se pueda buscar o copiar, prueba [OCR 
 |---|---|---|
 | Captura antes de que estés listo | Cambia a manual | El modo automático se dispara en cuanto ve los bordes |
 | Bordes cortados | Arrastra las esquinas del recorte después de capturar | La detección no siempre es exacta |
-| El PDF pesa demasiado | Usa escala de grises y escanea menos páginas por archivo | Las páginas en color pesan más; también puedes usar [Comprimir PDF](/es/comprimir-pdf/) |
+| El PDF pesa demasiado | Usa escala de grises y escanea menos páginas por archivo | Las páginas en color pesan más; también puedes usar [Comprimir PDF](https://pdfcompact.com/compress-pdf) (pdfcompact.com, en inglés) |
 | La firma sale muy tenue | Usa color o escala de grises, no blanco y negro | El blanco y negro puede borrar los trazos finos de pluma |
 | El texto se ve ondulado | Aplana la hoja y vuelve a escanear | El papel curvo no se puede corregir del todo |
 
@@ -128,7 +129,7 @@ Sí. Sigue capturando antes de tocar Guardar; todas las páginas van al mismo PD
 
 ### ¿Y si mi PDF escaneado quedó con páginas de más?
 
-Separa las páginas que necesitas en otro archivo con [Dividir PDF](/es/dividir-pdf/), por intervalos; y si tienes varios escaneos que deben ir juntos, únelos con [Unir PDF](/es/unir-pdf/).
+Separa las páginas que necesitas en otro archivo con [Dividir PDF](https://pdfcompact.com/split-pdf) (pdfcompact.com, en inglés), por intervalos; y si tienes varios escaneos que deben ir juntos, únelos con [Unir PDF](https://pdfcompact.com/merge-pdf) (pdfcompact.com, en inglés).
 
 ## En resumen
 
@@ -136,4 +137,4 @@ Separa las páginas que necesitas en otro archivo con [Dividir PDF](/es/dividir-
 - **Android:** Google Drive → Escanear.
 - **¿Solo tienes fotos?** Recórtalas y usa el [conversor](/es/jpg-a-pdf/).
 
-Escanea el papel siempre que puedas: queda más limpio y pesa menos. A continuación: [convertir una foto a PDF](/es/blog/foto-a-pdf/) o [reducir un PDF con Comprimir PDF](/es/comprimir-pdf/).
+Escanea el papel siempre que puedas: queda más limpio y pesa menos. A continuación: [convertir una foto a PDF](/es/blog/foto-a-pdf/) o [reducir un PDF con Comprimir PDF](https://pdfcompact.com/compress-pdf) (pdfcompact.com, en inglés).

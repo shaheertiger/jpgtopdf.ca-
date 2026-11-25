@@ -3,6 +3,7 @@ title: Cómo convertir una foto a PDF: 4 formas gratis
 h1: Cómo convertir una foto a PDF en cualquier dispositivo (4 formas gratis)
 description: Convierte una foto o imagen a PDF en menos de un minuto en iPhone, Android, Windows o Mac. Cuatro métodos gratis comparados y el paso que más se olvida.
 date: 2026-11-19
+updated: 2026-11-25
 pair: photo-to-pdf
 related: ["jpg-a-pdf-iphone", "jpg-a-pdf-android", "unir-imagenes-en-un-pdf", "escanear-documento-pdf-celular"]
 card: {"title": "Foto a PDF en 4 pasos", "alt": "Cuatro pasos para convertir una foto a PDF: abrir el conversor, elegir las fotos, escoger Carta o Ajustar a la imagen y descargar el PDF.", "steps": ["Abre el conversor gratis en cualquier navegador", "Elige una foto, o varias en orden", "Escoge Carta para imprimir o Ajustar a la imagen", "Pulsa Descargar PDF y revisa el archivo"]}
@@ -82,7 +83,7 @@ Si tu menú es distinto, busca la opción más parecida.
 | La foto no se acepta (HEIC) | Elígela desde el navegador, o pon la cámara en «Más compatible» | Los iPhone recientes guardan en HEIC por defecto |
 | Las páginas salen en otro orden | Elige las fotos en orden, o arrastra las miniaturas antes de descargar | Cada foto se convierte en la página siguiente |
 
-Si el PDF ya está hecho y sigue pesando mucho, redúcelo con [Comprimir PDF](/es/comprimir-pdf/).
+Si el PDF ya está hecho y sigue pesando mucho, redúcelo con [Comprimir PDF](https://pdfcompact.com/compress-pdf) (pdfcompact.com, en inglés).
 
 ## Convertir varias fotos en un solo PDF
 

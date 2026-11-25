@@ -3,8 +3,8 @@ title: HEIC to PDF Free — iPhone Photos to PDF, No Upload
 description: Put iPhone HEIC photos straight into one PDF in your browser. No converting to JPG first, mix in JPG or PNG, reorder pages. Free and private.
 h1: HEIC to PDF — Convert iPhone Photos to PDF Free
 lead: Drop your HEIC photos, set the order, download one PDF.
-dateModified: 2026-11-12
-related: ["heic-to-jpg", "jpg-to-pdf", "compress-pdf", "scan-to-pdf"]
+dateModified: 2026-11-25
+related: ["heic-to-jpg", "jpg-to-pdf", "scan-to-pdf"]
 features: ["HEIC and HEIF input, mixed with JPG or PNG", "No separate HEIC to JPG step", "Reorder, rotate and remove pages", "Fit to image, A4, Letter or Legal pages", "Balanced and Small presets for upload limits", "Runs in the browser: nothing is uploaded"]
 ---
 
@@ -67,7 +67,7 @@ A PDF avoids the "I can't open this file" reply. Gmail attachments top out at 25
 |---|---|---|
 | "Could not be decoded" | Export the photo as JPG from Photos, or set iPhone Camera → Formats → Most Compatible | The file uses a HEIC variant the decoder doesn't support, or it's damaged |
 | Adding photos is slow | Add them in batches of 10–20 | HEIC decoding is heavy work, done on your device |
-| The PDF is huge | Choose Balanced or Small, or run [Compress PDF](/compress-pdf/) | Full-resolution 12–48 MP photos make large pages |
+| The PDF is huge | Choose Balanced or Small, or run [Compress PDF](https://pdfcompact.com/compress-pdf) | Full-resolution 12–48 MP photos make large pages |
 | A Live Photo shows a still only | That's expected | Only the main still image is used |
 
 ## Frequently asked questions

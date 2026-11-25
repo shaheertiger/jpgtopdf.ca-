@@ -3,6 +3,7 @@ title: PDF trop lourd ? Réduire la taille sous 2 Mo ou 4 Mo en 3 étapes
 h1: PDF trop lourd ? Comment réduire sa taille sous 2 Mo ou 4 Mo
 description: Pourquoi un PDF fait de photos de téléphone pèse 10 à 30 Mo, et trois façons de le faire passer sous une limite d’envoi sans rendre le texte illisible.
 date: 2026-11-19
+updated: 2026-11-25
 pair: jpg-to-pdf-file-size
 related: ["regrouper-images-un-seul-pdf", "documents-ircc-pdf", "scanner-document-pdf-telephone", "envoyer-photo-en-pdf"]
 card: {"title": "Réduire la taille d’un PDF", "alt": "Pour alléger le PDF : redimensionner les photos à environ 1 600 pixels sur le côté long, les convertir, vérifier la taille, et compresser seulement si c’est encore au-dessus de la limite.", "steps": ["Redimensionnez à ~1 600 px côté long", "Convertissez-les en un seul PDF", "Comparez la taille avec la limite", "Compressez seulement si c’est trop lourd"]}
@@ -62,7 +63,7 @@ Les scanners des téléphones (Fichiers ou Notes sur iPhone, Google Drive) recad
 
 ## Méthode 3 : compresser le PDF terminé
 
-Si vous avez déjà le PDF et qu’il dépasse un peu, utilisez un compresseur de PDF, comme notre outil [Compress PDF](/compress-pdf/) (en anglais). Vérifiez le résultat à 200 % : la compression peut rendre les petits caractères difficiles à lire.
+Si vous avez déjà le PDF et qu’il dépasse un peu, utilisez un compresseur de PDF, comme [Compress PDF sur pdfcompact.com](https://pdfcompact.com/compress-pdf) (en anglais). Vérifiez le résultat à 200 % : la compression peut rendre les petits caractères difficiles à lire.
 
 ## Les méthodes comparées
 

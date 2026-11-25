@@ -3,6 +3,7 @@ title: Convertir JPG a PDF en Android: 3 formas gratis, sin apps
 h1: Cómo convertir JPG a PDF en Android (3 formas gratis, sin apps)
 description: Convierte un JPG o una foto a PDF en Android con Guardar como PDF de Google Fotos, un conversor en el navegador o el escáner de Drive. Samsung y Pixel.
 date: 2026-11-19
+updated: 2026-11-25
 pair: jpg-to-pdf-android
 related: ["foto-a-pdf", "escanear-documento-pdf-celular", "unir-imagenes-en-un-pdf", "jpg-a-pdf-iphone"]
 card: {"title": "JPG a PDF en Android", "alt": "Método de Google Fotos: abrir la foto, tocar el menú de tres puntos, elegir Imprimir y luego Guardar como PDF como impresora.", "steps": ["Abre la foto en Google Fotos", "Toca el menú de tres puntos y luego Imprimir", "Elige Guardar como PDF como impresora", "Toca el botón PDF y elige una carpeta"]}
@@ -91,7 +92,7 @@ Consulta [cómo escanear un documento a PDF con el celular](/es/blog/escanear-do
 | No aparece la opción Imprimir | Usa Compartir → Imprimir, o Chrome + conversor | Imprimir cambia de lugar según la versión |
 | El PDF se descargó pero no aparece | App de archivos → Descargas | Chrome e Imprimir guardan ahí de forma predeterminada |
 | La foto sale cortada en la página | Elige Ajustar a la imagen o agrega un margen | Imprimir llena la página y puede recortar |
-| El archivo pesa demasiado para enviarlo | Menos fotos, calidad «Equilibrada» o [Comprimir PDF](/es/comprimir-pdf/) | Cada foto de celular pesa de 2 a 5 MB |
+| El archivo pesa demasiado para enviarlo | Menos fotos, calidad «Equilibrada» o [Comprimir PDF](https://pdfcompact.com/compress-pdf) (pdfcompact.com, en inglés) | Cada foto de celular pesa de 2 a 5 MB |
 | Las páginas salen en desorden | Elige las fotos en orden en el conversor | Cada foto elegida es la página siguiente |
 
 ## Apps de conversión de Play Store (con precaución)
