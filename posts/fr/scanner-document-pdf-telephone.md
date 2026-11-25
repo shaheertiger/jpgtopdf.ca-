@@ -1,34 +1,37 @@
 ---
-title: Comment scanner un document en PDF avec son téléphone, gratuitement
-h1: Comment scanner un document en PDF avec son téléphone
-description: Numérisez un document papier en PDF propre avec le scanner déjà présent sur iPhone ou Android : Fichiers, Notes ou Google Drive. Plus les bons réglages.
+title: Scanner un document en PDF avec son téléphone (Android et iPhone)
+h1: Comment scanner un document en PDF avec son téléphone (Android et iPhone)
+description: Scanner en PDF sur Android (Google Drive) ou iPhone (Fichiers, Notes), gratuitement et sans appli. Les bons réglages, la résolution utile et que faire avec de simples photos.
 date: 2026-11-11
+updated: 2026-11-25
 pair: scan-document-to-pdf-phone
-related: ["photo-en-pdf-iphone", "photo-en-pdf-android", "envoyer-photo-en-pdf", "photo-en-pdf"]
-card: {"title": "Scanner un document en PDF", "alt": "Poser la page sur une surface sombre et plane à la lumière du jour, ouvrir le scanner du téléphone, capturer, puis enregistrer en PDF.", "steps": ["Posez la page sur une surface sombre", "Ouvrez Fichiers, Notes ou Drive", "Laissez-le détecter les bords et capturer", "Ajoutez les pages, enregistrez un PDF"]}
+tool: jpg-to-pdf
+related: ["photo-en-pdf-android", "photo-en-pdf-iphone", "regrouper-images-un-seul-pdf", "reduire-taille-pdf-photo"]
+card: {"title": "Scanner un document en PDF", "alt": "Poser la page sur une surface sombre et plane à la lumière du jour, ouvrir le scanner du téléphone, capturer, puis enregistrer en PDF.", "steps": ["Posez la page sur une surface sombre", "Ouvrez Drive, Fichiers ou Notes", "Laissez-le détecter les bords et capturer", "Ajoutez les pages, enregistrez un PDF"]}
 ---
 
-Vous devez envoyer un formulaire signé, un bail ou une attestation en PDF, et vous n’avez pas de scanner.
+## Réponse rapide
 
-**Votre téléphone en a un.** Sur iPhone, ouvrez **Fichiers** → **⋯** → **Numériser des documents** (ou Notes → icône pièce jointe → Numériser des documents). Sur Android, ouvrez **Google Drive** → **+** → **Numériser**. Le téléphone détecte les bords, redresse la page et enregistre un PDF. Aucune appli à installer.
+Sur **Android**, ouvrez **Google Drive** → **+** → **Numériser** ; sur **iPhone**, ouvrez **Fichiers** → **⋯** → **Numériser des documents**. Le téléphone détecte les bords, redresse la page et enregistre un PDF, sans appli à installer. Une page A4 (210 × 297 mm) numérisée à 150 ppp compte 1 240 × 1 754 pixels : assez pour un formulaire. Vous n’avez que des photos ? Utilisez le convertisseur ci-dessous.
 
-Une photo de page et un scan se ressemblent, mais le scan est recadré, redressé, uniformément éclairé et beaucoup plus léger. Ce guide couvre les deux téléphones, les réglages pour un résultat propre, et que faire si vous n’avez que des photos.
+<!-- tool -->
+
+Vous devez envoyer un formulaire signé, un bail ou une attestation en PDF, et vous n’avez pas de scanner. Votre téléphone en a un. Une photo de page et un scan se ressemblent, mais le scan est recadré, redressé, uniformément éclairé et beaucoup plus léger. Ce guide couvre les deux téléphones, les réglages pour un résultat propre, et que faire si vous n’avez que des photos.
 
 <!-- card -->
 
-## Scan ou photo : quelle différence ?
+## Comment scanner en PDF sur Android
 
-Une photo capture tout le cadre : la table, les ombres, l’angle de travers. Un scanner détecte la page, corrige la perspective pour qu’elle paraisse à plat, augmente le contraste et coupe le reste.
+1. Ouvrez **Google Drive** et touchez **+** (ou l’icône d’appareil photo en bas à droite).
+2. Touchez **Numériser**. Visez la page : Drive capture et détecte les bords.
+3. Ajustez le recadrage, ajoutez des pages avec **+**, puis touchez **Enregistrer** ou **OK**.
+4. Nommez le fichier et choisissez un dossier. Le PDF est dans Drive ; téléchargez-le si vous en avez besoin sur le téléphone.
 
-### Ce que peu de gens savent
+Les Samsung Galaxy proposent aussi la numérisation dans l’appareil photo : une invite « Numériser » apparaît quand un document est détecté. Les intitulés changent selon les versions d’Android.
 
-Une page numérisée pèse souvent **5 à 10 fois moins** qu’une photo de la même page, parce que l’arrière-plan disparaît et que l’image est nettoyée. C’est souvent ce qui fait passer un fichier sous la limite d’un formulaire.
+> **Photo en PDF sur Android ?** Pour une photo déjà prise (et non un scan), Google Photos → Imprimer → Enregistrer au format PDF suffit. Étapes détaillées : [mettre une photo en PDF sur Android](/fr/blog/photo-en-pdf-android/).
 
-> **À retenir :** Pour du papier, numérisez. Pour ce qui n’est pas une page plate (un objet, un écran, un tableau blanc), prenez une photo et convertissez-la.
-
-<!-- cta -->
-
-## Scanner en PDF sur iPhone
+## Comment scanner en PDF sur iPhone
 
 ### Étape 1 : ouvrez le scanner
 
@@ -47,25 +50,39 @@ Continuez pour les pages suivantes. Touchez une miniature pour recadrer, pivoter
 
 ### Étape 4 : renommez et partagez
 
-Dans Fichiers, appui long sur le PDF → Renommer. Dans Notes, ouvrez le scan → Partager → Enregistrer dans Fichiers.
+Dans Fichiers, appui long sur le PDF → Renommer. Dans Notes, ouvrez le scan → Partager → Enregistrer dans Fichiers. Pour une photo de la galerie plutôt qu’un scan : [mettre une photo en PDF sur iPhone](/fr/blog/photo-en-pdf-iphone/).
 
-## Scanner en PDF sur Android
+<!-- cta -->
 
-1. Ouvrez **Google Drive** et touchez **+** (ou l’icône d’appareil photo).
-2. Touchez **Numériser**. Visez la page et capturez.
-3. Ajustez le recadrage, ajoutez des pages avec **+**, puis **Enregistrer** ou **OK**.
-4. Nommez le fichier et choisissez un dossier. Le PDF est dans Drive ; téléchargez-le si vous en avez besoin sur le téléphone.
+## Scan ou photo : quelle différence ?
 
-Les Samsung proposent aussi la numérisation dans l’appareil photo (une invite « Numériser » apparaît quand un document est détecté). Les intitulés changent selon les versions.
+Une photo capture tout le cadre : la table, les ombres, l’angle de travers. Un scanner détecte la page, corrige la perspective pour qu’elle paraisse à plat, augmente le contraste et coupe le reste. C’est pour cela qu’une page numérisée en niveaux de gris pèse en général bien moins que la photo en couleur de la même page, ce qui fait souvent passer un fichier sous la limite d’un formulaire.
+
+> **À retenir :** Pour du papier, numérisez. Pour ce qui n’est pas une page plate (un objet, un écran, un tableau blanc), prenez une photo et convertissez-la.
+
+## Quelle résolution pour scanner un document en PDF ?
+
+La résolution (ppp, points par pouce) est le nombre de pixels divisé par la taille de la page en pouces. Voici les pixels nécessaires pour une page pleine, calculés à partir des formats exacts : A4 = 210 × 297 mm, Letter = 215,9 × 279,4 mm (8,5 × 11 po), le format courant au Canada.
+
+| Résolution | Page A4 | Page Letter | Pour quoi |
+|---|---|---|---|
+| 96 ppp | 794 × 1 123 px | 816 × 1 056 px | Lecture à l’écran seulement |
+| 150 ppp | 1 240 × 1 754 px | 1 275 × 1 650 px | Formulaires, IRCC, courriel |
+| 200 ppp | 1 654 × 2 339 px | 1 700 × 2 200 px | Petits caractères lisibles |
+| 300 ppp | 2 480 × 3 508 px | 2 550 × 3 300 px | Impression, archivage |
+
+Une photo de téléphone de 12 Mpx (3 024 × 4 032 px) dépasse déjà 360 ppp sur une page A4 ou Letter : la résolution n’est presque jamais le problème, c’est la taille du fichier. Pour un portail limité à 4 Mo, numérisez en niveaux de gris ou choisissez la qualité « Équilibrée » dans le convertisseur (environ 225 ppp sur une page pleine).
 
 ## Les scanners intégrés comparés
 
-| Scanner | Téléphone | Enregistre dans | Plusieurs pages | Filtres |
-|---|---|---|---|---|
-| Fichiers → Numériser | iPhone/iPad | Dossier Fichiers (PDF) | Oui | Couleur, gris, N&B |
-| Notes → Numériser | iPhone/iPad | Note (export PDF) | Oui | Idem |
-| Google Drive → Numériser | Android, iPhone aussi | Google Drive (PDF) | Oui | Auto, N&B, couleur |
-| Appareil photo Samsung | Galaxy | Galerie (image) | Variable | Recadrage auto |
+| Scanner | Téléphone | Enregistre dans | Filtres |
+|---|---|---|---|
+| Google Drive → Numériser | Android (et iPhone) | Google Drive (PDF) | Auto, N&B, couleur |
+| Fichiers → Numériser | iPhone, iPad | Dossier Fichiers (PDF) | Couleur, gris, N&B |
+| Notes → Numériser | iPhone, iPad | Note (export PDF) | Couleur, gris, N&B |
+| Appareil photo Samsung | Galaxy | Galerie (image) | Recadrage auto |
+
+Tous gèrent plusieurs pages dans un même PDF, sauf l’appareil photo Samsung, qui enregistre une image par page.
 
 ## Un scan propre du premier coup
 
@@ -79,7 +96,7 @@ Les Samsung proposent aussi la numérisation dans l’appareil photo (une invite
 
 ## Vous avez déjà des photos ? Convertissez-les
 
-Si vous avez photographié les pages, recadrez-les dans votre éditeur photo, puis sélectionnez-les dans [notre convertisseur gratuit](/fr/) pour obtenir un seul PDF. Il ne corrige pas la perspective : reprenez toute page trop de travers. Méthodes par appareil : [iPhone](/fr/blog/photo-en-pdf-iphone/), [Android](/fr/blog/photo-en-pdf-android/).
+Si vous avez photographié les pages, recadrez-les dans votre éditeur photo, puis sélectionnez-les dans le convertisseur en haut de cette page pour obtenir un seul PDF : une photo par page, dans l’ordre choisi, sans rien téléverser. Il ne corrige pas la perspective : reprenez toute page trop de travers. Pour réunir beaucoup de pages : [regrouper plusieurs images en un seul PDF](/fr/blog/regrouper-images-un-seul-pdf/).
 
 ## Problèmes fréquents et solutions
 
@@ -93,28 +110,29 @@ Si vous avez photographié les pages, recadrez-les dans votre éditeur photo, pu
 
 ## Les applis de scan avec abonnement (avec prudence)
 
-Les applis de scan tierces limitent souvent les scans gratuits, ajoutent un filigrane ou exigent un compte qui synchronise vos documents dans leur cloud.
-
-### Les vrais risques
-
-- Abonnement hebdomadaire après un court essai.
-- Pièces d’identité et documents fiscaux stockés chez une autre entreprise.
-
-> **En résumé :** Les scanners de l’iPhone et d’Android sont gratuits et suffisent pour presque tous les formulaires.
+Les applis de scan tierces limitent souvent les scans gratuits, ajoutent un filigrane ou exigent un compte qui synchronise vos documents dans leur nuage : abonnement hebdomadaire après un court essai, pièces d’identité et documents fiscaux stockés chez une autre entreprise. Les scanners de l’iPhone et d’Android sont gratuits et suffisent pour presque tous les formulaires.
 
 ## Questions fréquentes
+
+### Comment scanner un document en PDF sur Android ?
+
+Ouvrez Google Drive, touchez + → Numériser, capturez les pages et enregistrez. Drive crée un PDF, sans appli à installer.
 
 ### Comment scanner un document en PDF avec un iPhone ?
 
 Ouvrez Fichiers, touchez ⋯ → Numériser des documents, capturez les pages et touchez Enregistrer. Le PDF est enregistré dans le dossier ouvert.
 
-### Comment scanner un document en PDF sur Android ?
+### Comment mettre une photo en PDF sur Android ?
 
-Ouvrez Google Drive, touchez + → Numériser, capturez les pages et enregistrez. Drive crée un PDF.
+Ouvrez la photo dans Google Photos, touchez ⋮ → Imprimer, choisissez Enregistrer au format PDF, puis l’icône PDF. Ou sélectionnez-la dans le convertisseur de cette page.
+
+### Quelle résolution choisir pour scanner un document en PDF ?
+
+150 ppp suffit pour un formulaire : 1 240 × 1 754 pixels sur une page A4. Prenez 300 ppp seulement pour imprimer ou archiver.
 
 ### Un scan avec le téléphone est-il valable pour un document officiel ?
 
-En général oui, s’il est plat, net et entièrement dans le cadre. Vérifiez les exigences de l’organisme (couleur, résolution).
+En général oui, s’il est plat, net et entièrement dans le cadre. Vérifiez les exigences de l’organisme (couleur, résolution, taille maximale).
 
 ### Faut-il scanner en couleur ou en noir et blanc ?
 
@@ -126,8 +144,9 @@ Oui. Continuez à capturer avant de toucher Enregistrer : toutes les pages vont 
 
 ## L’essentiel
 
+- **Android :** Google Drive → + → Numériser.
 - **iPhone :** Fichiers ou Notes → Numériser des documents.
-- **Android :** Google Drive → Numériser.
-- **Seulement des photos ?** Recadrez-les et utilisez le [convertisseur](/fr/).
+- **150 ppp** suffit pour un formulaire ; la taille du fichier compte plus que la résolution.
+- **Seulement des photos ?** Recadrez-les et utilisez le convertisseur en haut de la page.
 
-Numérisez le papier dès que possible : plus propre et plus léger. À lire ensuite : [envoyer une photo en PDF](/fr/blog/envoyer-photo-en-pdf/).
+À lire ensuite : [envoyer une photo en PDF](/fr/blog/envoyer-photo-en-pdf/) ou [réduire la taille d’un PDF de photos](/fr/blog/reduire-taille-pdf-photo/).

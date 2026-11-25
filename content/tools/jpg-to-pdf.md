@@ -1,7 +1,7 @@
 ---
-title: JPG to PDF Converter Free — Photos to One PDF, No Upload
-description: Free JPG to PDF converter. Turn photos and pictures (JPG, PNG, HEIC) into one PDF in your browser, in any order, at original quality. No upload, no sign-up.
-h1: JPG to PDF Converter — Free, Private, Original Quality
+title: JPG to PDF — Convert JPG, PNG or Photos to PDF Free
+description: JPG to PDF in your browser: convert JPG, JPEG, PNG and iPhone photos to one PDF, at original quality, on A4, Letter or photo-size pages. No upload, no sign-up.
+h1: JPG to PDF — Convert JPG, PNG and Photos to PDF Free
 lead: Drop your pictures, put them in order, download one PDF. Nothing leaves your device.
 dateModified: 2026-11-25
 related: ["heic-to-pdf", "scan-to-pdf", "compress-image"]
@@ -10,7 +10,7 @@ features: ["JPG, JPEG, PNG, WebP, GIF, BMP and HEIC input", "Combine many images
 
 ## Quick answer
 
-Select one or more JPG, PNG, WebP or HEIC images, drag them into order, and press **Download PDF**. Each image becomes one page. On the default **Original** setting, JPEG files go into the PDF byte for byte, so there is no quality loss. If the PDF must fit an upload limit, the **Balanced** preset is typically 60–80% smaller for phone photos.
+To convert JPG to PDF, select your JPG, PNG or HEIC photos above, drag them into order and press **Download PDF**: one image per page, one file. On **Original**, JPEGs are copied in unchanged, so the PDF weighs what your photos weigh plus under 1 KB per page. For printing, pick A4 (210 × 297 mm) or Letter (8.5 × 11 in).
 
 ## Limits
 
@@ -39,7 +39,7 @@ Select one or more JPG, PNG, WebP or HEIC images, drag them into order, and pres
 
 Not on the **Original** setting. A JPEG is already compressed, and a PDF can hold that exact JPEG data. This converter copies the bytes in unchanged instead of decoding and re-saving the picture, so the image in the PDF is identical to your file. PNG images are stored losslessly too.
 
-Phone photos often carry a rotation tag (EXIF) instead of being stored upright. Many converters re-save the photo to rotate it, which costs a little quality each time. Here the common rotations (90°, 180°, 270°) are applied with a page transform, so the JPEG still isn't re-encoded. Only mirrored photos, which are rare, are redrawn at high quality.
+Phone photos often carry a rotation tag (EXIF) instead of being stored upright. Many converters re-save the photo to rotate it; here the rotation is applied with a page transform, so the JPEG still isn't re-encoded.
 
 Quality is lost only when you ask for it, with the **Balanced** or **Small** presets. For more on keeping images sharp, read [JPG to PDF without losing quality](/blog/jpg-to-pdf-without-losing-quality/).
 
@@ -51,17 +51,44 @@ Quality is lost only when you ask for it, with the **Balanced** or **Small** pre
 | Balanced | Long edge up to 2,480 px, JPEG quality 82 | 60–80% smaller for phone photos | Email, most upload forms, sharing |
 | Small | Long edge up to 1,600 px, JPEG quality 70 | 85–95% smaller for phone photos | Strict portals, WhatsApp, slow connections |
 
-A 2,480-pixel long edge is still over 200 dpi on a full Letter or A4 page, so text in a photographed document stays readable on Balanced. Small is still fine on screen but can look soft when printed.
+Balanced keeps text in a photographed document readable (225 dpi on a full page, see below). Small can look soft when printed.
+
+## What page size is the PDF?
+
+You choose. **Fit to image** makes each page exactly the size of the picture, counting 96 pixels as one inch (rows below: a 3,024 × 4,032 px photo and a 1,170 × 2,532 px screenshot); the other sizes are standard paper, and the picture is scaled to fit inside the margin you pick.
+
+| Page size | Millimetres | Inches | PDF points | Pixels for 300 dpi |
+|---|---|---|---|---|
+| A4 | 210 × 297 | 8.27 × 11.69 | 595 × 842 | 2,480 × 3,508 |
+| Letter | 215.9 × 279.4 | 8.5 × 11 | 612 × 792 | 2,550 × 3,300 |
+| Legal | 215.9 × 355.6 | 8.5 × 14 | 612 × 1,008 | 2,550 × 4,200 |
+| Fit: 12 MP photo | 800 × 1,067 | 31.5 × 42 | 2,268 × 3,024 | — |
+| Fit: iPhone screenshot | 310 × 670 | 12.19 × 26.38 | 878 × 1,899 | — |
+
+Fit to image pages look normal on screen, but they are far bigger than paper. To print, or when a form wants a standard page, choose A4 (most of the world) or Letter (Canada and the US).
+
+## How sharp will a photo be on an A4 or Letter page?
+
+Sharpness on paper is the photo's pixels divided by the page's inches. Here is what each quality setting gives on a full page with no margin, computed from the converter's own settings:
+
+| Image | Setting | On A4 | On Letter |
+|---|---|---|---|
+| 12 MP photo | Original, 3,024 × 4,032 px | 366 dpi | 367 dpi |
+| 12 MP photo | Balanced, 1,860 × 2,480 px | 225 dpi | 225 dpi |
+| 12 MP photo | Small, 1,200 × 1,600 px | 145 dpi | 145 dpi |
+| iPhone screenshot | Original, 1,170 × 2,532 px | 217 dpi | 230 dpi |
+
+Print shops ask for 300 dpi; 150–200 dpi is plenty for a document read on screen or printed at the office. A 10 mm margin raises these numbers by 8–11%.
 
 ## How do I combine several JPGs or photos into one PDF?
 
 Select all the images at once (Ctrl or Cmd-click on a computer, or pick several in your phone's photo picker), or add them in batches: new images are added to the end of the list. Every image becomes its own page in a single PDF. The guide [combine JPGs into one PDF](/blog/combine-jpg-into-one-pdf/) covers the same job with built-in apps on each device.
 
-If you already have PDFs and want to join them, use [Merge PDF](https://pdfcompact.com/merge-pdf) instead.
+If some pages are already PDFs, make the image PDF here first, then join the files with [Merge PDF on pdfcompact.com](https://pdfcompact.com/merge-pdf), our sister site.
 
 ## Why is my PDF so big, and how do I make it smaller?
 
-A modern phone photo is 2–5 MB, so ten photos make a 20–50 MB PDF on the Original setting. That's the size of the pictures, not waste added by the PDF. Pick **Balanced** before you press Download and the same photos usually land at a fraction of that size. If you already made the PDF, run it through [Compress PDF](https://pdfcompact.com/compress-pdf). The [JPG to PDF too big](/blog/jpg-to-pdf-file-size/) guide explains the numbers.
+A modern phone photo is 2–5 MB, so ten photos make a 20–50 MB PDF on the Original setting. That's the size of the pictures, not waste added by the PDF: in our test, ten 3 MB JPEGs gave a PDF only 4 KB bigger than the photos themselves. Pick **Balanced** before you press Download and the same photos usually land at a fraction of that size. If you already made the PDF, run it through [Compress PDF on pdfcompact.com](https://pdfcompact.com/compress-pdf). The [JPG to PDF too big](/blog/jpg-to-pdf-file-size/) guide explains the numbers.
 
 ## Use cases
 
@@ -73,13 +100,9 @@ Gmail attachments are capped at 25 MB and Outlook at 20 MB. Ten phone photos on 
 
 IRCC uploads have a per-file limit of about 4 MB on many forms. Use A4 or Letter pages, the Balanced or Small preset, and check the size shown before uploading. See [IRCC documents as PDF](/blog/ircc-documents-pdf/).
 
-### Job applications
-
-Upload portals often want one PDF for a certificate or ID. Photograph each page, convert them in order, and keep the file small with Balanced.
-
 ### Receipts and expense reports
 
-Snap each receipt, select them all, and send one PDF to accounting instead of a dozen photos.
+Snap each receipt, select them all, and send one PDF instead of a dozen photos.
 
 ### HEIC photos from an iPhone
 
@@ -108,9 +131,9 @@ Yes. It is free with no account, no watermark and no daily limit; the site is ke
 
 No. The PDF is built by JavaScript in your browser, so your images never leave your device, and the page keeps working offline once it has loaded.
 
-### Can I convert PNG, WebP or HEIC as well as JPG?
+### Is JPEG to PDF the same as JPG to PDF?
 
-Yes. JPG, JPEG, PNG, WebP, GIF, BMP and HEIC can be mixed in one PDF. PNG stays lossless; WebP is saved as high-quality JPEG; HEIC is decoded in the browser.
+Yes. JPG and JPEG are the same format with two spellings of the extension. Both convert the same way, and you can mix them with PNG, WebP, GIF, BMP and iPhone HEIC photos in one PDF.
 
 ### Will the PDF be the same quality as my photos?
 
@@ -128,6 +151,6 @@ Use Fit to image for sharing on screen, since each page matches the photo. Use A
 
 Yes. The converter runs in Safari, Chrome and other current mobile browsers: tap the box, pick the photos or pictures from your library (iPhone HEIC photos included), and download the PDF. Step by step: [photo to PDF](/blog/photo-to-pdf/), [iPhone](/blog/jpg-to-pdf-iphone/) and [Android](/blog/jpg-to-pdf-android/).
 
-### Can I convert a PDF back to JPG?
+### How do I convert JPG to PDF on Windows 10 or 11?
 
-Yes, with [PDF to JPG](https://pdfcompact.com/pdf-to-jpg), which saves each page as an image.
+Open this page in Edge or Chrome, select the pictures and download the PDF; nothing to install. Windows also has a built-in way, Microsoft Print to PDF, but its Fit picture to frame box crops photos: see [JPG to PDF on Windows 10 and 11](/blog/jpg-to-pdf-windows/).

@@ -307,6 +307,7 @@ fieldset.radios .inline-inputs{margin-top:6px}
 
 /* ===== Answer-first guides, link box, phone-width tables (2026-11) ===== */
 .post .answer,.content.answer{border:2px solid var(--line);border-radius:var(--radius);padding:4px 18px 8px;margin:18px 0 22px;background:var(--soft)}
+.content.answer{box-sizing:border-box;width:calc(100% - 40px);max-width:720px;margin:18px auto 22px}
 .post .answer h2,.content.answer h2{border:none;margin:12px 0 6px;padding:0;font-size:14px;text-transform:uppercase;letter-spacing:.6px}
 .post .answer p,.content.answer p{margin:0 0 10px}
 .post-cont{padding-top:0}
@@ -319,6 +320,7 @@ fieldset.radios .inline-inputs{margin-top:6px}
 th,td{overflow-wrap:break-word;hyphens:auto}
 @media (max-width:560px){
   table{font-size:13.5px}
+  .tool-content table th[scope=row]{white-space:normal}
   th,td{padding:6px 7px}
   .post p,.post li,.tool-content p,.tool-content li{font-size:16px}
 }

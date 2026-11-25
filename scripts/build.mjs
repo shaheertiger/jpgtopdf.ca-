@@ -20,6 +20,19 @@ const write = (p, s) => { const f = path.join(ROOT, p); fs.mkdirSync(path.dirnam
 
 if (!lint({ quiet: true })) { console.error('Content check failed. Run: node scripts/check-content.mjs'); process.exit(1); }
 
+// The page sizes, dpi and file-size tables in the copy (homepage, PNG and combine guides, /fr/) are
+// computed from these engine constants. If the converter changes, the build stops so the tables get redone.
+{
+  const core = read('assets/js/core.js'), conv = read('assets/js/images-to-pdf.js');
+  const expect = [
+    [core, 'PAGE_SIZES = { a4: [595.28, 841.89], letter: [612, 792], legal: [612, 1008] }'],
+    [core, 'MM = 72 / 25.4'],
+    [conv, "QUALITY = { original: { maxEdge: 0, q: 0.92 }, balanced: { maxEdge: 2480, q: 0.82 }, small: { maxEdge: 1600, q: 0.7 } }"],
+    [conv, 'pw = dw * 0.75; ph = dh * 0.75; // 96 px per inch'],
+  ];
+  for (const [src, needle] of expect) if (!src.includes(needle)) { console.error(`Converter constant changed: "${needle}". Recompute the tables that quote it.`); process.exit(1); }
+}
+
 const T = {
   en: {
     htmlLang: 'en', og: 'en_US', skip: 'Skip to content', home: '/', homeName: 'Home',
@@ -348,7 +361,7 @@ for (const p of posts) {
   <nav class="crumbs" aria-label="Breadcrumb"><a href="${L.home}">${L.homeName}</a> › <a href="${L.blog}">${L.blogName}</a></nav>
   <h1>${esc(p.h1)}</h1>
   <p class="meta">${L.by} · ${L.updated} <time datetime="${p.modified}">${p.modified}</time> · ${L.minutes(minutes)}${others.map((q) => ` · <a href="${q.path}" hreflang="${HL[q.lang]}" lang="${q.lang}">${LANG_NAME[q.lang]}</a>`).join('')}</p>
-  ${p.html.replace('%%CTA%%', cta).replace('%%CARD%%', card(p.card)).replace('%%TOOL%%', embed).replace(/<h2 (?!id="(quick-answer|reponse-rapide|respuesta-rapida)")/, `<nav class="toc" aria-label="${L.toc}"><strong>${L.toc}</strong><ol>${p.heads.map(([id, t]) => `<li><a href="#${id}">${esc(t)}</a></li>`).join('')}</ol></nav>\n<h2 `)}
+  ${p.html.replace('%%CTA%%', cta).replace('%%CARD%%', card(p.card)).replace(/<h2 (?!id="(quick-answer|reponse-rapide|respuesta-rapida)")/, `<nav class="toc" aria-label="${L.toc}"><strong>${L.toc}</strong><ol>${p.heads.map(([id, t]) => `<li><a href="#${id}">${esc(t)}</a></li>`).join('')}</ol></nav>\n<h2 `).replace('%%TOOL%%', embed)}
   ${related.length ? `<section class="related"><h2>${L.related}</h2><ul class="list">${related.map((r) => `<li><a href="${r.path}">${esc(r.h1)}</a></li>`).join('')}</ul></section>` : ''}
 </article>`;
   const schema = { '@context': 'https://schema.org', '@graph': [

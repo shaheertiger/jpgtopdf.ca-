@@ -1,55 +1,71 @@
 ---
-title: How to Convert PNG to PDF: Free, Lossless, Transparency Explained
-h1: How to Convert PNG to PDF (Free, No Quality Loss)
-description: Convert a PNG to PDF free on any device without losing sharpness. What happens to transparent backgrounds, and why PNG PDFs are bigger than JPG ones.
+title: How to Convert PNG to PDF Without Losing Quality (Free)
+h1: How to Convert PNG to PDF Without Losing Quality
+description: Convert PNG to PDF free, pixel for pixel: the PNG is stored losslessly and keeps its transparency. Measured file sizes, print dpi, and the one setting that blurs it.
 date: 2026-11-11
+updated: 2026-11-25
 pair: png-en-pdf
-related: ["screenshot-to-pdf", "photo-to-pdf", "jpg-to-pdf-without-losing-quality", "jpg-to-pdf-file-size"]
-card: {"title": "PNG to PDF", "alt": "Select PNG files, choose Fit to image to keep the original size, download, then check transparent areas and file size.", "steps": ["Select one or more PNG files", "Keep Fit to image for screen use", "Download the PDF", "Check transparent areas and file size"]}
+tool: jpg-to-pdf
+related: ["screenshot-to-pdf", "jpg-to-pdf-without-losing-quality", "combine-jpg-into-one-pdf", "jpg-to-pdf-windows"]
+card: {"title": "PNG to PDF, lossless", "alt": "Select PNG files, keep the Original quality setting, choose Fit to image or Letter, then download the PDF.", "steps": ["Select one or more PNG files", "Keep quality on Original", "Fit to image for screen, Letter or A4 to print", "Download the PDF"]}
 ---
 
-You have a PNG (a screenshot, a logo, a chart, an exported design) and you need it as a PDF.
+## Quick answer
 
-**Convert it in about 15 seconds:** open [our free converter](/), select the PNG, and tap **Download PDF**. PNG is lossless, and it stays lossless in the PDF, so text and lines stay crisp. You can mix PNG and JPG files in one PDF.
+To convert PNG to PDF without losing quality, select the PNG in the converter below, keep quality on **Original** and press **Download PDF**. The PNG is stored losslessly, so every pixel and its transparency are kept. In our test a 1,310 × 1,191 screenshot went from a 434 KB PNG to a 337 KB PDF. Only **Balanced** and **Small** turn it into a JPEG.
 
-Two things surprise people with PNGs: transparent areas, and file size. A PNG with a see-through background can look different in a PDF viewer, and a PNG-based PDF is often several times bigger than a JPG one. This guide explains both and how to handle them.
+<!-- tool -->
+
+You have a PNG (a screenshot, a logo, a chart, an exported design) and you need it as a PDF. The converter above does it in your browser, nothing is uploaded, and you can mix PNG and JPG files in one PDF.
+
+Two things surprise people with PNGs: what happens to transparent areas, and file size. Both are measured below.
 
 <!-- card -->
 
-## PNG vs JPG: What Changes in the PDF?
+## How to Convert PNG to PDF (Step by Step)
 
-PNG stores every pixel exactly (lossless). JPG throws away detail the eye barely sees (lossy) to make files smaller. When either goes into a PDF, it keeps its character.
+1. **Select the PNG files.** Tap **Select images** above and pick one PNG or several. Add JPGs too if you need both in one file.
+2. **Keep quality on Original.** This is the step people get wrong. Original stores the PNG losslessly; **Balanced** and **Small** resize it and save it as a JPEG, which softens text edges and fills transparent areas with white.
+3. **Choose the page size.** **Fit to image** makes the page exactly the PNG's size (96 pixels = 1 inch). **Letter** or **A4** scales the PNG to fit the paper, for printing.
+4. **Download and check.** Press **Download PDF**, zoom to 200% on text, and look at any area that was transparent.
 
-### What Most People Don't Know
+## Does Converting PNG to PDF Lose Quality?
 
-A PNG screenshot of text is usually **sharper** than a JPG of the same screen, but often **larger**. For photos, it's the reverse: a photo saved as PNG can be five times the size of the JPG with no visible gain.
+Not on Original. The PDF stores the PNG's pixels with the same kind of lossless compression (Flate) that PNG uses, so nothing is thrown away. We ran four PNGs through the same PDF library the converter uses and compared the sizes. The last column is the same picture saved as a JPEG at quality 92, for comparison.
 
-> **Key point:** Use PNG for screenshots, diagrams and text. Use JPG for camera photos. Converting the "wrong" format to PDF just carries the problem along.
+| PNG | Pixels | PNG file | PDF made from it | As JPEG (q92) |
+|---|---|---|---|---|
+| Web page screenshot, with transparency | 1,310 × 1,191 | 434 KB | 337 KB | 248 KB |
+| Text page (test image) | 1,170 × 2,532 | 281 KB | 239 KB | 524 KB |
+| Illustration | 1,024 × 1,024 | 488 KB | 482 KB | 82 KB |
+| Camera-style photo saved as PNG (test image) | 4,032 × 3,024 | 11.2 MB | 12.8 MB | 3.1 MB |
+
+What it shows: for screenshots and text, the PDF is about the same size as the PNG or smaller, and a JPEG would be *bigger* for the text page while blurring it. For photos, PNG is the wrong format: the PDF is about four times the size of a JPEG of the same picture.
+
+> **Key point:** Use PNG for screenshots, diagrams and text; use JPG for camera photos. Converting the "wrong" format to PDF just carries the problem along.
 
 <!-- cta -->
 
-## How to Convert PNG to PDF
+## What Happens to a Transparent PNG Background?
 
-### Step 1: Select the PNG Files
+On Original it stays transparent: the PDF keeps the PNG's transparency as a separate mask. PDF viewers draw the page white underneath, so a transparent area *looks* white. That's a problem for one case: a white logo on a transparent background becomes invisible. Put it on a coloured background in any image editor and export it again before converting.
 
-On [jpgtopdf.ca](/), tap **Select images** and choose your PNGs. Add JPGs too if you need both in one file.
+On Balanced or Small, transparent areas are filled with solid white, because those settings save a JPEG and JPEG has no transparency.
 
-### Step 2: Choose the Page Size
+## How Do I Convert a PNG to a High-Resolution PDF for Printing?
 
-- **Fit to image:** the page is exactly the size of the PNG. Best for screen viewing and designs.
-- **Letter or A4:** the PNG is scaled to fit the page with optional margins. Best for printing.
+Print sharpness is pixels divided by inches. The converter turns landscape images onto landscape pages when orientation is Auto. This is what common PNG sizes give on a full page with no margin, computed from the converter's page sizes:
 
-### Step 3: Download
+| PNG | On Letter | On A4 | Fit to image page |
+|---|---|---|---|
+| 1,920 × 1,080 screenshot | 175 dpi | 164 dpi | 508 × 286 mm |
+| 2,560 × 1,440 screenshot | 233 dpi | 219 dpi | 677 × 381 mm |
+| 1,170 × 2,532 iPhone screenshot | 230 dpi | 217 dpi | 310 × 670 mm |
+| 800 × 600 image | 73 dpi | 73 dpi | 212 × 159 mm |
 
-Tap **Download PDF**. PNG pixels are compressed losslessly inside the PDF, so nothing is lost.
+Over 150 dpi reads fine on paper; under 100 dpi looks blocky. The PDF can't add pixels that the PNG doesn't have, so for a high-resolution PDF, start from a bigger PNG (export the chart or design at 2× or 3×). Then choose Letter or A4, not Fit to image, so the printer doesn't have to shrink a 50 cm page.
 
-### Step 4: Check Transparency, Don't Assume It
-
-Open the PDF and look at areas that were transparent in the PNG. In most viewers they show as white. If your logo was white on transparent, it may now be invisible.
-
-> **Pro tip:** If a white logo vanishes, put it on a coloured background in any image editor and export again before converting.
-
-## PNG to PDF on Each Device
+## How Do I Change a PNG to a PDF on Windows, Mac, iPhone or Android?
 
 | Device | Built-in way | Notes |
 |---|---|---|
@@ -57,70 +73,54 @@ Open the PDF and look at areas that were transparent in the PNG. In most viewers
 | Mac | Preview → File → Export as PDF | Or Finder → Quick Actions → Create PDF |
 | iPhone | Files → long-press → Create PDF | [iPhone guide](/blog/jpg-to-pdf-iphone/) |
 | Android | Google Photos → Print → Save as PDF | [Android guide](/blog/jpg-to-pdf-android/) |
-| Any browser | [jpgtopdf.ca](/) | Mixes PNG and JPG, nothing uploaded |
+| Any browser | The converter above | Mixes PNG and JPG, nothing uploaded |
 
-## Why Is My PNG PDF So Big?
-
-| Source PNG | Typical size | Same image as JPG |
-|---|---|---|
-| Phone screenshot | 0.5–2 MB | 0.2–0.5 MB |
-| 1080p chart or slide | 0.1–0.5 MB | 0.1–0.3 MB |
-| Camera photo saved as PNG | 10–20 MB | 2–4 MB |
-
-Rough figures; detail and colours change them. If the PDF is too big, save photo-like PNGs as JPG first. Text screenshots usually stay best as PNG. More in [how to shrink a JPG to PDF](/blog/jpg-to-pdf-file-size/).
+Print-to-PDF routes go through the printer system, which can rescale the image to the paper. The browser converter places the PNG data in the PDF directly.
 
 ## PNG to PDF Problems and Fixes
 
 | Problem | Fix | Why it works |
 |---|---|---|
-| Transparent area shows white | Add a background before converting | PDF viewers often draw transparency on white |
-| File much bigger than expected | Save photo-like PNGs as JPG first | Lossless storage is heavy for photos |
-| Text looks blurry when printed | Use Letter page and check the PNG resolution | Low-resolution screenshots print soft |
-| Page is huge on screen | Choose Letter instead of Fit to image | Fit uses pixel size: 1 px = 0.75 pt |
-
-## Converting PNG to PDF for Print
-
-A 1920 × 1080 screenshot on a Fit to image page is about 20 × 11 inches. Printers will shrink it to fit. For a predictable result, choose Letter, landscape, and a small margin. At that size the screenshot prints at roughly 190 pixels per inch: readable, not razor sharp.
-
-## Online PNG Converters (Use With Caution)
-
-PNGs are often screenshots, and screenshots often contain more than you meant to share: notifications, account numbers, open tabs.
-
-### The Real Risks
-
-- Upload-based tools keep a server copy.
-- You may share a screenshot you haven't checked closely.
-
-Checklist: crop out notifications and personal details, convert locally, open the PDF before sending.
-
-> **Bottom line:** Crop the screenshot, then convert it on your device.
+| Text looks soft in the PDF | Quality back to Original | Balanced and Small save a resized JPEG |
+| White logo disappeared | Add a coloured background first | Viewers draw transparency on a white page |
+| PDF much bigger than expected | Save photo-like PNGs as JPG first | Lossless storage is heavy for photos |
+| Page is huge on screen | Choose Letter or A4 | Fit to image uses 1 px = 0.75 pt |
+| Blurry when printed | Export a larger PNG | Under about 100 dpi on paper looks blocky |
 
 ## Frequently Asked Questions
 
-### How do I convert a PNG to PDF for free?
+### How do I convert PNG to PDF without losing quality?
 
-Select the PNG in a browser converter such as jpgtopdf.ca and download the PDF. Windows, Mac, iPhone and Android also have built-in Print to PDF options.
+Use a converter that stores the PNG losslessly, such as the one on this page with quality on Original. Every pixel is kept; only resizing or saving as JPEG would lose detail.
 
-### Does converting PNG to PDF lose quality?
+### Does converting PNG to PDF reduce quality?
 
-No. PNG is stored losslessly in the PDF, so every pixel is kept.
+Not on the Original setting: the PNG's pixels are stored losslessly in the PDF. Print-to-PDF and "smaller file" settings can rescale or recompress it.
 
-### What happens to a transparent PNG background?
+### How do I change a PNG to a PDF for free?
 
-Most PDF viewers show transparent areas as white. Add a background before converting if that matters.
+Select it in the converter above and press Download PDF. Windows, Mac, iPhone and Android also have built-in Print to PDF or Create PDF options.
+
+### What happens to a transparent PNG background in a PDF?
+
+It stays transparent on Original, and viewers show the white page behind it. On Balanced or Small it is filled with white.
+
+### Why is my PDF bigger than my PNG?
+
+Usually it isn't: in our tests the PDF was 1–22% smaller for screenshots and graphics. A photo saved as PNG gave a PDF about 15% bigger; save photos as JPG first.
+
+### How do I convert a PNG to a high-resolution PDF?
+
+Start from a PNG with enough pixels (about 1,700 × 2,200 for 200 dpi on Letter), keep Original, and choose Letter or A4 pages.
 
 ### Can I combine PNG and JPG in one PDF?
 
 Yes. Each image becomes a page, whatever its format. See [combine images into one PDF](/blog/combine-jpg-into-one-pdf/).
 
-### Why is my PNG PDF bigger than the PNG?
-
-It shouldn't be much bigger; PDF adds a little overhead per page. If it's far larger, the PNG may be a high-resolution photo better stored as JPG.
-
 ## The Bottom Line
 
-- **PNG to PDF is lossless:** ideal for screenshots, charts and text.
-- **Watch transparency:** it usually becomes white.
-- **Watch size:** photos saved as PNG make heavy PDFs.
+- **PNG to PDF is lossless on Original:** ideal for screenshots, charts and text.
+- **Transparency is kept**, but viewers show it as white.
+- **Photos belong in JPG:** a PNG photo makes a PDF about four times heavier.
 
-Convert with the [free converter](/) and pick Letter if it'll be printed. Next: [turn a screenshot into a PDF](/blog/screenshot-to-pdf/).
+Next: [turn a screenshot into a PDF](/blog/screenshot-to-pdf/) or [keep JPGs sharp in a PDF](/blog/jpg-to-pdf-without-losing-quality/).
